@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+// imported fonts
+@font-face {
+    font-family: "InterR";
+    src: local("Inter"), url(./assets/fonts/static/Inter-Regular.ttf) format("truetype");
+    
+    font-family: "InterBL";
+    src: local("Inter"), url(./assets/fonts/static/Inter-Black.ttf) format("truetype");
+
+    font-family: "InterBo";
+    src: local("Inter"), url(./assets/fonts/static/Inter-Bold.ttf) format("truetype");
+
+    font-family: "InterEb";
+    src: local("Inter"), url(./assets/fonts/static/Inter-ExtraBold.ttf) format("truetype");
+
+    font-family: "InterL";
+    src: local("Inter"), url(./assets/fonts/static/Inter-Light.ttf) format("truetype");
+
+    font-family: "InterM";
+    src: local("Inter"), url(./assets/fonts/static/Inter-Medium.ttf) format("truetype");
+
+    font-family: "InterSb";
+    src: local("Inter"), url(./assets/fonts/static/Inter-SemiBold.ttf) format("truetype");
+
+}
+
+
+/* Start of global variables */
+$primary : #2A3181;
+$secondary : #00BAF2;
+$greyShadeLight : #E6E6E6;
+$greyShadeDark : #757575;
+$fontColor : #111111;
+
+$gradient : linear-gradient(266.12deg, #00BAF2 19.83%, #2B09DE 57.41%, #00BAF2 111.21%);
+
+$regular : InterR;
+$black :InterBL;
+$bold :InterBo;
+$extraBold :InterEb;
+$light :InterL;
+$medium :InterM;
+$semiBold :InterSm;
+/* End of global variables */
+.body{
+    width: 1080px;
+    height: 50px;
+    font-family: $black;
+    background-image: $gradient;
+
+}
