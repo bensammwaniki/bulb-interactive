@@ -2,27 +2,31 @@
 @font-face {
     font-family: "InterR";
     src: local("Inter"), url(./assets/fonts/static/Inter-Regular.ttf) format("truetype");
-    
+}
+@font-face {
     font-family: "InterBL";
     src: local("Inter"), url(./assets/fonts/static/Inter-Black.ttf) format("truetype");
-
+}
+@font-face {
     font-family: "InterBo";
     src: local("Inter"), url(./assets/fonts/static/Inter-Bold.ttf) format("truetype");
-
+}
+@font-face {
     font-family: "InterEb";
     src: local("Inter"), url(./assets/fonts/static/Inter-ExtraBold.ttf) format("truetype");
-
-    font-family: "InterL";
-    src: local("Inter"), url(./assets/fonts/static/Inter-Light.ttf) format("truetype");
-
+}
+@font-face {
     font-family: "InterM";
     src: local("Inter"), url(./assets/fonts/static/Inter-Medium.ttf) format("truetype");
-
+}
+@font-face {
+    font-family: "InterL";
+    src: local("Inter"), url(./assets/fonts/static/Inter-Light.ttf) format("truetype");
+}
+@font-face {
     font-family: "InterSb";
     src: local("Inter"), url(./assets/fonts/static/Inter-SemiBold.ttf) format("truetype");
-
 }
-
 
 /* Start of global variables */
 $primary : #2A3181;
@@ -39,12 +43,13 @@ $bold :InterBo;
 $extraBold :InterEb;
 $light :InterL;
 $medium :InterM;
-$semiBold :InterSm;
+$semiBold :InterSb;
 /* End of global variables */
 .body{
     width: 1080px;
     height: 50px;
-    font-family: $black;
+    font-family: $semiBold;
+    // font-weight:bold;
     background-image: $gradient;
 
 }
