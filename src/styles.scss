@@ -83,16 +83,25 @@ $light :InterL;
 $medium :InterM;
 $semiBold :InterSb;
 /* End of global variables */
+
+@media only screen and (max-width: 390px) {
+    .hideitems{
+       display: none;
+     }
+     .headingfooter{
+         display: flex;
+         align-items: flex-end;
+         height:40px;
+     }
+     .footerres{
+         margin-top: 10px;
+     }
+   }
+
+
 body{
     font-family: $regular;
     font-size: 14px;
-}
-.logo{
-    height: 60px;
-    left: 30px;
-    top: 0px;
-    padding: 5px;
-    object-fit: contain;
 }
 .btnEdit{
     width: 180px;
@@ -102,6 +111,11 @@ body{
 }
 .btnEdit:hover{
     color: white;
+}
+.logo{
+    height: 50px;
+    padding: 5px;
+    object-fit: contain;
 }
 .row-1{
     background-color:$primary !important;
@@ -130,13 +144,12 @@ body{
 
 .slidertxt{
         color: white;
-        font-weight: 900;
         font-family: $black;
-        height: 100%;
-    .centered{
-    height: fit-content;
-    align-items: center;
-    margin: auto;
+        margin: 5px;
+        padding: 5px;
+        width: 35.9rem;
+        top: 25%;
+        left: 5%;
     .sliderbtn{
         font-family: $regular;
         width: 180px;
@@ -145,4 +158,111 @@ body{
         font-size: 14px;
         }
       }
+
+    .footerbg{
+        background-color: $greyShadeLight;
     }
+    footer{
+        font-family: $bold;
+        .footer{
+            width: 80%;
+            margin: auto;
+        }
+        .footer-title{
+            color: $primary;
+
+        }
+        p{
+            font-family: $regular;
+            font-size: 10px;
+        }
+        .adjusttitle{
+            vertical-align: bottom;
+        }
+        a{
+            text-decoration: none;
+            color: #111111;
+        }
+        .headingfooter{
+            display: flex;
+            align-items: flex-end;
+            height: 80px;
+        }
+        .footerlogo{
+            height: 70px;
+            object-fit: contain;
+        }
+        .footerres{
+            margin-top: 10px;
+        }
+        .copyright{
+            font-family: $regular;
+        }
+    }
+
+//====================== Responsiveness===================================//
+// ===================== Mobile phone ====================================//
+
+
+    @media only screen and (max-width: 750px) {
+        .logo{
+            height: 40px;
+            padding: 5px;
+            object-fit: contain;
+        }
+        .slide{
+            height: 690px;
+            .slidertxt{
+                color: white;
+                font-family: $black;
+                margin: auto;
+                padding: 5px;
+                width: 90%;
+                text-align: center;
+              }
+            .sliderbtn{
+                
+                margin: auto;
+                }
+    
+        }
+        .carousel-inner{
+            height: 690px;
+        }
+        .carousel-item{
+            height: 690px;
+            img{
+                height: 690px;
+                object-fit: cover;
+            } 
+            .bslogo {
+                position: absolute;
+                top: 93%;
+                padding: 10px;
+                right: 0px;
+                float: right;
+                img{
+                    width: 60px;
+                    height: 10.82;
+                    object-fit: contain;
+                }   
+              }
+        }
+       .hideitems{
+          display: none;
+        }
+        .headingfooter{
+            display: flex;
+            align-items: flex-end;
+            height:40px;
+        }
+        .footerres{
+            margin-top: 10px;
+        }
+        body{
+            font-size: 70%;
+        }
+      }
+
+//====================== Responsiveness===================================//
+// ===================== Mobile phone ====================================//
