@@ -14,6 +14,9 @@ import { SliderComponent } from './Home/slider/slider.component';
 import { LinksComponent } from './Home/links/links.component';
 import { VideoSliderComponent } from './Shared/video-slider/video-slider.component';
 import { PartnersComponent } from './Home/partners/partners.component';
+import { MagazineComponent } from './magazine/magazine/magazine.component';
+import { MagazineSliderComponent } from './magazine/magazine-slider/magazine-slider.component';
+import { EditionsComponent } from './magazine/editions/editions.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { PartnersComponent } from './Home/partners/partners.component';
     SliderComponent,
     LinksComponent,
     VideoSliderComponent,
-    PartnersComponent
+    PartnersComponent,
+    MagazineComponent,
+    MagazineSliderComponent,
+    EditionsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +41,10 @@ import { PartnersComponent } from './Home/partners/partners.component';
       {
         path:'',
         component: HomeComponent
+      },
+      {
+        path:'magazine',
+        component: MagazineComponent
       },
 
     ])

@@ -47,6 +47,14 @@ $border-radius-2xl:0rem ;
 $border-radius-pill:50rem;
 $border-width: 0rem;
 $btn-border-width:.0rem ;
+$btn-link-hover-color: $dark !default;
+
+$position-values: (
+  0: 0,
+  2:1%,
+  50: 50%,
+  100: 100%
+) !default;
 
 $navbar-dark-color: white;
 $navbar-dark-toggler-border-color:  0rem;
@@ -68,6 +76,7 @@ $card-spacer-x: 1px;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/buttons";
 // bootstrap componets
 
 $primary : #2A3181;
@@ -107,7 +116,39 @@ body{
     color: white;
 }
 
-// ==============Slider=======================//   
+// ==============Slider=======================//  
+
+// magazine slider>>>>>>>>>>>>>>>>>>>>>>>>>>
+.carousel-inner-mag{
+    height: 300px;
+}
+.carousel-item-mag{
+    height: 300px;
+    img{
+        height: 300px;
+        object-fit: cover;
+    } 
+}
+.bslogo-mag {
+    position: absolute;
+    top: 86%;
+    padding: 10px;
+    right: 0px;
+    float: right;
+    img{
+        width: 165.88px;
+        height: 37px;
+        object-fit: contain;
+    }   
+  }
+  .slidertxtmag{
+    color: white;
+    font-family: $black;
+    padding: 5px;
+    width: fit-content;
+  }
+// magazine slider>>>>>>>>>>>>>>>>>>>>>>>>>
+
 .slide{
     top: -4px;
 }
@@ -151,7 +192,7 @@ body{
         }
       }
 // ==============End of Slider=======================//  
-
+// ==============home links,Editions, ==============//
 .card{
     font-family: $bold;
     .card-img-top{
@@ -173,6 +214,9 @@ body{
         transition-delay: 0.3s;
         transition-timing-function: ease-in-out;
         .text-desc{
+            display: block;
+        }
+        .text-desc-mag{
             display: block;
         }
     }
@@ -205,8 +249,38 @@ body{
     left: 10%;
     margin-bottom: 60px;
 }
+//editions>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+.mag{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.link-title-mag{
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    color: $primary;
+    margin-top: 4px;
+    z-index: 1;
+    font-family: $bold;
+}
+.text-desc-mag{
+    display: none;
+    width: 100%;
+    font-family: $regular;
+    font-size: 0.75rem;
+    color: white;
+    a{
+        margin: 3px;
+        color: white;
+    }
+    div{
+        bottom: 10px;
+    }
+}
 
-// ===============Footer ===========================//
+// ===============Home links,Editions, =====================//
+
+// ===============Footer =========================//
     .footerbg{
         background-color: $greyShadeLight;
     }
