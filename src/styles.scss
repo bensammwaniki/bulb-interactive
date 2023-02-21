@@ -148,7 +148,56 @@ body{
     width: fit-content;
   }
 // magazine slider>>>>>>>>>>>>>>>>>>>>>>>>>
+//video slider>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+.video-slider{
+    height: 500px;
+    object-fit: cover;
+}
+.bslogo-vid{
+    position: absolute;
+    top: 89%;
+    padding: 10px;
+    right: 0px;
+    float: right;
+    img{
+        width: 165.88px;
+        height: 37px;
+        object-fit: contain;
+    }  
+}
 
+//video slider>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//video carousel section 2-----------------
+
+.featured-carousel h3,
+.featured-carousel p, .featured-carousel h2 {
+  text-align: center;
+  color: $primary;
+  font-family: $bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.featured-carousel .tile {
+    position: relative;
+    display: inline-block;
+    width: 420px;
+    height: 250px;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+  }
+  .featured-carousel .tile__img {
+    width: 420px;
+    height: 250px;
+    object-fit: cover;
+  }
+//video carousel the other css affecting 
+//video slider can be found in their idividual componets.css
+
+// home and main sliders >>>>>>>>>>>>>>>>>>
 .slide{
     top: -4px;
 }
@@ -181,8 +230,6 @@ body{
         margin: 5px;
         padding: 5px;
         width: 35.9rem;
-        top: 25%;
-        left: 5%;
     .sliderbtn{
         font-family: $regular;
         width: 180px;
@@ -191,6 +238,8 @@ body{
         font-size: 14px;
         }
       }
+// home and main sliders >>>>>>>>>>>>>>>>>>
+//*****************************************
 // ==============End of Slider=======================//  
 // ==============home links,Editions, ==============//
 .card{
@@ -244,9 +293,9 @@ body{
 }
 
 .row-left{
-    width: 80%;
+    width: 95%;
     position: relative;
-    left: 10%;
+    left: 5%;
     margin-bottom: 60px;
 }
 //editions>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -268,13 +317,31 @@ body{
     width: 100%;
     font-family: $regular;
     font-size: 0.75rem;
-    color: white;
     a{
+        background-color: #00BAF2;
         margin: 3px;
+        border-radius:50%;
+        height: 40px;
+        width: 40px;
+        font-size: 1.25rem;
+        text-align: center;
+        text-decoration: none;
         color: white;
+        line-height: 2;
     }
     div{
         bottom: 10px;
+    }
+}
+
+.socials{
+    top: 30px;
+    left: 15px;
+    img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        object-fit: cover;
     }
 }
 
@@ -362,7 +429,11 @@ body{
         }
         .carousel-item{
             height: 700px;
-            img{
+            .video-slider{
+                height: 700px;
+                object-fit: cover;
+            }
+             img{
                 height: 700px;
                 object-fit: cover;
             } 
@@ -400,6 +471,26 @@ body{
             width: 95%;
             margin-bottom: 20px;
         }
+
+
+        .socials{
+            top: 10px;
+            left: 3px;
+            img{
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+        .featured-carousel .tile {
+            width: 320px;
+            height: 180px;
+          }
+          .featured-carousel .tile__img {
+            width: 320px;
+            height: 180px;
+          }
+
       }
 
 //====================== Responsiveness===================================//
