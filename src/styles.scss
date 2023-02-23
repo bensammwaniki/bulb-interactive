@@ -122,30 +122,17 @@ body{
 .carousel-inner-mag{
     height: 300px;
 }
-.carousel-item-mag{
-    height: 300px;
-    img{
-        height: 300px;
-        object-fit: cover;
-    } 
-}
-.bslogo-mag {
-    position: absolute;
-    top: 86%;
-    padding: 10px;
-    right: 0px;
-    float: right;
-    img{
-        width: 165.88px;
-        height: 37px;
-        object-fit: contain;
-    }   
-  }
-  .slidertxtmag{
+
+
+
+.slidertxtmag{
     color: white;
     font-family: $black;
     padding: 5px;
-    width: fit-content;
+    h1{
+        text-align: center;
+        white-space: nowrap;
+    }
   }
 // magazine slider>>>>>>>>>>>>>>>>>>>>>>>>>
 //video slider>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -153,19 +140,6 @@ body{
     height: 500px;
     object-fit: cover;
 }
-.bslogo-vid{
-    position: absolute;
-    top: 89%;
-    padding: 10px;
-    right: 0px;
-    float: right;
-    img{
-        width: 165.88px;
-        height: 37px;
-        object-fit: contain;
-    }  
-}
-
 //video slider>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //video carousel section 2-----------------
 
@@ -213,12 +187,7 @@ body{
 }
 
 .bslogo {
-    position: absolute;
-    top: 93%;
-    padding: 10px;
-    right: 0px;
-    float: right;
-    img{
+    .BGimg{
         width: 165.88px;
         height: 37px;
         object-fit: contain;
@@ -431,6 +400,38 @@ body{
     }
 }
 
+
+.branding{
+    height: 400px;
+    img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    .overlay{
+        position: absolute;
+        height: 400px;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        background: linear-gradient(204.37deg, #00BAF2 14.01%, #2B09DE 84.41%);
+        opacity: 0.4;
+    }
+}
+.about{
+    padding: 0px 40px 40px 0px;
+    margin: 10px 40px 40px 0px;
+    p{
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+.why{
+    padding: 0px 40px 40px 0px;
+    margin: 10px 60px 60px 0px;
+
+}
+
 // ===============Footer =========================//
     .footerbg{
         background-color: $greyShadeLight;
@@ -492,6 +493,8 @@ body{
             height: 30px;
             object-fit: contain;
         }
+
+
         .slide{
             height: 700px;
             .slidertxt{
@@ -508,6 +511,7 @@ body{
                 }
     
         }
+
         .carousel-inner{
             height: 700px;
         }
@@ -521,18 +525,6 @@ body{
                 height: 700px;
                 object-fit: cover;
             } 
-            .bslogo {
-                position: absolute;
-                top: 93%;
-                padding: 10px;
-                right: 0px;
-                float: right;
-                img{
-                    width: 60px;
-                    height: 10.82;
-                    object-fit: contain;
-                }   
-              }
         }
        .hideitems{
           display: none;
@@ -556,7 +548,14 @@ body{
             margin-bottom: 20px;
         }
 
-
+        .bslogo {
+            bottom: 86%;
+            .BGimg{
+                width: 60px;
+                height: 10.82;
+                object-fit: contain;
+            }   
+          }
         .socials{
             top: 10px;
             left: 3px;
@@ -583,7 +582,24 @@ body{
             padding-left: 0px;
           }
           }
-         
+          .branding{
+            height: 700px;
+            img{
+                height: 700px;
+            }
+            .overlay{
+                height: 700px;
+            }
+        }
+        .about{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .why{
+            padding: 0px;
+            margin: 0px;
+        }
 
       }
 
@@ -591,16 +607,12 @@ body{
 // ********************* End Mobile phone *******************************//
 @media only screen and (max-width: 900px) {
     .bslogo {
-        position: absolute;
-        top: 90%;
-        padding: 10px;
-        right: 0px;
-        float: right;
         img{
             width: 140px;
             object-fit: contain;
         }   
       }
+
       .row-left{
         width: 95%;
         margin-bottom: 20px;

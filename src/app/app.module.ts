@@ -22,6 +22,10 @@ import { GallerysliderComponent } from './Gallery/galleryslider/galleryslider.co
 import { EventsComponent } from './Event/events/events.component';
 import { StoryComponent } from './Event/story/story.component';
 import { SpeakersComponent } from './Event/speakers/speakers.component';
+import { BrandingComponent } from './Branding/branding/branding.component';
+import { AboutComponent } from './Branding/about/about.component';
+import { PackagesComponent } from './Branding/packages/packages.component';
+import { ContainerComponent } from './Branding/container/container.component';
 
 
 @NgModule({
@@ -42,7 +46,11 @@ import { SpeakersComponent } from './Event/speakers/speakers.component';
     GallerysliderComponent,
     EventsComponent,
     StoryComponent,
-    SpeakersComponent
+    SpeakersComponent,
+    BrandingComponent,
+    AboutComponent,
+    PackagesComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +73,10 @@ import { SpeakersComponent } from './Event/speakers/speakers.component';
       {
         path:'events',
         component: EventsComponent
+      },
+      {
+        path:'branding',
+        component: BrandingComponent
       },
 
     ])
