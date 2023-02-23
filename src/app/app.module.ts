@@ -19,6 +19,9 @@ import { EditionsComponent } from './magazine/editions/editions.component';
 import { VideogalleryComponent } from './Gallery/videogallery/videogallery.component';
 import { CategoryComponent } from './Gallery/category/category.component';
 import { GallerysliderComponent } from './Gallery/galleryslider/galleryslider.component';
+import { EventsComponent } from './Event/events/events.component';
+import { StoryComponent } from './Event/story/story.component';
+import { SpeakersComponent } from './Event/speakers/speakers.component';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { GallerysliderComponent } from './Gallery/galleryslider/galleryslider.co
     EditionsComponent,
     VideogalleryComponent,
     CategoryComponent,
-    GallerysliderComponent
+    GallerysliderComponent,
+    EventsComponent,
+    StoryComponent,
+    SpeakersComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +61,10 @@ import { GallerysliderComponent } from './Gallery/galleryslider/galleryslider.co
       {
         path:'videos',
         component: VideogalleryComponent
+      },
+      {
+        path:'events',
+        component: EventsComponent
       },
 
     ])
