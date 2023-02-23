@@ -45,7 +45,16 @@ $border-radius-lg:.0rem ;
 $border-radius-xl:0rem ;
 $border-radius-2xl:0rem ;
 $border-radius-pill:50rem;
+$border-width: 0rem;
 $btn-border-width:.0rem ;
+$btn-link-hover-color: $dark !default;
+
+$position-values: (
+  0: 0,
+  2:1%,
+  50: 50%,
+  100: 100%
+) !default;
 
 $navbar-dark-color: white;
 $navbar-dark-toggler-border-color:  0rem;
@@ -61,8 +70,13 @@ $carousel-indicator-active-bg:  $secondary;
 $carousel-indicator-opacity: .7;
 
 
+$card-spacer-y: 1px;
+$card-spacer-x: 1px;
+
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/buttons";
 // bootstrap componets
 
 $primary : #2A3181;
@@ -84,24 +98,13 @@ $medium :InterM;
 $semiBold :InterSb;
 /* End of global variables */
 
-@media only screen and (max-width: 390px) {
-    .hideitems{
-       display: none;
-     }
-     .headingfooter{
-         display: flex;
-         align-items: flex-end;
-         height:40px;
-     }
-     .footerres{
-         margin-top: 10px;
-     }
-   }
-
 
 body{
     font-family: $regular;
     font-size: 14px;
+    background-image:url(../../bulb_interactive/src/assets/svgs/bg.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
 }
 .btnEdit{
     width: 180px;
@@ -112,44 +115,90 @@ body{
 .btnEdit:hover{
     color: white;
 }
+
+// ==============Slider=======================//  
+
+// magazine slider>>>>>>>>>>>>>>>>>>>>>>>>>>
+.carousel-inner-mag{
+    height: 300px;
+}
+
+
+
+.slidertxtmag{
+    color: white;
+    font-family: $black;
+    padding: 5px;
+    h1{
+        text-align: center;
+        white-space: nowrap;
+    }
+  }
+// magazine slider>>>>>>>>>>>>>>>>>>>>>>>>>
+//video slider>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+.video-slider{
+    height: 500px;
+    object-fit: cover;
+}
+//video slider>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//video carousel section 2-----------------
+
+.featured-carousel h3,
+.featured-carousel p, .featured-carousel h2 {
+  text-align: center;
+  color: $primary;
+  font-family: $bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.featured-carousel .tile {
+    position: relative;
+    display: inline-block;
+    width: 420px;
+    height: 250px;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+  }
+  .featured-carousel .tile__img {
+    width: 420px;
+    height: 250px;
+    object-fit: cover;
+  }
+//video carousel the other css affecting 
+//video slider can be found in their idividual componets.css
+
+// home and main sliders >>>>>>>>>>>>>>>>>>
+.slide{
+    top: -4px;
+}
+
+.indicators{
+    border-radius: 50%;
+}
+
 .logo{
     height: 50px;
     padding: 5px;
     object-fit: contain;
 }
-.row-1{
-    background-color:$primary !important;
-}
 
-.row-2{
-    background-color:$greyShadeLight !important;
-    
-}
-.indicators{
-    border-radius: 50%;
-}
 .bslogo {
-    position: absolute;
-    top: 93%;
-    padding: 10px;
-    right: 0px;
-    float: right;
-    img{
+    .BGimg{
         width: 165.88px;
         height: 37px;
         object-fit: contain;
     }   
   }
-
-
 .slidertxt{
         color: white;
         font-family: $black;
         margin: 5px;
         padding: 5px;
         width: 35.9rem;
-        top: 25%;
-        left: 5%;
     .sliderbtn{
         font-family: $regular;
         width: 180px;
@@ -158,7 +207,232 @@ body{
         font-size: 14px;
         }
       }
+// home and main sliders >>>>>>>>>>>>>>>>>>
+//*****************************************
+// ==============End of Slider=======================//  
+// ==============home links,Editions, ==============//
+.card{
+    font-family: $bold;
+    .card-img-top{
+        height: 19.42rem;
+        object-fit: cover;
+        border-radius: $border-radius;
+    }
+    .overlay{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0.73deg, #2B09DE -13.92%, rgba(0, 186, 242, 0) 106.97%);
+        opacity: 0.5;
+    }
+    .overlay:hover{
+        opacity: 1;
+        transition-duration: 0.2s;
+        transition-delay: 0.3s;
+        transition-timing-function: ease-in-out;
+        .text-desc{
+            display: block;
+        }
+        .text-desc-mag{
+            display: block;
+        }
+    }
+    
+    .text-desc{
+        display: none;
+        margin: 5px;
+        padding: 10px;
+        font-family: $regular;
+        font-size: 0.75rem;
+        color: white;
+        position: absolute;
+        bottom: 30px;
+        text-align: center;
+    }
+} 
+.link-title{
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+}
 
+.row-left{
+    width: 95%;
+    position: relative;
+    left: 5%;
+    margin-bottom: 60px;
+}
+//editions>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+.mag{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.link-title-mag{
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    color: $primary;
+    margin-top: 4px;
+    z-index: 1;
+    font-family: $bold;
+}
+.text-desc-mag{
+    display: none;
+    width: 100%;
+    font-family: $regular;
+    font-size: 0.75rem;
+    a{
+        background-color: #00BAF2;
+        margin: 3px;
+        border-radius:50%;
+        height: 40px;
+        width: 40px;
+        font-size: 1.25rem;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        line-height: 2;
+    }
+    div{
+        bottom: 10px;
+    }
+}
+
+.socials{
+    top: 30px;
+    left: 15px;
+    z-index: 1;
+    img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+// ===============Home links,Editions, =====================//
+.cat-main{
+    margin-bottom: 40px;
+    h2{
+        text-align: center;
+        color: $primary;
+        font-family: $bold;
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+}
+.category{
+    margin: auto;
+    .cat{
+        margin: 3px;
+        color: white;
+        background-color: $primary;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .cat:hover{
+        opacity: .95;
+    }
+}
+
+.story-title{
+    width: 100%;
+    text-align: center;
+    color: $primary;
+    font-family: $bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+.story{
+    margin: 20px;
+    font-size: 1rem;
+    div{
+        margin: 20px;
+        width: 600px;
+        height: 300px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align:top;
+    }
+    p{
+        margin: 20px;
+        padding-left: 40px;
+    }
+}
+
+
+.speaker-title{
+    width: 100%;
+    text-align: center;
+    color: $primary;
+    font-family: $bold;
+    font-size: 1.7rem;
+    margin-top: 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+.speaker{
+    width: 181.08px;
+    margin-left: 20px;
+    margin-right: 20px;
+    img{
+        width: 181.08px;
+        height: 246.54px;
+        object-fit: cover;
+        border-radius: 200px;
+    }
+    h6{
+        width: 100%;
+        text-align: center;
+        color: $primary;
+        font-family: $bold;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}
+
+
+.branding{
+    height: 400px;
+    img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    .overlay{
+        position: absolute;
+        height: 400px;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        background: linear-gradient(204.37deg, #00BAF2 14.01%, #2B09DE 84.41%);
+        opacity: 0.4;
+    }
+}
+.about{
+    padding: 0px 40px 40px 0px;
+    margin: 10px 40px 40px 0px;
+    p{
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+.why{
+    padding: 0px 40px 40px 0px;
+    margin: 10px 60px 60px 0px;
+
+}
+
+// ===============Footer =========================//
     .footerbg{
         background-color: $greyShadeLight;
     }
@@ -199,19 +473,30 @@ body{
             font-family: $regular;
         }
     }
+    .row-1{
+        background-color:$primary !important;
+    }
+    
+    .row-2{
+        background-color:$greyShadeLight !important;
+        
+    }
+// ===============End Footer===========================//
 
-//====================== Responsiveness===================================//
+
+//====================== Responsiveness ===================================//
 // ===================== Mobile phone ====================================//
 
 
     @media only screen and (max-width: 750px) {
         .logo{
-            height: 40px;
-            padding: 5px;
+            height: 30px;
             object-fit: contain;
         }
+
+
         .slide{
-            height: 690px;
+            height: 700px;
             .slidertxt{
                 color: white;
                 font-family: $black;
@@ -226,27 +511,20 @@ body{
                 }
     
         }
+
         .carousel-inner{
-            height: 690px;
+            height: 700px;
         }
         .carousel-item{
-            height: 690px;
-            img{
-                height: 690px;
+            height: 700px;
+            .video-slider{
+                height: 700px;
+                object-fit: cover;
+            }
+             img{
+                height: 700px;
                 object-fit: cover;
             } 
-            .bslogo {
-                position: absolute;
-                top: 93%;
-                padding: 10px;
-                right: 0px;
-                float: right;
-                img{
-                    width: 60px;
-                    height: 10.82;
-                    object-fit: contain;
-                }   
-              }
         }
        .hideitems{
           display: none;
@@ -262,7 +540,81 @@ body{
         body{
             font-size: 70%;
         }
+        .indicators{
+            border-radius: 50%;
+        }
+        .row-left{
+            width: 95%;
+            margin-bottom: 20px;
+        }
+
+        .bslogo {
+            bottom: 86%;
+            .BGimg{
+                width: 60px;
+                height: 10.82;
+                object-fit: contain;
+            }   
+          }
+        .socials{
+            top: 10px;
+            left: 3px;
+            img{
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+        .featured-carousel .tile {
+            width: 320px;
+            height: 180px;
+          }
+          .featured-carousel .tile__img {
+            width: 320px;
+            height: 180px;
+          }
+          .story {
+            margin: 0px;
+            div{
+                width: 290px;
+            }
+             p{
+            padding-left: 0px;
+          }
+          }
+          .branding{
+            height: 700px;
+            img{
+                height: 700px;
+            }
+            .overlay{
+                height: 700px;
+            }
+        }
+        .about{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .why{
+            padding: 0px;
+            margin: 0px;
+        }
+
       }
 
 //====================== Responsiveness===================================//
-// ===================== Mobile phone ====================================//
+// ********************* End Mobile phone *******************************//
+@media only screen and (max-width: 900px) {
+    .bslogo {
+        img{
+            width: 140px;
+            object-fit: contain;
+        }   
+      }
+
+      .row-left{
+        width: 95%;
+        margin-bottom: 20px;
+    }
+   }
