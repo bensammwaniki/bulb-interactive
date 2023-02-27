@@ -517,16 +517,16 @@ button{
     footer{
         font-family: $bold;
         .footer{
-            width: 80%;
+            width: 90%;
             margin: auto;
         }
+
         .footer-title{
             color: $primary;
-
         }
         p{
             font-family: $regular;
-            font-size: 10px;
+            font-size: 0.8rem;
         }
         .adjusttitle{
             vertical-align: bottom;
@@ -534,11 +534,6 @@ button{
         a{
             text-decoration: none;
             color: #111111;
-        }
-        .headingfooter{
-            display: flex;
-            align-items: flex-end;
-            height: 80px;
         }
         .footerlogo{
             height: 70px;
@@ -550,12 +545,21 @@ button{
         .copyright{
             font-family: $regular;
         }
+        iframe{
+            width: 20rem;
+            border-radius: 10px;
+            height: 11rem;
+        }
+    }
+    .hideitems{
+        top: 10px;
     }
     .row-1{
         background-color:$primary !important;
     }
     
     .row-2{
+        margin-top: 7rem;
         background-color:$greyShadeLight !important;
         
     }
