@@ -1,5 +1,4 @@
 $animationSpeed: 40s;
-
 @keyframes scroll {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(calc(-250px * 7))}
@@ -17,8 +16,17 @@ $animationSpeed: 40s;
 		display: flex;
 		width: calc(250px * 14);
 	}
+	.slide-track:hover{
+		animation-play-state: paused;
+		cursor: pointer;
+	}
 	.slide {
-		height: 100px;
-		width: 250px;
+		height: 90px;
+		width: 240px;
+		margin: 10px;
+		img{
+			-webkit-filter: grayscale(100%); /* Safari/Chrome */
+			filter: grayscale(100%);			
+		}
 	}
 }

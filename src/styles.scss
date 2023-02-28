@@ -116,15 +116,15 @@ body{
     color: white;
 }
 
-// ==============Slider=======================// 
+// ============== Home Slider=======================// 
 .carousel-inner{
-    height: 600px;
+    height: 500px;
 }
 .carousel-item{
-    height: 600px;
+    height: 500px;
 
      img{
-        height: 600px;
+        height: 500px;
         object-fit: cover;
     } 
 }
@@ -132,10 +132,15 @@ body{
 // magazine slider>>>>>>>>>>>>>>>>>>>>>>>>>>
 .carousel-inner-mag{
     height: 300px;
+    .carousel-item{
+        height: 300px;
+
+        .img{
+            height: 300px;
+            object-fit: cover;
+        } 
+    }
 }
-
-
-
 .slidertxtmag{
     color: white;
     font-family: $black;
@@ -510,15 +515,32 @@ button{
 }
 }
 
+
+.par{
+    text-align: center;
+    color: $primary;
+    h6{
+        font-family: $bold;
+        font-size: 1.7rem;
+        margin-top: 20px;
+    }
+    p{
+        font-family: $regular;
+        font-size: 0.8rem;
+    }
+    }
+
 // ===============Footer =========================//
     .footerbg{
         background-color: $greyShadeLight;
     }
+
     footer{
         font-family: $bold;
         .footer{
             width: 90%;
             margin: auto;
+            padding-top: 20px;
         }
 
         .footer-title{
@@ -535,9 +557,13 @@ button{
             text-decoration: none;
             color: #111111;
         }
-        .footerlogo{
-            height: 70px;
-            object-fit: contain;
+        .hideitems{
+            left: 20px;
+            width: fit-content;
+            img{
+                height: 70px;
+                object-fit: contain;    
+            }
         }
         .footerres{
             margin-top: 10px;
@@ -545,24 +571,23 @@ button{
         .copyright{
             font-family: $regular;
         }
+        .loc{
+            text-align: center;
+        }
         iframe{
-            width: 20rem;
+            width: 100%;
             border-radius: 10px;
             height: 11rem;
+            box-shadow: $box-shadow;
         }
     }
-    .hideitems{
-        top: 10px;
+    .row-2{
+        background-color:$greyShadeLight !important;   
     }
     .row-1{
         background-color:$primary !important;
     }
     
-    .row-2{
-        margin-top: 7rem;
-        background-color:$greyShadeLight !important;
-        
-    }
 // ===============End Footer===========================//
 
 
@@ -578,7 +603,7 @@ button{
 
 
         .slide{
-            height: 700px;
+            height: fit-content;
             .slidertxt{
                 color: white;
                 font-family: $black;
@@ -593,8 +618,7 @@ button{
                 }
     
         }
-
-        .carousel-inner{
+        .home{
             height: 700px;
         }
         .carousel-item{
@@ -608,6 +632,8 @@ button{
                 object-fit: cover;
             } 
         }
+
+        
        .hideitems{
           display: none;
         }
@@ -687,12 +713,19 @@ button{
             margin-left: 0.8rem;
             margin-right: 0.8rem;
             }
+        .footer{
+                width: 100%;
+                margin: 0px;
+            }
+        iframe{
+            width: 100%;
+        }
 
       }
 
 //====================== Responsiveness===================================//
 // ********************* End Mobile phone *******************************//
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
     .bslogo {
         img{
             width: 140px;
@@ -703,5 +736,8 @@ button{
       .row-left{
         width: 95%;
         margin-bottom: 20px;
+    }
+    iframe{
+        width: 100%;
     }
    }
