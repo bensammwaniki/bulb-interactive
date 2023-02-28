@@ -53,6 +53,8 @@ $position-values: (
   0: 0,
   2:1%,
   50: 50%,
+  25: 25%,
+  96: 96%,
   100: 100%
 ) !default;
 
@@ -531,6 +533,17 @@ button{
     }
 
 // ===============Footer =========================//
+.whatsapp{
+    width: fit-content;
+    bottom: 30%;
+    img{
+        height:50px;
+        width: 50px;
+        object-fit: contain;
+        -webkit-filter: drop-shadow($box-shadow);
+        filter: drop-shadow($box-shadow);
+    }
+}
     .footerbg{
         background-color: $greyShadeLight;
     }
@@ -575,7 +588,7 @@ button{
             text-align: center;
         }
         iframe{
-            
+
             width: 100%;
             border-radius: 10px;
             height: 11rem;
@@ -591,6 +604,10 @@ button{
     
 // ===============End Footer===========================//
 
+// ==========Angular active classess=========//
+.active-link{
+    color: $secondary;
+}
 
 //====================== Responsiveness ===================================//
 // ===================== Mobile phone ====================================//
