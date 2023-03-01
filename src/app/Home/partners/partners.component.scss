@@ -22,11 +22,11 @@ $animationSpeed: 40s;
 	}
 	.slide {
 		height: 90px;
-		width: 240px;
 		margin: 10px;
 		img{
-			-webkit-filter: grayscale(100%); /* Safari/Chrome */
-			filter: grayscale(100%);			
+			height: 80px;
+            width: fit-content;
+            object-fit: contain;			
 		}
 	}
 }

@@ -517,7 +517,6 @@ button{
 }
 }
 
-
 .par{
     text-align: center;
     color: $primary;
@@ -531,7 +530,9 @@ button{
         font-size: 0.8rem;
     }
     }
-
+.card{
+    box-shadow: $box-shadow;
+}
 // ===============Footer =========================//
 .whatsapp{
     width: fit-content;
@@ -737,6 +738,11 @@ button{
             }
         iframe{
             width: 100%;
+        }
+
+        .whatsapp{
+            width: fit-content;
+            bottom: 5%;
         }
 
       }
