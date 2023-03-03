@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import AOS from "aos";
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +6,4 @@ import AOS from "aos";
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  ngOnInit() {
-    AOS.init();
-  }
 }
