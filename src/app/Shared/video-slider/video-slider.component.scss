@@ -93,12 +93,12 @@
   transform: translate3d(-62.5px, 0, 0);
 }
 .featured-carousel .row__inner:hover .tile {
-  opacity: 0.3;
+  opacity: 0.7;
 }
 .featured-carousel .row__inner:hover .tile:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   opacity: 1;
 }
 .featured-carousel .tile:hover ~ .tile {
-  transform: translate3d(125px, 0, 0);
+  transform: translate3d(20px, 0, 0);
 }
