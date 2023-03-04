@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build-compress": "ng build && gzipper c ./dist --include js,css,html --output-file-format [filename].[ext] ./dist-compressed/"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,7 @@
     "@angular/youtube-player": "^15.1.0",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.2.3",
+    "gzipper": "^7.2.0",
     "jquery": "^3.6.3",
     "node-sass": "^8.0.0",
     "rxjs": "~7.8.0",
