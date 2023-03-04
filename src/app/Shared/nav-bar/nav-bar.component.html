@@ -49,4 +49,18 @@
 
     </div>
   </nav>
+
+  <form (ngSubmit)="onSubmit()">
+    <label>
+      Amount:
+      <input type="number" [(ngModel)]="amount" name="amount" required>
+    </label>
+    <br>
+    <label>
+      Phone Number:
+      <input type="number" [(ngModel)]="phoneNumber" name="phoneNumber" required>
+    </label>
+    <br>
+    <button type="submit">Send Payment Request</button>
+  </form>
   <!-- End of navbar -->
