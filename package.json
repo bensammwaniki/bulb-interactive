@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve ",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -22,6 +22,7 @@
     "@angular/youtube-player": "^15.1.0",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.2.3",
+    "cors": "^2.8.5",
     "gzipper": "^7.2.0",
     "jquery": "^3.6.3",
     "node-sass": "^8.0.0",

@@ -68,10 +68,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bulb_interactive:build:production"
+              "browserTarget": "bulb_interactive:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
-              "browserTarget": "bulb_interactive:build:development"
+              "browserTarget": "bulb_interactive:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

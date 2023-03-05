@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from './environment';
+import { environment } from '../environment';
 
 const apiKey = environment.apiKey;
 const apitoken = environment.apitoken;
@@ -32,7 +32,10 @@ export class MpesaService {
   sendPaymentRequest(amount: number, phoneNumber: number): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': this.auth_token
+      'Authorization': this.auth_token,
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
     });
     const body = {
       "BusinessShortCode": 174379,
@@ -43,10 +46,12 @@ export class MpesaService {
       "PartyA": phoneNumber,
       "PartyB": 174379,
       "PhoneNumber": phoneNumber,
-      "CallBackURL": "https://mydomain.com/path",
+      "CallBackURL": "*",
       "AccountReference": "CompanyXLTD",
       "TransactionDesc": "Payment of X"
     };
+    console.log(headers);
     return this.http.post<any>(this.mpesaUrl, JSON.stringify(body), { headers });
   }
 }
+
