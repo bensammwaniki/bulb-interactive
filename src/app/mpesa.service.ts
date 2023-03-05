@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from './environments';
+import { environment } from './environment';
 
 const apiKey = environment.apiKey;
 const apitoken = environment.apitoken;
