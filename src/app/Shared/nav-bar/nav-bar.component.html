@@ -42,7 +42,7 @@
         </ul>
 
         <div>
-            <button type="link" class="btn btn-secondary btnEdit shadow">Register Now <i class="fa-solid fa-clipboard-user"></i> </button>
+            <button type="link" class="btn btn-secondary btnEdit shadow" data-bs-toggle="modal" data-bs-target="#paymentModal">Register Now <i class="fa-solid fa-clipboard-user"></i> </button>
         </div>
 
       </div>
@@ -50,17 +50,42 @@
     </div>
   </nav>
 
-  <form (ngSubmit)="onSubmit()">
-    <label>
-      Amount:
-      <input type="number" [(ngModel)]="amount" name="amount" required>
-    </label>
-    <br>
-    <label>
-      Phone Number:
-      <input type="number" [(ngModel)]="phoneNumber" name="phoneNumber" required>
-    </label>
-    <br>
-    <button type="submit">Send Payment Request</button>
-  </form>
+
+  <div class="modal fade" id="paymentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-2">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Register for the This Event 📅</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="card col">
+          <img src="../../../assets/images/mpesa.webp" class="card-img-top" alt="Event banner">
+        </div>
+        <div class="modal-body">
+
+          <form (ngSubmit)="onSubmit()">
+
+            <div class="mb-3">
+              <label for="input1" class="form-label">Enter Amount</label>
+              <input type="number" [(ngModel)]="amount" name="amount" required class="form-control" id="input1" aria-describedby="input1">
+              <div id="input1" class="form-text">Please note enter amount only once</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="input2" class="form-label">Enter Phone Number</label>
+              <input type="number" [(ngModel)]="phoneNumber" name="phoneNumber" required class="form-control" id="input2" aria-describedby="input2">
+              <div id="input2" class="form-text"> </div>
+            </div>
+
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Make Payments</button>
+            </div>
+
+          </form>
+        </div>        
+      </div>
+    </div>
+  </div>
   <!-- End of navbar -->
