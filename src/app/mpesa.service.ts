@@ -38,8 +38,8 @@ export class MpesaService {
   sendPaymentRequest(amount: number, phoneNumber: number): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': this.auth_token,
-      'Access-Control-Allow-Origin': '*',
+      'Authorization': "Bearer UAiGaxQZjGXxpJcQ5ZplCcqfcFtm",
+      'Access-Control-Allow-Origin': 'https://bulb-interactive.vercel.app/',
       'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
       'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
     });
