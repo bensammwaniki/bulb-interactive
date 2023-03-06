@@ -2,9 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from './environment';
+import { Buffer } from 'buffer';
 
-const apiKey = environment.apiKey;
 const apitoken = environment.apitoken;
+const BusinessShortCode = 174379;
 
 
 function generateTimestamp(): string {
@@ -19,27 +20,32 @@ function generateTimestamp(): string {
   return `${year}${month}${day}${hours}${minutes}${seconds}`;
 }
 
+function generateEncodedCredentials(): string {
+  const strToEncode = `${BusinessShortCode}${apitoken}${generateTimestamp()}`;
+  const encodedStr = Buffer.from(strToEncode).toString('base64');
+  return encodedStr;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class MpesaService {
   private mpesaUrl = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
-  private auth_token = apitoken;
+  private auth_token = generateEncodedCredentials();
 
   constructor(private http: HttpClient) { }
 
   sendPaymentRequest(amount: number, phoneNumber: number): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': this.auth_token
-      // 'Access-Control-Allow-Origin': '*',
-      // 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-      // 'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
+      'Authorization': this.auth_token,
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
     });
     const body = {
       "BusinessShortCode": 174379,
-      "Password": apiKey,
+      "Password": generateEncodedCredentials(),
       "Timestamp": generateTimestamp(),
       "TransactionType": "CustomerPayBillOnline",
       "Amount": amount,
@@ -50,7 +56,7 @@ export class MpesaService {
       "AccountReference": "CompanyXLTD",
       "TransactionDesc": "Payment of X"
     };
-    console.log(headers);
+    console.log(generateEncodedCredentials());
     return this.http.post<any>(this.mpesaUrl, JSON.stringify(body), { headers });
   }
 }
