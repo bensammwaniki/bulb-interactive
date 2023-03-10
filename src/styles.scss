@@ -79,8 +79,11 @@ $card-spacer-x: 1px;
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/carousel";
 @import "../node_modules/bootstrap/scss/buttons";
+@import "~@angular/cdk/overlay-prebuilt.css";
 // bootstrap componets
-
+lightbox{
+    margin-top: 60px!important;
+}
 $primary : #2A3181;
 $secondary : #00BAF2;
 $greyShadeLight : #E6E6E6;

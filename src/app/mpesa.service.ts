@@ -50,7 +50,6 @@ export class MpesaService {
       response.headers.set('Access-Control-Allow-Origin', '*');
       response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
       response.headers.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-      console.log(generateTimestamp())
       return new Observable(observer => observer.next(response));
     } else {
       return this.http.post<any>(this.mpesaUrl, JSON.stringify(body), { headers });

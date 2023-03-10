@@ -3,6 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { GalleryModule } from  'ng-gallery';
+import { LightboxModule } from  'ng-gallery/lightbox';
+import { LIGHTBOX_CONFIG } from 'ng-gallery/lightbox';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,6 +58,9 @@ import { ContainerComponent } from './Branding/container/container.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    GalleryModule,
+    LightboxModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
@@ -80,7 +88,14 @@ import { ContainerComponent } from './Branding/container/container.component';
 
     ])
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LIGHTBOX_CONFIG,
+      useValue: {
+        keyboardShortcuts: false
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
