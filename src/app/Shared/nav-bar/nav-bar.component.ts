@@ -15,7 +15,7 @@ export class NavBarComponent {
   onSubmit() {
     this.mpesaService.sendPaymentRequest(this.amount, this.phoneNumber).subscribe(
       response => console.log(response),
-      error => console.log(error)
+      error => console.log(error),
     );
   }
 }

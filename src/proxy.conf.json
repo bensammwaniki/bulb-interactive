@@ -1,6 +1,6 @@
 {
     "/api/*": {
-      "target": "http://localhost:4200",
+      "target": "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest",
       "secure": true,
       "changeOrigin": true,
       "logLevel": "debug"
