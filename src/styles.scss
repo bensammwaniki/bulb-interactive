@@ -800,4 +800,15 @@ button{
     .displays {
         min-width: 45%;
     }
+    .home{
+        height: fit-content;
+        .carousel-item{
+            height: fit-content;
+        
+             img{
+                height: fit-content;
+                object-fit: cover;
+            } 
+        }
+    }
    }
