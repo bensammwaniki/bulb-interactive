@@ -24,7 +24,7 @@ export class CategoryComponent {
 
     // Add custom gallery config to the lightbox (optional)
     lightboxRef.setConfig({
-      imageSize: ImageSize.Cover,
+      imageSize: ImageSize.Contain,
       thumbPosition: ThumbnailsPosition.Top
     });
 

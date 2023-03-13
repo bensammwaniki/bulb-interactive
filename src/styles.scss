@@ -378,6 +378,16 @@ body{
     .cat:hover{
         opacity: .95;
     }
+    .displays {
+        background-color: #fff;
+        border-radius: 2px;
+        max-width: 24%;
+        height: 250px;
+        object-fit: cover;
+        object-position: top;
+        margin-left: 5px;
+        padding: 5px 5px 5px 5px;
+    }
 }
 
 .story-title{
@@ -762,13 +772,17 @@ button{
         .whatsapp{
             width: fit-content;
             bottom: 5%;
+        }    
+        .displays {
+            min-width: 100%;
         }
+
 
       }
 
 //====================== Responsiveness===================================//
 // ********************* End Mobile phone *******************************//
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .bslogo {
         img{
             width: 140px;
@@ -782,5 +796,8 @@ button{
     }
     iframe{
         width: 100%;
+    }
+    .displays {
+        min-width: 45%;
     }
    }
