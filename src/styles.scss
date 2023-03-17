@@ -75,11 +75,16 @@ $carousel-indicator-opacity: .7;
 $card-spacer-y: 1px;
 $card-spacer-x: 1px;
 
+$dropdown-bg: $secondary;
+$dropdown-min-width: 19rem;
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/carousel";
 @import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/dropdown";
 @import "~@angular/cdk/overlay-prebuilt.css";
+// @import '~ngx-sharebuttons/button/themes/default';
 // bootstrap componets
 lightbox{
     margin-top: 60px!important;
@@ -102,8 +107,6 @@ $light :InterL;
 $medium :InterM;
 $semiBold :InterSb;
 /* End of global variables */
-
-
 body{
     font-family: $regular;
     font-size: 14px;
@@ -273,9 +276,6 @@ body{
         .text-desc{
             display: block;
         }
-        .text-desc-mag{
-            display: block;
-        }
     }
     
     .text-desc{
@@ -312,34 +312,35 @@ body{
     margin-top: 80px;
     margin-bottom: 80px;
 }
-.link-title-mag{
-    text-align: center;
-    width: 100%;
-    font-size: 1rem;
-    color: $primary;
-    margin-top: 4px;
-    z-index: 1;
-    font-family: $bold;
-}
 .text-desc-mag{
-    display: none;
     width: 100%;
-    font-family: $regular;
-    font-size: 0.75rem;
+    z-index: 5;
+    background-color: #e6e6e600;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    margin-top: 4px;
+    font-family: $bold;
+    position: absolute;
+    bottom: 0px;
     a{
         background-color: #00BAF2;
         margin: 3px;
         border-radius:50%;
-        height: 40px;
-        width: 40px;
-        font-size: 1.25rem;
+        height: 30px;
+        width: 30px;
+        font-size: 1rem;
         text-align: center;
         text-decoration: none;
-        color: white;
         line-height: 2;
     }
-    div{
-        bottom: 10px;
+    h5{
+        color: $primary;
+        margin-bottom: 0px;
+        line-height: 2;
+    }
+    ul{
+        transform: translate3d(-209.8px, -39.2px, 0px)!important;
     }
 }
 

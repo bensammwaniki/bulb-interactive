@@ -7,6 +7,9 @@ import { GalleryModule } from  'ng-gallery';
 import { LightboxModule } from  'ng-gallery/lightbox';
 import { LIGHTBOX_CONFIG } from 'ng-gallery/lightbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -64,6 +67,8 @@ import { ContainerComponent } from './Branding/container/container.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ShareButtonsModule,
+    ShareIconsModule,
     RouterModule.forRoot([
       {
         path:'',

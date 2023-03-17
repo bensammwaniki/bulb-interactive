@@ -1,22 +1,37 @@
 <div class="container mt-5 ">
-    <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2 g-lg-3">
         <div class="col">
             <div class="card col">
                 <img src="../../../assets/images/img-2.jpg" class="card-img-top image-maga" alt="First edition of bulb magazine">
-                <div class="overlay">
-                    <div class="text-desc-mag align-middle">
-                        <div class="position-absolute bottom-1 start-50 translate-middle-x d-flex">
-                            <a href="" ><i class="fa-solid fa-cloud-arrow-down"></i> </a>
-                            <a href=""><i class="fa-solid fa-share"></i> </a>                                
+                <div class="text-desc-mag d-flex justify-content-center">
+                    <div>
+                        <h5>First Edition</h5>
+                    </div>
+                    <div class="d-flex">
+                        <div>
+                            <a type="button" ><i class="fa-solid fa-cloud-arrow-down"></i> </a>
                         </div>
+
+                        <div class="dropup">
+                            <a type="button" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-share"></i></a>
+                            <ul class="dropdown-menu">
+                                <share-buttons [theme]="'CIRCLES-DARK'"
+                                    [include]="['facebook','twitter','linkedin','pinterest','whatsapp','email','print','copy']"
+                                    [show]="20"
+                                    [showText]="true"
+                                    [url]="'https://www.linkedin.com/in/bensam-mwaniki-njoroge/'"
+                                    [autoSetMeta]="false"
+                                ></share-buttons>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-            <div class="link-title-mag">
-                <h5>First Edition</h5>
-            </div>
-        </div>
 
-    </div>
+                <!-- <div class="overlay">
+                </div> -->
+            </div>
+
+        </div>
 
 </div>
