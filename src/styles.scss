@@ -254,7 +254,7 @@ body{
     transition: background-color 0.5s ease;
   }
   
-  .transparent .scrolled {
+  .scrolled {
     background-color: rgba(0, 0, 0, 0.5)!important;
     backdrop-filter: blur(4px);
     font-family: $bold;
