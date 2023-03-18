@@ -250,6 +250,18 @@ body{
 //*****************************************
 // ==============End of Slider=======================//  
 // ==============home links,Editions, ==============//
+.transparent {
+    transition: background-color 0.5s ease;
+  }
+  
+  .transparent .scrolled {
+    background-color: rgba(0, 0, 0, 0.5)!important;
+    backdrop-filter: blur(4px);
+    font-family: $bold;
+    font-size: 1rem;
+  }
+
+  
 .card{
     font-family: $bold;
     .lnk{

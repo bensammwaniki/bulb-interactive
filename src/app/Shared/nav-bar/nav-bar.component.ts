@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,HostListener  } from '@angular/core';
 import { MpesaService } from '../../mpesa.service';
 
 @Component({
@@ -17,5 +17,11 @@ export class NavBarComponent {
       response => console.log(response),
       error => console.log(error),
     );
+  }
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    this.isScrolled = window.pageYOffset > 0;
   }
 }
