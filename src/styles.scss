@@ -443,14 +443,15 @@ body{
 
 }
 .speaker{
-    width: 181.08px;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 22%;
+    margin-left: 10px;
+    margin-right: 10px;
     img{
-        width: 181.08px;
         height: 246.54px;
+        width: 246.54px;
         object-fit: cover;
-        border-radius: 200px;
+        object-position: center;
+        border-radius: 100%;
     }
     h6{
         width: 100%;
@@ -835,6 +836,13 @@ button{
                 height: fit-content;
                 object-fit: cover;
             } 
+        }
+    }
+    .speaker{
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 200px;
         }
     }
     .pos-map{
