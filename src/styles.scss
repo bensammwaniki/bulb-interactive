@@ -730,11 +730,14 @@ button{
           }
           .story {
             margin: 0px;
+            padding: 0px;
             div{
-                width: 290px;
+                width: 100%;
+                margin: 0px;
             }
              p{
-            padding-left: 0px;
+                margin: 0px;
+                padding-left: 0px;
           }
           }
           .branding{
@@ -779,6 +782,28 @@ button{
             max-width: 125%;
             div{
                 width: 100%;                
+            }
+        }
+
+        .speaker{
+            margin-left: 5px;
+            margin-right: 0px;
+            width: 23%;
+            padding: 0px;
+            img{
+                width: 100%;
+                height: 145px;
+                object-fit: cover;
+                border-radius: 50px;
+            }
+            h6{
+                width: 100%;
+                text-align: center;
+                color: $primary;
+                font-family: $bold;
+                font-size: 0.7rem;
+                margin-top: 10px;
+                filter: none;
             }
         }
 
