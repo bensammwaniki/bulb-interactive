@@ -672,7 +672,9 @@ button{
         .web{
             display: none;
         }
-
+        .home{
+            height: 700px;
+        }
         .slide{
             height: fit-content;
             .slidertxt{
@@ -683,28 +685,11 @@ button{
                 width: 90%;
                 text-align: center;
               }
-            .sliderbtn{
-                
+            .sliderbtn{   
                 margin: auto;
                 }
     
         }
-        .home{
-            height: 700px;
-        }
-        // .carousel-item{
-        //     height: 700px;
-        //     .video-slider{
-        //         height: 700px;
-        //         object-fit: cover;
-        //     }
-        //      img{
-        //         height: 700px;
-        //         object-fit: cover;
-        //     } 
-        // }
-
-        
        .hideitems{
           display: none;
         }
@@ -789,7 +774,7 @@ button{
             bottom: 5%;
         }    
         .displays {
-            min-width: 100%;
+            min-width: 100%!important;
         }
 
 
