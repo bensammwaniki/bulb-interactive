@@ -335,6 +335,7 @@ body{
     font-family: $bold;
     position: absolute;
     bottom: 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     a{
         background-color: #00BAF2;
         margin: 3px;
@@ -345,9 +346,9 @@ body{
         text-align: center;
         text-decoration: none;
         line-height: 2;
+        color: white;
     }
     h5{
-        color: $primary;
         margin-bottom: 0px;
         line-height: 2;
     }
@@ -402,7 +403,6 @@ body{
         padding: 5px 5px 5px 5px;
     }
 }
-
 .story-title{
     width: 100%;
     text-align: center;
