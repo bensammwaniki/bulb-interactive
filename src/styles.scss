@@ -585,6 +585,7 @@ button{
 .whatsapp{
     width: fit-content;
     bottom: 40px;
+    z-index: 1;
     img{
         height:40px;
         width: 40px;
@@ -637,8 +638,6 @@ button{
             text-align: center;
         }
         iframe{
-            width: 100%;
-            border-radius: 10px;
             height: 11rem;
             box-shadow: $box-shadow;
         }
@@ -765,10 +764,6 @@ button{
                 width: 100%;
                 margin: 0px;
             }
-        iframe{
-            width: 100%;
-        }
-
         .whatsapp{
             width: fit-content;
             bottom: 5%;
@@ -776,13 +771,22 @@ button{
         .displays {
             min-width: 100%!important;
         }
-
+        .pos-map{
+            position: relative;
+            width: 100vw !important;
+            left: -10vw;
+            padding: 0px;
+            max-width: 125%;
+            div{
+                width: 100%;                
+            }
+        }
 
       }
 
 //====================== Responsiveness===================================//
 // ********************* End Mobile phone *******************************//
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 990px) {
     .bslogo {
         img{
             width: 140px;
@@ -793,9 +797,6 @@ button{
       .row-left{
         width: 95%;
         margin-bottom: 20px;
-    }
-    iframe{
-        width: 100%;
     }
     .displays {
         min-width: 45%;
@@ -809,6 +810,16 @@ button{
                 height: fit-content;
                 object-fit: cover;
             } 
+        }
+    }
+    .pos-map{
+        position: relative;
+        width: 100vw;
+        left: -7vw;
+        padding: 0px;
+        max-width: 117%;
+        div{
+            width: 100%;                
         }
     }
    }
