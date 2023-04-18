@@ -34,6 +34,9 @@ import { BrandingComponent } from './Branding/branding/branding.component';
 import { AboutComponent } from './Branding/about/about.component';
 import { PackagesComponent } from './Branding/packages/packages.component';
 import { ContainerComponent } from './Branding/container/container.component';
+import { TicketComponent } from './Shared/ticket/ticket.component';
+import { SocialsComponent } from './Shared/socials/socials.component';
+import { AboutTvComponent } from './Home/about-tv/about-tv.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,10 @@ import { ContainerComponent } from './Branding/container/container.component';
     BrandingComponent,
     AboutComponent,
     PackagesComponent,
-    ContainerComponent
+    ContainerComponent,
+    TicketComponent,
+    SocialsComponent,
+    AboutTvComponent
   ],
   imports: [
     BrowserModule,

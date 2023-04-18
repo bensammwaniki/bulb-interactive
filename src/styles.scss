@@ -45,7 +45,7 @@ $border-radius-lg:.0rem ;
 $border-radius-xl:0rem ;
 $border-radius-2xl:0rem ;
 $border-radius-pill:50rem;
-$border-width: 1px;
+$border-width: 0.5px;
 $btn-border-width:.0rem ;
 $btn-link-hover-color: $dark !default;
 
@@ -106,6 +106,14 @@ $extraBold :InterEb;
 $light :InterL;
 $medium :InterM;
 $semiBold :InterSb;
+
+.margin_both{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.margin_one{
+    margin-bottom: 200px;
+}
 /* End of global variables */
 body{
     font-family: $regular;
@@ -126,17 +134,11 @@ body{
 }
 
 // ============== Home Slider=======================// 
-.home{
-    height: 700px;
-    .carousel-item{
-        height: 700px;
-    
+    .carousel-item{    
          img{
-            height: 700px;
             object-fit: cover;
         } 
     }
-}
 
 
 // magazine slider>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -208,19 +210,12 @@ body{
 .slide{
     top: -4px;
 }
-.mob{
-    display: none;
-}
-.web{
-    display: block;
-}
-
 .indicators{
     border-radius: 50%;
 }
 
 .logo{
-    height: 50px;
+    height: 75px;
     padding: 5px;
     object-fit: contain;
 }
@@ -237,36 +232,37 @@ body{
         font-family: $black;
         margin: 5px;
         padding: 5px;
-        width: 35.9rem;
+        width: 60%;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     .sliderbtn{
         font-family: $regular;
-        width: 180px;
-        border-radius: 84px;
         color: white;
         font-size: 14px;
         }
       }
+.slidertxt:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.322));
+}
+
 // home and main sliders >>>>>>>>>>>>>>>>>>
 //*****************************************
 // ==============End of Slider=======================//  
 // ==============home links,Editions, ==============//
-.transparent {
-    transition: background-color 0.5s ease;
-  }
-  
-  .scrolled {
+.navbar-collapse{
+    text-align: center !important;
+}
+.scrolled {
     background-color: rgba(0, 0, 0, 0.5)!important;
-    backdrop-filter: blur(4px);
-    font-family: $bold;
-    font-size: 1rem;
+    backdrop-filter: blur(1px);
+    font-weight: 600;
   }
-
-  
 .card{
     font-family: $bold;
     .lnk{
-        height: 20rem;
-        object-fit: contain;
+        height: 18rem;
+        object-fit: cover;
     }
     .image-maga{
         height: 20rem;
@@ -274,22 +270,26 @@ body{
     }
     .overlay{
         position: absolute;
-        top: 0;
+        bottom: 0;
         width: 100%;
-        height: 100%;
+        height: 0%;
         background: linear-gradient(0.73deg, #2B09DE -13.92%, rgba(0, 186, 242, 0) 106.97%);
-        opacity: 0;
+        transition: height;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in;
     }
-    .overlay:hover{
-        opacity: 1;
-        transition-duration: 0.2s;
-        transition-delay: 0.3s;
-        transition-timing-function: ease-in-out;
+    .lnk:hover ~ .overlay{
+        height: 100%;
         .text-desc{
             display: block;
         }
     }
-    
+    .overlay:hover{
+        height: 100%;
+        .text-desc{
+            display: block;
+        }
+    }
     .text-desc{
         display: none;
         margin: 5px;
@@ -437,7 +437,7 @@ body{
     text-align: center;
     color: $primary;
     font-family: $bold;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     margin-top: 20px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
@@ -568,7 +568,7 @@ button{
     color: $primary;
     h6{
         font-family: $bold;
-        font-size: 1.7rem;
+        font-size: 1.2rem;
         margin-top: 20px;
     }
     p{
@@ -604,7 +604,7 @@ button{
         .footer{
             width: 90%;
             margin: auto;
-            padding-top: 20px;
+            padding-top: 90px;
         }
 
         .footer-title{
@@ -666,12 +666,6 @@ button{
             height: 30px;
             object-fit: contain;
         }
-        .mob{
-            display: block;
-        }
-        .web{
-            display: none;
-        }
         .home{
             height: 700px;
         }
@@ -680,16 +674,16 @@ button{
             .slidertxt{
                 color: white;
                 font-family: $black;
-                margin: auto;
                 padding: 5px;
                 width: 90%;
-                text-align: center;
               }
-            .sliderbtn{   
-                margin: auto;
-                }
     
         }
+        .bslogo {
+            .BGimg{
+                width: 92.88px;
+            }   
+          }
        .hideitems{
           display: none;
         }
@@ -807,12 +801,32 @@ button{
                 filter: none;
             }
         }
+        .card .lnk {
+            height: 23rem;
+        }
+        .links .col{
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .about p{
+            text-align: start;
+        }
 
       }
 
 //====================== Responsiveness===================================//
 // ********************* End Mobile phone *******************************//
 @media only screen and (max-width: 990px) {
+
+    .margin_both{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .margin_one{
+        margin-bottom: 50px;
+    }
+
     .bslogo {
         img{
             width: 140px;
@@ -828,12 +842,11 @@ button{
         min-width: 45%;
     }
     .home{
-        height: fit-content;
+        height: 400px;
         .carousel-item{
-            height: fit-content;
-        
-             img{
-                height: fit-content;
+            height: 400px;
+             .web{
+                height: 400px;
                 object-fit: cover;
             } 
         }

@@ -1,5 +1,6 @@
 import { Component,HostListener  } from '@angular/core';
 import { MpesaService } from '../../mpesa.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-nav-bar',
@@ -21,7 +22,17 @@ export class NavBarComponent {
   isScrolled = false;
 
   @HostListener('window:scroll', [])
+
+  // Styling the nav bar using funtions//
+//=======================================//
   onScroll(): void {
     this.isScrolled = window.pageYOffset > 0;
+  }
+  hideNavbar(): void {
+    $('#navbartoggle').addClass("hide");
+    $('#navbartoggle').removeClass("show");
+  }
+  togg(): void{
+    $('#ico').removeClass("navbar-toggler-icon").addClass("btn-close");
   }
 }
