@@ -1,5 +1,7 @@
 <app-slider></app-slider>
 <app-links></app-links>
-<app-video-slider></app-video-slider>
+<ng-container *ngIf="showVideoSlider">
+    <router-outlet name="video-slider"></router-outlet>
+</ng-container>
 <app-about-tv></app-about-tv>
 <app-partners></app-partners>

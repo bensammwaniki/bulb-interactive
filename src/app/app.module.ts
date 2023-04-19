@@ -9,7 +9,6 @@ import { LIGHTBOX_CONFIG } from 'ng-gallery/lightbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
-import { ZlazymoduleModule } from './zlazymodule/zlazymodule.module';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +18,7 @@ import { NavBarComponent } from './Shared/nav-bar/nav-bar.component';
 import { HomeComponent } from './Home/home/home.component';
 import { SliderComponent } from './Home/slider/slider.component';
 import { LinksComponent } from './Home/links/links.component';
-import { VideoSliderComponent } from './Shared/video-slider/video-slider.component';
+// import { VideoSliderComponent } from './Shared/video-slider/video-slider.component';
 import { PartnersComponent } from './Home/partners/partners.component';
 import { MagazineComponent } from './magazine/magazine/magazine.component';
 import { MagazineSliderComponent } from './magazine/magazine-slider/magazine-slider.component';
@@ -46,7 +45,7 @@ import { AboutTvComponent } from './Home/about-tv/about-tv.component';
     HomeComponent,
     SliderComponent,
     LinksComponent,
-    VideoSliderComponent,
+    // VideoSliderComponent,
     PartnersComponent,
     MagazineComponent,
     MagazineSliderComponent,
@@ -71,12 +70,15 @@ import { AboutTvComponent } from './Home/about-tv/about-tv.component';
     GalleryModule,
     LightboxModule,
     AppRoutingModule,
-    ZlazymoduleModule,
     HttpClientModule,
     FormsModule,
     ShareButtonsModule,
     ShareIconsModule,
     RouterModule.forRoot([
+      { path: '', 
+        redirectTo: 'home', 
+        pathMatch: 'full' 
+      },
       {
         path:'',
         component: HomeComponent

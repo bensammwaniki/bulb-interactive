@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  // { path: ' ', loadChildren: () => import('./zlazymodule/zlazymodule.module').then(m => m.ZlazymoduleModule) }
+  { path: 'videos', loadChildren: () => import('./video-slider/video-slider.module').then(m => m.VideoSliderModule), outlet: 'video-slider' }
 ];
 
 

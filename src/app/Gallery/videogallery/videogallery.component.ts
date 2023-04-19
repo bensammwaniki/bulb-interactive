@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./videogallery.component.scss']
 })
 export class VideogalleryComponent {
-
+  showVideoSlider = false; 
 }
