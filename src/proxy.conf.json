@@ -1,9 +1,0 @@
-{
-    "/api/*": {
-      "target": "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest",
-      "secure": true,
-      "changeOrigin": true,
-      "logLevel": "debug"
-    }
-  }
-  
