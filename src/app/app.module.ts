@@ -9,7 +9,7 @@ import { LIGHTBOX_CONFIG } from 'ng-gallery/lightbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
-
+import { ZlazymoduleModule } from './zlazymodule/zlazymodule.module';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -71,6 +71,7 @@ import { AboutTvComponent } from './Home/about-tv/about-tv.component';
     GalleryModule,
     LightboxModule,
     AppRoutingModule,
+    ZlazymoduleModule,
     HttpClientModule,
     FormsModule,
     ShareButtonsModule,
