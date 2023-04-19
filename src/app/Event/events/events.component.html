@@ -1,4 +1,6 @@
-<app-galleryslider></app-galleryslider>
+<ng-container *ngIf="showVideoSlider">
+    <router-outlet name="video-slider-lazy"></router-outlet>
+</ng-container>
 <app-story></app-story>
 <app-speakers></app-speakers>
 <app-partners></app-partners>

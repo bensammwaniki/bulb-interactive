@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./events.component.scss']
 })
 export class EventsComponent {
-
+  showVideoSlider = false; 
 }
