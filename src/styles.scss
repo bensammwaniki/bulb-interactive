@@ -221,6 +221,12 @@ body{
 }
 
 .bslogo {
+    h5{
+        font-family: $bold;
+        font-size: 16px;
+        color: #fff;
+        margin-right: 20px;
+    }
     .BGimg{
         width: 165.88px;
         height: 37px;
@@ -680,6 +686,9 @@ button{
     
         }
         .bslogo {
+            h5{
+                font-size: 10px;
+            }
             .BGimg{
                 width: 92.88px;
             }   
