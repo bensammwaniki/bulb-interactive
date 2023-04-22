@@ -845,6 +845,14 @@ button{
             text-align: start;
         }
 
+        // .row-mag{
+        //     margin-left: 50px;
+        //     margin-right: 50px;
+        // }
+        .text-desc-mag ul {
+            min-width: 243px !important;
+            transform: translate3d(-122.81px, -39.2px, 0px) !important;
+        }
       }
 
 //====================== Responsiveness===================================//
@@ -899,5 +907,9 @@ button{
         div{
             width: 100%;                
         }
+    }
+    .row-mag{
+        margin-left: 50px;
+        margin-right: 50px;
     }
    }
