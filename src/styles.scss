@@ -114,6 +114,14 @@ $semiBold :InterSb;
 .margin_one{
     margin-bottom: 200px;
 }
+.global_overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(0.73deg, #2d09de89 -13.92%, rgba(0, 186, 242, 0.004) 106.97%);
+}
+
 /* End of global variables */
 body{
     font-family: $regular;
@@ -761,15 +769,15 @@ button{
                 padding-left: 0px;
           }
           }
-          .branding{
-            height: 700px;
-            img{
-                height: 700px;
-            }
-            .overlay{
-                height: 700px;
-            }
-        }
+        //   .branding{
+        //     height: 700px;
+        //     img{
+        //         height: 700px;
+        //     }
+        //     .overlay{
+        //         height: 700px;
+        //     }
+        // }
         .about{
             padding: 0px;
             margin: 0px;
