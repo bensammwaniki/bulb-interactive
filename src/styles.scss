@@ -259,8 +259,13 @@ body{
 .navbar-collapse{
     text-align: center !important;
 }
+.transparent{
+    background-color: $primary!important;
+    transition: background-color ease-in-out 400ms;
+  }
 .scrolled {
     background-color: rgba(0, 0, 0, 0.5)!important;
+    transition: background-color ease-in-out 400ms;
     backdrop-filter: blur(1px);
     font-weight: 600;
   }
