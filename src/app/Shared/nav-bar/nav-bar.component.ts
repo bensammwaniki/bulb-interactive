@@ -26,7 +26,7 @@ export class NavBarComponent {
   // Styling the nav bar using funtions//
 //=======================================//
   onScroll(): void {
-    this.isScrolled = window.pageYOffset > 0;
+    this.isScrolled = window.pageYOffset > 130;
   }
   hideNavbar(): void {
     $('#navbartoggle').addClass("hide");
