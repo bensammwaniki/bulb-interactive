@@ -9,6 +9,7 @@ import { LIGHTBOX_CONFIG } from 'ng-gallery/lightbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { LightgalleryModule } from 'lightgallery/angular';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -36,6 +37,7 @@ import { ContainerComponent } from './Branding/container/container.component';
 import { TicketComponent } from './Shared/ticket/ticket.component';
 import { SocialsComponent } from './Shared/socials/socials.component';
 import { AboutTvComponent } from './Home/about-tv/about-tv.component';
+import { ImageGalleryComponent } from './Shared/image-gallery/image-gallery.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,8 @@ import { AboutTvComponent } from './Home/about-tv/about-tv.component';
     ContainerComponent,
     TicketComponent,
     SocialsComponent,
-    AboutTvComponent
+    AboutTvComponent,
+    ImageGalleryComponent
   ],
   imports: [
     BrowserModule,
@@ -74,6 +77,7 @@ import { AboutTvComponent } from './Home/about-tv/about-tv.component';
     FormsModule,
     ShareButtonsModule,
     ShareIconsModule,
+    LightgalleryModule,
     RouterModule.forRoot([
       { path: '', 
         redirectTo: 'home', 

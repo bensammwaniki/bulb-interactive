@@ -14,7 +14,7 @@ export class CategoryComponent {
   constructor(public gallery: Gallery,public lightbox: Lightbox) { }
   ngOnInit() {
     // Creat gallery items
-    this.items = this.imageData.map(item => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl }));
+    this.items = this.imageData.map(item => new ImageItem({ src: item.srcUrl,}));
 
 
     /** Lightbox Example */
@@ -37,18 +37,10 @@ export class CategoryComponent {
 const data = [
   {
     srcUrl: '../../../assets/images/img-1.jpg',
-    previewUrl: '../../../assets/images/img-1.jpg'
+    // previewUrl: '../../../assets/images/img-1.jpg'
   },
   {
-    srcUrl: 'https://preview.ibb.co/kPE1D6/clouds.jpg',
-    previewUrl: 'https://preview.ibb.co/kPE1D6/clouds.jpg'
+    srcUrl: 'https://drive.google.com/file/d/1nJTOuqAFTCdzk8ykgMdDF9zTaW1JGyr_/view?usp=share_link',
+    // previewUrl: '../../../assets/images/img-1.jpg'
   },
-  {
-    srcUrl: 'https://preview.ibb.co/mwsA6R/img7.jpg',
-    previewUrl: 'https://preview.ibb.co/mwsA6R/img7.jpg'
-  },
-  {
-    srcUrl: 'https://preview.ibb.co/kZGsLm/img8.jpg',
-    previewUrl: 'https://preview.ibb.co/kZGsLm/img8.jpg'
-  }
 ];
