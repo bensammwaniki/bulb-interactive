@@ -8,13 +8,24 @@ import * as $ from 'jquery';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
-  amount: number=0;
+  private _amount = 0;
   phoneNumber: number=0;
+  disp: number =2500;
 
-  constructor(private mpesaService: MpesaService) { }
+  constructor(private mpesaService: MpesaService) {}
+  get amount() {
+    return this._amount;
+  }
 
+  set amount(value: number) {
+    this._amount = value;
+    this.disp = this.getVal();
+  }
   onSubmit() {
-    this.mpesaService.sendPaymentRequest(this.amount, this.phoneNumber).subscribe(
+    let tkt = this.amount;
+    const calc = () => {let ticket = tkt * 2500; return ticket;};
+
+    this.mpesaService.sendPaymentRequest(calc(), this.phoneNumber).subscribe(
       response => console.log(response),
       error => console.log(error),
     );
@@ -34,5 +45,9 @@ export class NavBarComponent {
   }
   togg(): void{
     $('#ico').removeClass("navbar-toggler-icon").addClass("btn-close");
+  }
+  getVal(){
+    const val = this.amount * 2500;
+    return val
   }
 }

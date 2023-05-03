@@ -56,14 +56,17 @@
           <form (ngSubmit)="onSubmit()">
 
             <div class="mb-3">
-              <label for="input1" class="form-label">Enter Amount</label>
-              <input type="number" [(ngModel)]="amount" name="amount" required class="form-control" id="input1" aria-describedby="input1">
+              <label for="input1" class="form-label">Tickets</label>
+              <div class="d-flex">
+                <input style="width: 50%;" type="number" min="1" [(ngModel)]="amount" name="amount" placeholder="1" required class="form-control" id="input1" aria-describedby="input1">
+                <div class="p-2 amount">Total: {{disp}}/-</div> 
+              </div>
               <div id="input1" class="form-text">Please note enter amount only once</div>
             </div>
 
             <div class="mb-3">
               <label for="input2" class="form-label">Enter Phone Number</label>
-              <input type="number" [(ngModel)]="phoneNumber" name="phoneNumber" required class="form-control" id="input2" aria-describedby="input2">
+              <input type="number" [(ngModel)]="phoneNumber" name="phoneNumber" required class="form-control" aria-valuenow="0720-200 200" id="input2" aria-describedby="input2">
               <div id="input2" class="form-text"> </div>
             </div>
 

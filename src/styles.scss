@@ -621,6 +621,77 @@ button{
     margin-left: 5px;
     padding: 5px 5px 5px 5px;
 }
+//===================Story========================//
+.blog-post{
+    display: flex;
+    align-items: center;
+    max-width: 90rem;
+    background-color: #fff;
+    padding: 2.5rem;
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.8rem;
+    .blog-post_img{
+        position: relative;
+        min-width: 35rem;
+        max-width: 35rem;
+        height: 30rem;
+        transform: translateX(-8rem);
+    }
+    .blog-post_img img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.8rem;
+    }
+    .blog-post_img::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, $primary 0%, $secondary 100%);
+        box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.05);
+        border-radius: 0.8rem;
+        opacity: 0.5;
+    }
+    .blog-post_date span{
+        display: block;
+        color: $primary;
+        font-weight: 600;
+        margin: 0.5rem 0;
+    }
+    .blog-post_title{
+        font-size: 1.5rem;
+        font-family: $bold;
+        margin: 1.5rem 0 2rem;
+        text-transform: uppercase;
+        color: $secondary;
+    }
+    .blog-post_info p{
+        margin-bottom: 3rem;
+        color: #000000e9;
+    }
+    .blog-post_cta{
+        display: inline-block;
+        text-decoration: none;
+        background-image: linear-gradient( to right, $primary 0%, $secondary 100%,);
+        padding: 1.5rem 3rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 0.8rem;
+    }
+    .blog-post_cta:hover{
+        background-image: linear-gradient( to right, #00f2fe 0%, #4facfe 100%,);
+    }
+}
+.amount{
+    width: 50%;
+    border: 0.5px solid #75757536;
+    border-radius: $border-radius;
+    margin-left: 5px;
+    color: $primary;
+    font-family: $bold;
+}
 
 // ===============Footer =========================//
 .whatsapp{
@@ -698,10 +769,85 @@ button{
 }
 
 //====================== Responsiveness ===================================//
+// =======================bigger tablet================================//
+@media (max-width: 1068px) {
+    .blog-post{
+        max-width: 80rem;
+        flex-direction: column;
+    }
+}
+
+//===================tablet========================================//
+@media (max-width: 868px) {
+
+    .margin_both{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .margin_one{
+        margin-bottom: 20px;
+    }
+
+    .bslogo {
+        img{
+            width: 140px;
+            object-fit: contain;
+        }   
+      }
+
+      .row-left{
+        width: 95%;
+        margin-bottom: 20px;
+    }
+    .displays {
+        min-width: 45%;
+    }
+    .home{
+        height: 400px;
+        .carousel-item{
+            height: 400px;
+             .web{
+                height: 400px;
+                object-fit: cover;
+            } 
+        }
+    }
+    .speaker{
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 200px;
+        }
+    }
+    .pos-map{
+        position: relative;
+        width: 100vw;
+        left: -7vw;
+        padding: 0px;
+        max-width: 117%;
+        div{
+            width: 100%;                
+        }
+    }
+    .row-mag{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .blog-post{
+        max-width: 70rem;
+        flex-direction: column;
+    }
+    .blog-post_img{
+        min-width: 30rem;
+        max-width: 30rem;
+        transform: translate(0, -2rem);
+
+    }
+   }
 // ===================== Mobile phone ====================================//
 
 
-    @media only screen and (max-width: 750px) {
+    @media (max-width: 768px) {
         .logo{
             height: 30px;
             object-fit: contain;
@@ -855,72 +1001,19 @@ button{
         .about p{
             text-align: start;
         }
-
-        // .row-mag{
-        //     margin-left: 50px;
-        //     margin-right: 50px;
-        // }
         .text-desc-mag ul {
             min-width: 243px !important;
             transform: translate3d(-122.81px, -39.2px, 0px) !important;
+        }
+        .blog-post{
+            padding: 2.5rem;
+            flex-direction: column;
+        }
+        .blog-post_img{
+            min-width: 100%;
+            transform: translate(0, -8rem);
         }
       }
 
 //====================== Responsiveness===================================//
 // ********************* End Mobile phone *******************************//
-@media only screen and (max-width: 990px) {
-
-    .margin_both{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .margin_one{
-        margin-bottom: 20px;
-    }
-
-    .bslogo {
-        img{
-            width: 140px;
-            object-fit: contain;
-        }   
-      }
-
-      .row-left{
-        width: 95%;
-        margin-bottom: 20px;
-    }
-    .displays {
-        min-width: 45%;
-    }
-    .home{
-        height: 400px;
-        .carousel-item{
-            height: 400px;
-             .web{
-                height: 400px;
-                object-fit: cover;
-            } 
-        }
-    }
-    .speaker{
-        img{
-            width: 100%;
-            object-fit: cover;
-            border-radius: 200px;
-        }
-    }
-    .pos-map{
-        position: relative;
-        width: 100vw;
-        left: -7vw;
-        padding: 0px;
-        max-width: 117%;
-        div{
-            width: 100%;                
-        }
-    }
-    .row-mag{
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-   }
