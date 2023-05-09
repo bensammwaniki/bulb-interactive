@@ -8,7 +8,7 @@ import * as $ from 'jquery';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
-  private _amount = 0;
+  private _amount = 1;
   phoneNumber: number=0;
   disp: number =2500;
 
@@ -24,7 +24,6 @@ export class NavBarComponent {
   onSubmit() {
     let tkt = this.amount;
     const calc = () => {let ticket = tkt * 2500; return ticket;};
-
     this.mpesaService.sendPaymentRequest(calc(), this.phoneNumber).subscribe(
       response => console.log(response),
       error => console.log(error),

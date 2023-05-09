@@ -1,0 +1,6 @@
+{
+    "/mpesa/*": {
+      "target": "https://sandbox.safaricom.co.ke/",
+      "pathRewrite": {"^/api" : ""}
+    }
+  }

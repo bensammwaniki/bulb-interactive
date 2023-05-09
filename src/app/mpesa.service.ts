@@ -29,24 +29,24 @@ export class MpesaService {
   sendPaymentRequest(amount: number, phoneNumber: number): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': this.auth_token
+      Authorization: this.auth_token
     });
     const body = {
-      "BusinessShortCode": 174379,
-      "Password": generateEncodedCredentials(),
-      "Timestamp": generateTimestamp(),
-      "TransactionType": "CustomerPayBillOnline",
-      "Amount": amount,
-      "PartyA": phoneNumber,
-      "PartyB": 174379,
-      "PhoneNumber": phoneNumber,
-      "CallBackURL": "https://mydomain.com/path",
-      "AccountReference": "CompanyXLTD",
-      "TransactionDesc": "Payment of X"
+      BusinessShortCode: 174379,
+      Password: generateEncodedCredentials(),
+      Timestamp: generateTimestamp(),
+      TransactionType: 'CustomerPayBillOnline',
+      Amount: amount,
+      PartyA: phoneNumber,
+      PartyB: 174379,
+      PhoneNumber: phoneNumber,
+      CallBackURL: 'https://mydomain.com/path',
+      AccountReference: 'CompanyXLTD',
+      TransactionDesc: 'Payment of X'
     };
-    const request = new HttpRequest('OPTIONS', this.mpesaUrl, body, {headers});
+    const request = new HttpRequest('POST', this.mpesaUrl, body, { headers });
     if (request.method === 'OPTIONS') {
-      const response = new HttpResponse({status: 200});
+      const response = new HttpResponse({ status: 200 });
       response.headers.set('Access-Control-Allow-Origin', '*');
       response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
       response.headers.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
