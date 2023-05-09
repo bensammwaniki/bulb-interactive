@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule } from '@angular/common/http';
+import {HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { GalleryModule } from  'ng-gallery';
@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { LightgalleryModule } from 'lightgallery/angular';
+import { LoadingInterceptor } from './loading.interceptor';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -38,6 +39,7 @@ import { TicketComponent } from './Shared/ticket/ticket.component';
 import { SocialsComponent } from './Shared/socials/socials.component';
 import { AboutTvComponent } from './Home/about-tv/about-tv.component';
 import { ImageGalleryComponent } from './Shared/image-gallery/image-gallery.component';
+import { SpinnerComponent } from './Shared/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { ImageGalleryComponent } from './Shared/image-gallery/image-gallery.comp
     TicketComponent,
     SocialsComponent,
     AboutTvComponent,
-    ImageGalleryComponent
+    ImageGalleryComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -111,7 +114,10 @@ import { ImageGalleryComponent } from './Shared/image-gallery/image-gallery.comp
       provide: LIGHTBOX_CONFIG,
       useValue: {
         keyboardShortcuts: false
-      }
+      },
+    },
+    {
+      provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
     }
   ],
   bootstrap: [AppComponent]
