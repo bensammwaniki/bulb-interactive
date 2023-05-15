@@ -40,6 +40,7 @@ import { SocialsComponent } from './Shared/socials/socials.component';
 import { AboutTvComponent } from './Home/about-tv/about-tv.component';
 import { ImageGalleryComponent } from './Shared/image-gallery/image-gallery.component';
 import { SpinnerComponent } from './Shared/spinner/spinner.component';
+import { CountdownComponent } from './Event/countdown/countdown.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { SpinnerComponent } from './Shared/spinner/spinner.component';
     SocialsComponent,
     AboutTvComponent,
     ImageGalleryComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,

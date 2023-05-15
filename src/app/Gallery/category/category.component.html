@@ -1,8 +1,6 @@
-  <div class="container-fluid text-center cat-main">
+  <div class="container text-center cat-main">
       <h2 class="primary">Event images</h2>
       <div class="row row-cols-md-2 row-cols-lg-4 g-2 category justify-content-center" gallerize>
-          <img *ngFor="let img of imageData" [src]="img.srcUrl" class="displays">
+          <img *ngFor="let img of imageData" [src]="img.srcUrl" class="col displays">
       </div>  
   </div>
-videos on different events cartegorized
-the above to be taken to the events Album

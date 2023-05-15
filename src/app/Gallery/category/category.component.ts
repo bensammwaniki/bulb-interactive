@@ -36,11 +36,37 @@ export class CategoryComponent {
 
 const data = [
   {
-    srcUrl: '../../../assets/images/img-1.jpg',
+    srcUrl: '../../../assets/images/test.jpg',
+    previewUrl: '../../../assets/images/test(1).jpg'
+  },
+  {
+    srcUrl: '../../../assets/images/test(1).jpg',
     // previewUrl: '../../../assets/images/img-1.jpg'
   },
   {
-    srcUrl: 'https://drive.google.com/file/d/1nJTOuqAFTCdzk8ykgMdDF9zTaW1JGyr_/view?usp=share_link',
+    srcUrl: '../../../assets/images/test(2).jpg',
     // previewUrl: '../../../assets/images/img-1.jpg'
   },
+  {
+    srcUrl: '../../../assets/images/test(3).jpg',
+    // previewUrl: '../../../assets/images/img-1.jpg'
+  },
+  {
+    srcUrl: '../../../assets/images/test(4).jpg',
+    // previewUrl: '../../../assets/images/img-1.jpg'
+  },
+  {
+    srcUrl: '../../../assets/images/test(6).jpg',
+    // previewUrl: '../../../assets/images/img-1.jpg'
+  },
+  {
+    srcUrl: '../../../assets/images/test(5).jpg',
+    // previewUrl: '../../../assets/images/img-1.jpg'
+  },
+  {
+    srcUrl: '../../../assets/images/test(1).jpg',
+    // previewUrl: '../../../assets/images/img-1.jpg'
+  },
+  
+
 ];

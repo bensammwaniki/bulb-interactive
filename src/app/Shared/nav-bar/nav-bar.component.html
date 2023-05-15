@@ -1,5 +1,5 @@
 <!-- Nav Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top transparent" [class.transparent]="!isScrolled" [class.scrolled]="isScrolled">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top transparent" [class.transparent]="!isScrolled" [class.scrolled]="isScrolled">
     <div class="container-fluid">
 
         <a routerLink="/">
@@ -71,11 +71,35 @@
             </div>
 
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary">Make Payments</button>
+              <button type="submit" class="btn btn-secondary btnEdit shadow">Make Payments</button>
             </div>
 
           </form>
         </div>        
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="modal modal-xl" id="magazine" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center">
+          <div>
+            <img src="../../../assets/images/construct.png" alt="" style="width: 600px;height: fit-content;object-fit: contain;">
+            <p>
+              🚧 Our website is currently under construction. 🚧 <br>
+              We're working hard to bring you a new and improved experience. In the meantime, <br>
+              you can click the button below to learn more about our company and what we have to offer. <br>
+              <a type="button" href="https://online.fliphtml5.com/bsqkp/ccjb/" class="btn btn-secondary btnEdit" target="_blank" rel="noopener noreferrer">[Learn More]</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
