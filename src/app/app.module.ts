@@ -41,6 +41,7 @@ import { AboutTvComponent } from './Home/about-tv/about-tv.component';
 import { ImageGalleryComponent } from './Shared/image-gallery/image-gallery.component';
 import { SpinnerComponent } from './Shared/spinner/spinner.component';
 import { CountdownComponent } from './Event/countdown/countdown.component';
+import { AllvideosComponent } from './Gallery/allvideos/allvideos.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { CountdownComponent } from './Event/countdown/countdown.component';
     AboutTvComponent,
     ImageGalleryComponent,
     SpinnerComponent,
-    CountdownComponent
+    CountdownComponent,
+    AllvideosComponent
   ],
   imports: [
     BrowserModule,

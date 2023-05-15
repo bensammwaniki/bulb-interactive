@@ -168,15 +168,7 @@ body{
         } 
     }
 }
-.slidertxtmag{
-    color: white;
-    font-family: $black;
-    padding: 5px;
-    h1{
-        text-align: center;
-        white-space: nowrap;
-    }
-  }
+
 // magazine slider>>>>>>>>>>>>>>>>>>>>>>>>>
 //video slider>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 .video{
@@ -193,31 +185,7 @@ body{
 //video slider>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //video carousel section 2-----------------
 
-.featured-carousel h3,
-.featured-carousel p, .featured-carousel h2 {
-  text-align: center;
-  color: $primary;
-  font-family: $bold;
-  font-size: 1.2rem;
-  margin-top: 20px;
-}
 
-.featured-carousel .tile {
-    position: relative;
-    display: inline-block;
-    width: 420px;
-    height: 250px;
-    margin-right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 450ms all;
-    transform-origin: center left;
-  }
-  .featured-carousel .tile__img {
-    width: 420px;
-    height: 250px;
-    object-fit: cover;
-  }
 //video carousel the other css affecting 
 //video slider can be found in their idividual componets.css
 
@@ -344,12 +312,6 @@ body{
     background: linear-gradient(to right, #18c9ff 0%, #007fa5 100%);
     transition:scale 0.5s ;
 }
-.row-left{
-    width: 95%;
-    position: relative;
-    left: 5%;
-    margin-bottom: 60px;
-}
 //editions>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 .mag{
     margin-top: 80px;
@@ -367,7 +329,7 @@ body{
     }
 }
 
-// ===============Home links,Editions, =====================//
+// ===============Home links,Editions,=====================//
 .cat-main{
     margin-bottom: 40px;
     h2{
@@ -469,36 +431,29 @@ body{
 
 
 .branding{
-    height: 400px;
+    position: relative;
+    height: 250px;
+    width: 100%;
     img{
         width: 100%;
-        height: 400px;
+        height: inherit;
         object-fit: cover;
     }
     .overlay{
         position: absolute;
-        height: 400px;
+        height: inherit;
         width: 100%;
         left: 0px;
         top: 0px;
         background: linear-gradient(204.37deg, #00BAF2 14.01%, #2B09DE 84.41%);
         opacity: 0.4;
     }
-}
-.about{
-    padding: 0px 40px 40px 0px;
-    margin: 10px 10px 10px 0px;
-    p{
-        text-align: center;
+    h2{
+        color: white;
+        font-family: $bold;
+        font-size: 3rem;
     }
 }
-.why{
-    padding: 0px 40px 40px 0px;
-    margin: 10px 10px 10px 0px;
-
-}
-
-
 
 .sub-heading{
     text-align: center;
@@ -583,9 +538,11 @@ button{
     }
     }
 .ben-card{
+    padding: 40px;
+    margin: 10px;
     background-color: #fdfdfd;
-    font-family: $bold;
-    font-size: 15px;
+    border-radius: $border-radius;
+    font-size: 0.9rem;
     box-shadow: $box-shadow;
 }
 .castom-publication{
@@ -744,6 +701,20 @@ button{
     margin-left: 5px;
     color: $primary;
     font-family: $bold;
+}
+.tile_head{
+    text-align: center;
+    color: #2A3181;
+    font-family: InterBo;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.tile_video{
+    height: fit-content;
+    .tile_media_video{   
+        height: 240px;
+    }
 }
 
 // ===============Footer =========================//
@@ -976,15 +947,6 @@ button{
                 padding-left: 0px;
           }
           }
-        .about{
-            padding: 0px;
-            margin: 0px;
-        }
-
-        .why{
-            padding: 0px;
-            margin: 0px;
-        }
 
         .cards{
             margin-left: 0.8rem;
