@@ -716,6 +716,22 @@ button{
         height: 240px;
     }
 }
+.custom_btn{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    .btn{
+        color: white;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .btn:hover{
+        color: #2A3181;
+        font-size: 13px;
+    }
+
+}
 
 // ===============Footer =========================//
 .whatsapp{
@@ -871,6 +887,13 @@ button{
         }
         .btnEdit{
             height: 38px;
+        }
+        .custom_btn{
+            width: 100%;
+            .btnEdit{
+                width: 80px;
+                font-size: 10px;
+            }
         }
         .slide{
             height: fit-content;

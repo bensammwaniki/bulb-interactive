@@ -46,16 +46,18 @@
     </div>
 
 
-    
-    <div class="btn-group m-4 col" role="group" aria-label="Basic mixed styles example">
-      <button type="button" class="btn btn-secondary btnEdit shadow" (click)="filterVideos('all')"><span>Filter</span> Show all</button>
-      <button type="button" class="btn btn-secondary btnEdit shadow" (click)="filterVideos('tech')">Tech</button>
-      <button type="button" class="btn btn-secondary btnEdit shadow" (click)="filterVideos('design')">Design</button>
-      <button type="button" class="btn btn-secondary btnEdit shadow" (click)="filterVideos('networking')">Networking</button>
-    </div>
-
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 g-lg-3">
+      <div class="col custom_btn">
+        <button type="button" class="btn btnEdit shadow dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> <span>Filter</span> </button>
+        <ul class="dropdown-menu">        
+            <button type="button" class="btn" (click)="filterVideos('all')">Show all</button>
+            <button type="button" class="btn" (click)="filterVideos('tech')">Tech</button>
+            <button type="button" class="btn" (click)="filterVideos('design')">Design</button>
+            <button type="button" class="btn" (click)="filterVideos('networking')">Networking</button>
+        </ul>
+      </div>
+
       <div class="col filter hide tech">
           <div class="tile_video">
               <div class="tile_media_video">
