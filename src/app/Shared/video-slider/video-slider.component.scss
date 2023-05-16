@@ -4,26 +4,6 @@
 * {
   box-sizing: border-box;
 }
-.featured-carousel{
-    .row {
-      overflow-x:scroll;
-      overflow-y: hidden;
-      width: 100%;
-    }
-    .tile {
-      position: relative;
-      display: inline-block;
-      margin-right: 10px;
-      font-size: 20px;
-      cursor: pointer;
-      transition: 450ms all;
-      transform-origin: center left;
-    }
-    .tile__img{
-      width: 420px;
-      height: 240px;
-    }
-} 
 .featured-carousel .row::-webkit-scrollbar{
   display: none;
 }

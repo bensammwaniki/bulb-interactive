@@ -1,4 +1,4 @@
-import { Component,HostListener  } from '@angular/core';
+import { Component,HostListener,ElementRef, Renderer2 } from '@angular/core';
 import { MpesaService } from '../../mpesa.service';
 import * as $ from 'jquery';
 
@@ -12,7 +12,7 @@ export class NavBarComponent {
   phoneNumber: number=0;
   disp: number =2500;
 
-  constructor(private mpesaService: MpesaService) {}
+  constructor(private mpesaService: MpesaService, private renderer: Renderer2) {}
   get amount() {
     return this._amount;
   }
@@ -38,12 +38,24 @@ export class NavBarComponent {
   onScroll(): void {
     this.isScrolled = window.pageYOffset > 130;
   }
+  
   hideNavbar(): void {
-    $('#navbartoggle').addClass("hide");
-    $('#navbartoggle').removeClass("show");
+    const navbartoggle = document.getElementById('navbartoggle');
+    this.renderer.addClass(navbartoggle, 'hide');
+    this.renderer.removeClass(navbartoggle, 'show');
   }
   togg(): void{
     $('#ico').removeClass("navbar-toggler-icon").addClass("btn-close");
+  }
+  openNav(): void{
+    const mySidenav = document.getElementById("navdiv");
+    this.renderer.setStyle(mySidenav, 'display', 'flex');
+  }
+  closeNav(): void{
+    const sidenav = document.getElementById("navdiv");
+    if (sidenav) {
+      sidenav.style.display = "none";
+    }
   }
   getVal(){
     const val = this.amount * 2500;
