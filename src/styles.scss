@@ -256,7 +256,6 @@ body{
         display: flex;
         justify-content: space-between;
         border-bottom-left-radius: $border-radius;
-        padding-top: 75px;
     }
     ul{
         display: flex;
@@ -967,10 +966,11 @@ button{
             flex-wrap: nowrap;
             justify-content: space-evenly;
             position: absolute;
+            padding-top: 150px;
             top: 0px;
             right: 0px;
             z-index: 1;
-            height: 345px;
+            height: 500px;
             width: 0%;
             overflow: hidden;
             background-color: #2A3181;
