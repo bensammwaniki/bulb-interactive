@@ -8,37 +8,38 @@
 </div>
 
 <nav class="myNavbar sticky-top transparent" [class.transparent]="!isScrolled" [class.scrolled]="isScrolled">
-      <div class="navdiv" id="navdiv" (click)="hideNavbar()">
-        <div class="icon close" (click)="closeNav()">
-          <i class="fa-sharp fa-solid fa-xmark"></i>
-        </div>
+      <div class="navdiv" id="navdiv">
+          <!--Close Navbar icons -->
+          <div class="icon close" (click)="closeNav()">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+          </div>
 
-          <ul class="m-auto mb-lg-0 content" >
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/" routerLinkActive="active-link"  [routerLinkActiveOptions]="{exact:true}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  routerLink="/events" routerLinkActive="active-link"  [routerLinkActiveOptions]="{exact:true}">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  routerLink="/magazine" routerLinkActive="active-link"  [routerLinkActiveOptions]="{exact:true}">Bulb Magazine</a>
-            </li>
+            <ul class="m-auto mb-lg-0 content" >
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/" routerLinkActive="active-link"  [routerLinkActiveOptions]="{exact:true}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  routerLink="/events" routerLinkActive="active-link"  [routerLinkActiveOptions]="{exact:true}">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  routerLink="/magazine" routerLinkActive="active-link"  [routerLinkActiveOptions]="{exact:true}">Bulb Magazine</a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link"  routerLink="/videos" routerLinkActive="active-link"  [routerLinkActiveOptions]="{exact:true}">Bulb TV</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  routerLink="/branding" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Personal Branding</a>
-            </li>
-          </ul>
-          <ul>
-            <li class="nav-item">
-              <app-ticket></app-ticket>
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a class="nav-link"  routerLink="/videos" routerLinkActive="active-link"  [routerLinkActiveOptions]="{exact:true}">Bulb TV</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  routerLink="/branding" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Personal Branding</a>
+              </li>
+            </ul>
+            <ul>
+              <li class="nav-item">
+                <app-ticket></app-ticket>
+              </li>
+            </ul>
       </div>
 
-        <!-- menu icons -->
+        <!--open Navbar icons -->
         <div class="icon" (click)="openNav()">
           <i class="fa-solid fa-bars"></i>
         </div>

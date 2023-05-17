@@ -1,6 +1,6 @@
 import { Component,HostListener,ElementRef, Renderer2 } from '@angular/core';
 import { MpesaService } from '../../mpesa.service';
-import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -33,28 +33,26 @@ export class NavBarComponent {
 
   @HostListener('window:scroll', [])
 
-  // Styling the nav bar using funtions//
-//=======================================//
+// Styling the nav bar using funtions\\
+//===================================\\
   onScroll(): void {
     this.isScrolled = window.pageYOffset > 130;
   }
   
-  hideNavbar(): void {
-    const navbartoggle = document.getElementById('navbartoggle');
-    this.renderer.addClass(navbartoggle, 'hide');
-    this.renderer.removeClass(navbartoggle, 'show');
-  }
-  togg(): void{
-    $('#ico').removeClass("navbar-toggler-icon").addClass("btn-close");
-  }
+  // hideNavbar(): void {
+  //   const navbartoggle = document.getElementById('navbartoggle');
+  //   this.renderer.addClass(navbartoggle, 'hide');
+  //   this.renderer.removeClass(navbartoggle, 'show');
+  // }
+  
   openNav(): void{
     const mySidenav = document.getElementById("navdiv");
-    this.renderer.setStyle(mySidenav, 'display', 'flex');
+    this.renderer.setStyle(mySidenav, 'width', '60%');
   }
   closeNav(): void{
     const sidenav = document.getElementById("navdiv");
     if (sidenav) {
-      sidenav.style.display = "none";
+      sidenav.style.width = "0%";
     }
   }
   getVal(){
