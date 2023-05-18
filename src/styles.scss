@@ -675,18 +675,25 @@ button{
     padding-bottom: 10px;
     text-align: center;
     color: white;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     bottom: 0px;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
     a{
-        background-color: #ffffff72;
         border-radius:0.5rem;
         padding: 5px 8px;
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin: 2px;
         height: fit-content;
         width: fit-content;
         text-decoration: none;
         color: white;
+    }
+    a:hover{
+        scale: 1.2;
+        transition: 15ms;
     }
     ul{
         background-color: #00000000 !important;
@@ -694,7 +701,6 @@ button{
     }
     p{
         font-size: 0.9rem;
-        font-family: $bold;
         letter-spacing: 1px;
         text-transform: uppercase;
         padding-top: 5px;
