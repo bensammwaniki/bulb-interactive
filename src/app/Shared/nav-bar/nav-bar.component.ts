@@ -39,15 +39,15 @@ export class NavBarComponent {
     this.isScrolled = window.pageYOffset > 130;
   }
   
-  // hideNavbar(): void {
-  //   const navbartoggle = document.getElementById('navbartoggle');
-  //   this.renderer.addClass(navbartoggle, 'hide');
-  //   this.renderer.removeClass(navbartoggle, 'show');
-  // }
+  hideNavbar(): void {
+    const navbartoggle = document.getElementById('navdiv');
+    this.renderer.addClass(navbartoggle, 'nav_hide');
+  }
   
   openNav(): void{
     const mySidenav = document.getElementById("navdiv");
     this.renderer.setStyle(mySidenav, 'width', '60%');
+    this.renderer.removeClass(mySidenav, 'nav_hide');
   }
   closeNav(): void{
     const sidenav = document.getElementById("navdiv");

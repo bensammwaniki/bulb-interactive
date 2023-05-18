@@ -8,7 +8,7 @@
 </div>
 
 <nav class="myNavbar sticky-top transparent" [class.transparent]="!isScrolled" [class.scrolled]="isScrolled">
-      <div class="navdiv" id="navdiv">
+      <div class="navdiv" id="navdiv" (click)="hideNavbar()">
           <!--Close Navbar icons -->
           <div class="icon close" (click)="closeNav()">
             <i class="fa-sharp fa-solid fa-xmark"></i>

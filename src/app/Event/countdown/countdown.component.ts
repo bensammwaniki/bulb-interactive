@@ -16,7 +16,7 @@ export class CountdownComponent {
   private subscription: Subscription = new Subscription();
   private message: string = '';
   constructor(elm: ElementRef) {
-    this.futureString = '2023-05-31T00:00:00';
+    this.futureString = '2023-05-24T00:00:00';
   }
   days: number=0;
   hours: number=0;
