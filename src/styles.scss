@@ -398,6 +398,7 @@ body{
         height: 35px;
         width: 35px;
         object-fit: contain;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 }
 .publication{
@@ -439,6 +440,10 @@ body{
 }
 
 // ===============Home links,Editions,=====================//
+.gif{
+    width: 100%;
+    object-fit: contain;
+}
 .cat-main{
     margin-bottom: 40px;
     h2{
@@ -949,7 +954,7 @@ button{
       }
 
       .row-left{
-        width: 95%;
+        padding-left: 20px;
         margin-bottom: 20px;
     }
     .displays {
@@ -1045,6 +1050,11 @@ button{
             transition: 1s;
         }
     }
+    .branding{
+        h2{
+            font-size: 2rem;
+        }
+    }
    }
 // ===================== Mobile phone ====================================//
     @media (max-width: 768px) {
@@ -1106,7 +1116,7 @@ button{
             border-radius: 50%;
         }
         .row-left{
-            width: 95%;
+            padding-left: 20px;
             margin-bottom: 20px;
         }
 

@@ -42,6 +42,7 @@ import { ImageGalleryComponent } from './Shared/image-gallery/image-gallery.comp
 import { SpinnerComponent } from './Shared/spinner/spinner.component';
 import { CountdownComponent } from './Event/countdown/countdown.component';
 import { AllvideosComponent } from './Gallery/allvideos/allvideos.component';
+import { NotfoundComponent } from './Shared/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { AllvideosComponent } from './Gallery/allvideos/allvideos.component';
     ImageGalleryComponent,
     SpinnerComponent,
     CountdownComponent,
-    AllvideosComponent
+    AllvideosComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -88,10 +90,10 @@ import { AllvideosComponent } from './Gallery/allvideos/allvideos.component';
     RouterModule.forRoot([
       { path: '', 
         redirectTo: 'home', 
-        pathMatch: 'full' 
+        pathMatch: 'full'
       },
       {
-        path:'',
+        path:'home',
         component: HomeComponent
       },
       {
@@ -109,6 +111,10 @@ import { AllvideosComponent } from './Gallery/allvideos/allvideos.component';
       {
         path:'branding',
         component: BrandingComponent
+      },
+      {
+        path:'**',
+        component: NotfoundComponent
       },
 
     ])
