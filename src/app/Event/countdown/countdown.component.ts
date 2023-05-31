@@ -1,6 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
-import { Observable, interval } from 'rxjs';
-import { Subscription } from 'rxjs';
+import { Observable, interval,Subscription } from 'rxjs';
+import {  } from 'rxjs';
 import { map,takeUntil } from 'rxjs/operators';
 
 @Component({
@@ -16,7 +16,7 @@ export class CountdownComponent {
   private subscription: Subscription = new Subscription();
   private message: string = '';
   constructor(elm: ElementRef) {
-    this.futureString = '2023-05-24T00:00:00';
+    this.futureString = '2023-06-24T00:00:00';
   }
   days: number=0;
   hours: number=0;
@@ -59,6 +59,7 @@ export class CountdownComponent {
     this.subscription = this.$counter
       .subscribe((x) => this.message = this.dhms(this.diff));
   }
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
