@@ -1,7 +1,7 @@
 import { Component, ElementRef } from '@angular/core';
 import { Observable, interval } from 'rxjs';
 import { Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map,takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-countdown',
@@ -52,10 +52,14 @@ export class CountdownComponent {
       map((x) => {
         this.diff = Math.floor((this.future.getTime() - new Date().getTime()) / 1000);
         return x;
-      })
+      }),
+      takeUntil(interval(this.diff * 1000))
     );
   
     this.subscription = this.$counter
       .subscribe((x) => this.message = this.dhms(this.diff));
+  }
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }
