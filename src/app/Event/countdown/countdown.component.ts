@@ -16,7 +16,7 @@ export class CountdownComponent {
   private subscription: Subscription = new Subscription();
   private message: string = '';
   constructor(elm: ElementRef) {
-    this.futureString = '2023-06-24T00:00:00';
+    this.futureString = '2023-06-15T18:00:00';
   }
   days: number=0;
   hours: number=0;
@@ -53,7 +53,7 @@ export class CountdownComponent {
         this.diff = Math.floor((this.future.getTime() - new Date().getTime()) / 1000);
         return x;
       }),
-      takeUntil(interval(this.diff * 1000))
+      // takeUntil(interval(this.diff * 1000))
     );
   
     this.subscription = this.$counter
