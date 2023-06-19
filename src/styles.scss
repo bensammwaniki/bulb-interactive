@@ -754,6 +754,80 @@ button{
 .gallery-item img{
     border-radius: $border-radius;
 }
+
+.event-slider{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 50px;
+    border-radius: $border-radius;
+    background-color: #fff;
+    position: relative;
+	width: auto;
+    html {
+        scroll-behavior: smooth;
+      }
+    .head{
+        margin-bottom: 20px;
+        font-family: $bold;
+    }
+    .event{
+        width: 25rem;
+        height: 27rem;
+        position: relative;
+        margin-right: 20px;
+        img{
+            width: 25rem;
+            height: 100%;
+            border-radius: $border-radius;
+            object-fit: cover;           
+        }
+        .overlay{
+            position: absolute;
+            width: 25rem;
+            height: 100%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border-radius: $border-radius;
+            background-color: #11111156;
+            color: #fff;
+            top: 0px;
+            bottom: 0px;
+            transition: all 0.5s;
+            .badge{
+                width: fit-content;
+            }
+            h2{
+                font-family: $bold;
+                margin-top: 10px;
+            }
+            p{
+                max-height: 0px;
+                overflow: hidden;
+                transition:max-height 2s;
+            }
+            button{
+                height: 35px;
+                width: 145px;
+                padding: 0px 5px 0px 5px;
+            }
+        }
+        .overlay:hover{
+            background-color: #11111182;
+            backdrop-filter: blur(2px);
+            transition: all 2s;
+    
+            &:hover{
+                p{
+                    max-height: 125px;
+                    transition:max-height 2s;
+                }
+            }
+        }
+
+    }
+}
 //===================Story========================//
 .blog-post{
     display: flex;
@@ -1237,6 +1311,19 @@ button{
                 }
             }
         
+        }
+
+        .event-slider{
+            .event{
+                width: 20rem;
+                height: 22rem;    
+                img{
+                    width: 20rem;
+                }
+                .overlay{
+                    width: inherit;
+                }      
+            }
         }
       }
 //===========smaller phone sizes=========//

@@ -11,6 +11,7 @@ import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { LightgalleryModule } from 'lightgallery/angular';
 import { LoadingInterceptor } from './loading.interceptor';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -79,6 +80,7 @@ import { NotfoundComponent } from './Shared/notfound/notfound.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    SlickCarouselModule,
     GalleryModule,
     LightboxModule,
     AppRoutingModule,

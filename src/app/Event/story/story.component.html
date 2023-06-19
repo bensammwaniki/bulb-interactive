@@ -39,4 +39,32 @@ Add previous events testmonials with the link to the video -->
         </div>
     </article>
 
+
+        <div class="event-slider margin_one">
+          <h2 class="head">See what we've <br> done before</h2>
+            <div class="row">
+                <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel"
+                        [config]="slideConfig" 
+                        (init)="slickInit($event)"
+                        (breakpoint)="breakpoint($event)"
+                        (afterChange)="afterChange($event)"
+                        (beforeChange)="beforeChange($event)"
+                        >
+                    <div ngxSlickItem class="event"  *ngFor="let blog of blogs">
+                                <img [src]="blog.image" alt="">
+                            <div class="overlay">
+                                <span class="badge text-bg-primary">Past Events</span>
+                                <h2>The name of this event</h2>
+                                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                    Asperiores deserunt, voluptate odit fugiat sunt consectetur 
+                                    nisi maiores iste, nam tenetur distinctio sit ducimus obcaecati
+                                    cumque perspiciatis laudantium repellendus officiis commodi.
+                                </p>
+                                <button type="button" class="btn btn-secondary btnEdit">Learn More</button>
+                            </div>
+                    </div>
+                </ngx-slick-carousel>
+            </div>
+        </div>
 </div>
