@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-story',
@@ -7,30 +8,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./story.component.scss']
 })
 export class StoryComponent{
-  blogs = [
-    { id: 1, title: 'Blog 1', image: './../../assets/images/test(3).jpg' },
-    { id: 2, title: 'Blog 2', image: './../../assets/images/test(3).jpg' },
-    { id: 3, title: 'Blog 3', image: './../../assets/images/test(3).jpg' },
-    { id: 3, title: 'Blog 3', image: './../../assets/images/test(3).jpg' },
-    { id: 3, title: 'Blog 3', image: './../../assets/images/test(3).jpg' },
-  ];
-  slideConfig = { slidesToShow: 4, slidesToScroll: 4 };
+  blogs: any[] = [];
 
-  constructor(private router: Router) {}
+  slideConfig = { slidesToShow: 3, slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]};
+
+constructor(private router: Router, private http: HttpClient) {}
+ngOnInit() {
+  this.http.get<any[]>('/assets/blogs.json').subscribe(data => {
+    this.blogs = data;
+  });
+}
   openBlog(blogId: number) {
     this.router.navigate(['/blog', blogId]);
   }
-  slickInit(e: any) {
-    console.log('slick initialized');
-  }
-  breakpoint(e: any) {
-    console.log('breakpoint');
-  }
-  afterChange(e: any) {
-    console.log('afterChange');
-  }
-  beforeChange(e: any) {
-    console.log('beforeChange');
-  }
-  ngOnInit(): void {}
 }
