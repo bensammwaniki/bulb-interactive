@@ -50,13 +50,9 @@ Add previous events testmonials with the link to the video -->
                         <img [src]="blog.image" alt="">
                         <div class="overlay">
                             <span class="badge text-bg-primary">Past Events</span>
-                            <h2>The name of this event</h2>
-                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Asperiores deserunt, voluptate odit fugiat sunt consectetur 
-                                nisi maiores iste, nam tenetur distinctio sit ducimus obcaecati
-                                cumque perspiciatis laudantium repellendus officiis commodi.
-                            </p>
-                            <button type="button" class="btn btn-secondary btnEdit">Learn More</button>
+                            <h2>{{blog.title}}</h2>
+                            <p>{{blog.intro}}</p>
+                            <button type="button" class="btn btn-secondary btnEdit" (click)="openBlog(blog.id)">Learn More</button>
                         </div>
                     </div>
                 </ngx-slick-carousel>

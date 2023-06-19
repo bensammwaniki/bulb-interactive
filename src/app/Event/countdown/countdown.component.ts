@@ -53,7 +53,7 @@ export class CountdownComponent {
         this.diff = Math.floor((this.future.getTime() - new Date().getTime()) / 1000);
         return x;
       }),
-      // takeUntil(interval(this.diff * 1000))
+      takeUntil(interval(this.diff * 1000))
     );
   
     this.subscription = this.$counter

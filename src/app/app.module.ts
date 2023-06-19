@@ -44,6 +44,7 @@ import { SpinnerComponent } from './Shared/spinner/spinner.component';
 import { CountdownComponent } from './Event/countdown/countdown.component';
 import { AllvideosComponent } from './Gallery/allvideos/allvideos.component';
 import { NotfoundComponent } from './Shared/notfound/notfound.component';
+import { BlogPostComponent } from './Shared/blog-post/blog-post.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { NotfoundComponent } from './Shared/notfound/notfound.component';
     SpinnerComponent,
     CountdownComponent,
     AllvideosComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    BlogPostComponent
   ],
   imports: [
     BrowserModule,
@@ -114,6 +116,7 @@ import { NotfoundComponent } from './Shared/notfound/notfound.component';
         path:'branding',
         component: BrandingComponent
       },
+      { path: 'blog/:id', component: BlogPostComponent },
       {
         path:'**',
         component: NotfoundComponent
