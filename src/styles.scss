@@ -899,6 +899,49 @@ button{
         background-image: linear-gradient( to right, #00f2fe 0%, #4facfe 100%,);
     }
 }
+//================blog page==================//
+.blog-banner{
+    width: 100%;
+    height: 300px;
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    h2{
+        color: white;
+        font-family: $bold;
+        font-size: 3rem;
+        text-align: center;
+    }
+    p{
+        color: white;
+        font-family: $regular;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+}
+.blog-content{
+    margin: 0px 50px;
+    padding: 0px 100px;   
+    div{
+        padding: 5px 10px;
+        border-radius: $border-radius;
+        background-color: #f2f4f7;
+    }
+    img{
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: $border-radius;
+    }
+    p{
+        padding: 20px 100px;
+    }
+}
+
+
 .amount{
     width: 50%;
     border: 0.5px solid #75757536;
@@ -1312,6 +1355,34 @@ button{
                 }
             }
         
+        }
+        .blog-content{
+            margin: 0px;
+            padding: 0px;   
+            div{
+                padding: 10px 10px;
+            }
+            img{
+                width: 100%;
+                height: 350px;
+                object-fit: cover;
+                border-radius: $border-radius;
+            }
+            p{
+                padding: 20px 10px;
+            }
+        }
+        .blog-banner{
+            width: 100%;
+            height: 200px;
+            img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+            h2{
+                font-size: 2rem;
+            }
         }
         .event-slider .event{
             height: 21rem;
