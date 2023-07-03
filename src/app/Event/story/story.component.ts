@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./story.component.scss']
 })
 export class StoryComponent{
+  currentSlideIndex = 0;
   blogs: any[] = [];
 
   slideConfig = { slidesToShow: 3, slidesToScroll: 1,
@@ -26,7 +27,20 @@ ngOnInit() {
     this.blogs = data;
   });
 }
-  openBlog(blogId: number) {
+previousSlide() {
+  if (this.currentSlideIndex > 0) {
+    this.currentSlideIndex--;
+  }
+    console.log("clicked")
+  }
+
+nextSlide() {
+  if (this.currentSlideIndex < this.blogs.length - 1) {
+    this.currentSlideIndex++;
+  }
+  }
+openBlog(blogId: number) {
     this.router.navigate(['/blog', blogId]);
   }
+
 }

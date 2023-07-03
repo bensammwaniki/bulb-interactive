@@ -766,6 +766,28 @@ button{
     html {
         scroll-behavior: smooth;
       }
+    .story-head{
+        display: flex;
+        justify-content: space-between;
+      }
+    .cst-btn{
+        margin-top: 20px;
+        margin-top: 20px;
+        button{
+            font-size: 30px;
+            line-height: 1;
+            background-color: transparent;
+            padding: 20px 26px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+        button:nth-child(2):hover{
+            transform: translateX(5px);
+        }
+        button:first-child:hover{
+            transform: translateX(-5px);
+        }
+      }
     .head{
         margin-bottom: 20px;
         font-family: $bold;
