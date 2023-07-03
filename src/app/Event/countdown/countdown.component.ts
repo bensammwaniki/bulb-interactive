@@ -1,7 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
-import { Observable, interval,Subscription } from 'rxjs';
-import {  } from 'rxjs';
-import { map,takeUntil } from 'rxjs/operators';
+import { Observable, interval, Subscription } from 'rxjs';
+import { takeWhile } from 'rxjs/operators';
 
 @Component({
   selector: 'app-countdown',
@@ -15,13 +14,15 @@ export class CountdownComponent {
   private $counter: Observable<number> = new Observable();
   private subscription: Subscription = new Subscription();
   private message: string = '';
+
   constructor(elm: ElementRef) {
-    this.futureString = '2023-06-15T18:00:00';
+    this.futureString = '2023-07-06T17:00:00';
   }
-  days: number=0;
-  hours: number=0;
-  minutes: number=0;
-  seconds: number=0;
+
+  days: number = 0;
+  hours: number = 0;
+  minutes: number = 0;
+  seconds: number = 0;
 
   dhms(t: number) {
     let days, hours, minutes, seconds;
@@ -32,12 +33,12 @@ export class CountdownComponent {
     minutes = Math.floor(t / 60) % 60;
     t -= minutes * 60;
     seconds = t % 60;
-  
+
     this.days = days;
     this.hours = hours;
     this.minutes = minutes;
     this.seconds = seconds;
-  
+
     return [
       days + 'd',
       hours + 'h',
@@ -49,15 +50,17 @@ export class CountdownComponent {
   ngOnInit() {
     this.future = new Date(this.futureString);
     this.$counter = interval(1000).pipe(
-      map((x) => {
-        this.diff = Math.floor((this.future.getTime() - new Date().getTime()) / 1000);
-        return x;
-      }),
-      takeUntil(interval(this.diff * 1000))
+      takeWhile(() => this.diff >= 0),
     );
-  
-    this.subscription = this.$counter
-      .subscribe((x) => this.message = this.dhms(this.diff));
+
+    this.subscription = this.$counter.subscribe(() => {
+      this.diff = Math.floor((this.future.getTime() - new Date().getTime()) / 1000);
+      if (this.diff >= 0) {
+        this.message = this.dhms(this.diff);
+      } else {
+        this.message = 'Sorry time is up!';
+      }
+    });
   }
 
   ngOnDestroy() {

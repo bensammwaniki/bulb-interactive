@@ -1410,10 +1410,24 @@ button{
                 font-size: 2rem;
             }
         }
-        .event-slider .event{
-            height: 21rem;
-            p{
-                height: 120px;
+        .event-slider {
+            padding: 0px;
+            .story-head{
+                flex-direction: column;
+                .cst-btn{
+                    margin: 0px;
+                    button{
+                        font-size: 20px;
+                        padding: 14px 20px;
+                        margin: 5px;
+                    }
+                }
+            }
+            .event{
+                height: 21rem;
+                p{
+                    height: 120px;
+                }
             }
         }
       }
