@@ -32,31 +32,30 @@
             <a href="#" class="blog-post_cta">Learn more</a>
         </div>
     </article>
-
-
-        <div class="event-slider margin_one">
-            <div class="story-head">
-                <h2 class="head">See what we've <br> done before</h2>
-                <div class="cst-btn">
-                    <button (click)="slickModal.slickPrev()"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button (click)="slickModal.slickNext()"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-            </div>
-
-            <div class="row">
-                <ngx-slick-carousel class="carousel" 
-                        #slickModal="slick-carousel"
-                        [config]="slideConfig">
-                    <div ngxSlickItem class="event col"  *ngFor="let blog of blogs">
-                        <img [src]="blog.image" alt="">
-                        <div class="overlay">
-                            <span class="badge text-bg-primary">Past Events</span>
-                            <h2>{{blog.title}}</h2>
-                            <p>{{blog.intro}}</p>
-                            <button type="button" class="btn btn-secondary btnEdit" (click)="openBlog(blog.id)">Learn More</button>
-                        </div>
-                    </div>
-                </ngx-slick-carousel>
+</div>
+<div class="container">
+    <div class="event-slider margin_one">
+        <div class="story-head">
+            <h2 class="head">See what we've <br> done before</h2>
+            <div class="cst-btn">
+                <button (click)="slickModal.slickPrev()"><i class="fa-solid fa-chevron-left"></i></button>
+                <button (click)="slickModal.slickNext()"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
+        <div class="row">
+            <ngx-slick-carousel class="carousel" 
+                    #slickModal="slick-carousel"
+                    [config]="slideConfig">
+                <div ngxSlickItem class="event col"  *ngFor="let blog of blogs">
+                    <img [src]="blog.image" alt="">
+                    <div class="overlay">
+                        <span class="badge text-bg-primary">Past Events</span>
+                        <h2>{{blog.title}}</h2>
+                        <p>{{blog.intro}}</p>
+                        <button type="button" class="btn btn-secondary btnEdit" (click)="openBlog(blog.id)">Learn More</button>
+                    </div>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+    </div>
 </div>

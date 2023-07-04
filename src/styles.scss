@@ -130,6 +130,7 @@ body{
     background-size: 100%;
     background-position: right bottom;
     background-repeat: no-repeat;
+    overflow-x: clip;
 }
 .btnEdit{
     width: 180px;
@@ -858,7 +859,7 @@ button{
     max-width: 90rem;
     background-color: #fff;
     padding: 2.5rem;
-    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
     border-radius: 0.8rem;
     .blog-post_img{
         position: relative;
