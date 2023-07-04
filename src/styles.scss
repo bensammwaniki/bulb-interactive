@@ -865,7 +865,7 @@ button{
         min-width: 38rem;
         max-width: 38rem;
         height: 38rem;
-        transform: translateX(-9rem);
+        transform: translateX(-10rem);
     }
     .blog-post_img img{
         display: block;
@@ -1083,7 +1083,7 @@ button{
 // =======================bigger tablet================================//
 @media (max-width: 1068px) {
     .blog-post{
-        max-width: 80rem;
+        max-width: 70rem;
         flex-direction: column;
     }
 }
@@ -1359,6 +1359,16 @@ button{
         .blog-post{
             padding: 2.5rem;
             flex-direction: column;
+            .blog-post_img {
+                position: relative;
+                min-width: 120%;
+                max-width: 120%;
+                height: 18rem;
+                transform: translateX(0rem);
+                img{
+                    object-fit: cover;
+                }
+            }
         }
         .countdown{
             h2{
