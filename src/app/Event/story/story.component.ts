@@ -18,6 +18,12 @@ export class StoryComponent{
         settings: {
           slidesToShow: 1,
         }
+      },
+      {
+        breakpoint: 1068,
+        settings: {
+          slidesToShow: 2,
+        }
       }
     ]};
 
