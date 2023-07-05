@@ -8,14 +8,6 @@
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...."
     },
     {
-      "id": 2,
-      "title": "Name of this bulb event 2",
-      "date": "26/06/2023",
-      "image": "./../../assets/images/test(5).jpg",
-      "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque rerum reiciendis error veniam placeat eos atque numquam aut labore cupiditate, recusandae perspiciatis at maxime sunt. Perspiciatis, vitae. Aperiam, excepturi et!",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,\n\nconsectetur adipisicing elit. Itaque rerum reiciendis error veniam placeat eos atque numquam aut labore cupiditate, recusandae perspiciatis at maxime sunt. Perspiciatis, vitae. Aperiam, excepturi et!"
-    },
-    {
       "id": 6,
       "title": "Name of this bulb event 3",
       "date": "26/06/2023",
@@ -28,14 +20,6 @@
       "title": "Name of this bulb event 3",
       "date": "26/06/2023",
       "image": "./../../assets/images/test(6).jpg",
-      "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque rerum reiciendis error veniam placeat eos atque numquam aut labore cupiditate, recusandae perspiciatis at maxime sunt. Perspiciatis, vitae. Aperiam, excepturi et!",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...."
-    },
-    {
-      "id": 8,
-      "title": "Name of this bulb event 8",
-      "date": "26/06/2023",
-      "image": "./../../assets/images/test(5).jpg",
       "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque rerum reiciendis error veniam placeat eos atque numquam aut labore cupiditate, recusandae perspiciatis at maxime sunt. Perspiciatis, vitae. Aperiam, excepturi et!",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...."
     }
