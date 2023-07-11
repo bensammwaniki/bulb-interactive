@@ -31,13 +31,10 @@ import { CategoryComponent } from './Gallery/category/category.component';
 import { GallerysliderComponent } from './Gallery/galleryslider/galleryslider.component';
 import { EventsComponent } from './Event/events/events.component';
 import { StoryComponent } from './Event/story/story.component';
-import { SpeakersComponent } from './Event/speakers/speakers.component';
 import { BrandingComponent } from './Branding/branding/branding.component';
 import { AboutComponent } from './Branding/about/about.component';
 import { PackagesComponent } from './Branding/packages/packages.component';
 import { ContainerComponent } from './Branding/container/container.component';
-import { TicketComponent } from './Shared/ticket/ticket.component';
-import { SocialsComponent } from './Shared/socials/socials.component';
 import { AboutTvComponent } from './Home/about-tv/about-tv.component';
 import { ImageGalleryComponent } from './Shared/image-gallery/image-gallery.component';
 import { SpinnerComponent } from './Shared/spinner/spinner.component';
@@ -64,13 +61,10 @@ import { BlogPostComponent } from './Shared/blog-post/blog-post.component';
     GallerysliderComponent,
     EventsComponent,
     StoryComponent,
-    SpeakersComponent,
     BrandingComponent,
     AboutComponent,
     PackagesComponent,
     ContainerComponent,
-    TicketComponent,
-    SocialsComponent,
     AboutTvComponent,
     ImageGalleryComponent,
     SpinnerComponent,
