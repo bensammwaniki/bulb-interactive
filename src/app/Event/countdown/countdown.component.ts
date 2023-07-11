@@ -16,7 +16,7 @@ export class CountdownComponent {
   private message: string = '';
 
   constructor(elm: ElementRef) {
-    this.futureString = '2023-07-06T17:00:00';
+    this.futureString = '2023-07-13T20:00:00';
   }
 
   days: number = 0;
