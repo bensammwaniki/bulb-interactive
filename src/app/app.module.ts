@@ -42,6 +42,8 @@ import { CountdownComponent } from './Event/countdown/countdown.component';
 import { AllvideosComponent } from './Gallery/allvideos/allvideos.component';
 import { NotfoundComponent } from './Shared/notfound/notfound.component';
 import { BlogPostComponent } from './Shared/blog-post/blog-post.component';
+import { DisplayComponent } from './News/display/display.component';
+import { ReadComponent } from './News/read/read.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { BlogPostComponent } from './Shared/blog-post/blog-post.component';
     CountdownComponent,
     AllvideosComponent,
     NotfoundComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    DisplayComponent,
+    ReadComponent
   ],
   imports: [
     BrowserModule,
@@ -109,6 +113,10 @@ import { BlogPostComponent } from './Shared/blog-post/blog-post.component';
       {
         path:'branding',
         component: BrandingComponent
+      },
+      {
+        path:'news',
+        component: DisplayComponent
       },
       { path: 'blog/:id', component: BlogPostComponent },
       {
