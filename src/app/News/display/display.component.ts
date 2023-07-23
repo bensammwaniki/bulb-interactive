@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NewsService } from 'src/app/news.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { NewsService } from 'src/app/news.service';
 export class DisplayComponent implements OnInit {
   news: any[] = [];
 
-  constructor(private newsService: NewsService) { }
+  constructor(private newsService: NewsService,private router: Router) { }
 
   ngOnInit() {
     this.getNews();
@@ -25,6 +26,9 @@ export class DisplayComponent implements OnInit {
           console.error('Error fetching news:', error);
         }
       );
+  }
+  openNews(newsId: number) {
+    this.router.navigate(['/news', newsId]);
   }
   preview(content: string): string {
     return content.slice(0, 500);

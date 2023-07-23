@@ -3,56 +3,22 @@
         <h1>Recent Headlines</h1>
     </div>
     <div class="row headline">
-        <div class="col main" *ngIf="news.length > 0">
-            <img *ngIf="news[0]?.acf?.Featured_image?.url" [src]="news[0]?.acf?.Featured_image?.url" alt="">
-            <h2>{{ news[0]?.title?.rendered }} </h2>
-            <p [innerHTML]="preview(news[0]?.content?.rendered) + ' ...'"></p>
-            <span>{{ news[0]?.acf?.date_published }}</span>
-        </div>
+            <div class="col main">
+                <a *ngIf="news.length > 0" (click)="openNews(news[0].id)">
+                    <img *ngIf="news[0]?.acf?.Featured_image?.url" [src]="news[0]?.acf?.Featured_image?.url" alt="">
+                    <h2>{{ news[0]?.title?.rendered }} </h2>
+                    <p [innerHTML]="preview(news[0]?.content?.rendered) + ' ...'"></p>
+                    <span>{{ news[0]?.acf?.date_published }}</span>
+                </a>
+            </div>
         <div class="col sec">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12" *ngFor="let singleNews of news.slice(1, 6)">
                     <div class="highlight">
-                        <img src="../../../assets/images/mag(soon).jpg" alt="">
+                        <img *ngIf="singleNews?.acf?.Featured_image?.url" [src]="singleNews?.acf?.Featured_image?.url" alt=" news article images">
                         <div>
-                            <h3>FDA approves nation’s first over-the-counter birth control pill</h3>
-                            <span>July 13, 2023</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="highlight">
-                        <img src="../../../assets/images/mag(soon).jpg" alt="">
-                        <div>
-                            <h3>FDA approves nation’s first over-the-counter birth control pill</h3>
-                            <span>July 13, 2023</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="highlight">
-                        <img src="../../../assets/images/mag(soon).jpg" alt="">
-                        <div>
-                            <h3>FDA approves nation’s first over-the-counter birth control pill</h3>
-                            <span>July 13, 2023</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="highlight">
-                        <img src="../../../assets/images/mag(soon).jpg" alt="">
-                        <div>
-                            <h3>FDA approves nation’s first over-the-counter birth control pill</h3>
-                            <span>July 13, 2023</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="highlight">
-                        <img src="../../../assets/images/mag(soon).jpg" alt="">
-                        <div>
-                            <h3>FDA approves nation’s first over-the-counter birth control pill</h3>
-                            <span>July 13, 2023</span>
+                            <a (click)="openNews(singleNews.id)">  <h3>{{ singleNews?.title?.rendered }}</h3>  </a>
+                            <span>{{ singleNews?.acf?.date_published }}</span>
                         </div>
                     </div>
                 </div>
