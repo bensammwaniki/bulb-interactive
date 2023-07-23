@@ -119,6 +119,7 @@ import { ReadComponent } from './News/read/read.component';
         component: DisplayComponent
       },
       { path: 'blog/:id', component: BlogPostComponent },
+      { path: 'news/:id', component: ReadComponent },
       {
         path:'**',
         component: NotfoundComponent

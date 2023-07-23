@@ -1,1 +1,16 @@
-<p>read works!</p>
+<div class="blog-banner position-relative">
+    <div class="col-lg-9 col-md-12 position-absolute top-50 start-50 translate-middle">
+        <h2 class="text-wrap">{{ news.title?.rendered }}</h2>
+        <p>Published on: {{ news.acf?.date_published }}</p>
+        <p>By: {{ news.acf?.author }}</p>
+    </div>
+    <img src="../../../assets/images/counter.jpg" alt="blur image of people looking at a computer">
+</div>
+<div class="container">
+    <div class="news-content">
+        <div *ngIf="news">
+            <img *ngIf="news.acf?.Featured_image?.url" [src]="news.acf?.Featured_image?.sizes?.medium_large" alt="{{ news.title?.rendered }} Blog Image" class="main_img">
+            <div [innerHTML]="news.content?.rendered" class="content"></div>
+        </div>
+    </div>
+</div>
