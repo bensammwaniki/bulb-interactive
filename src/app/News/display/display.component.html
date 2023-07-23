@@ -3,16 +3,11 @@
         <h1>Recent Headlines</h1>
     </div>
     <div class="row headline">
-        <div class="col main">
-            <img src="../../../assets/images/Bulb-Networking-Event.jpg" alt="">
-            <h2>Soda sweetener aspartame now listed as
-                possible cancer cause. But it’s still considered safe
-            </h2>
-            <p>The World Health Organization’s cancer agency has deemed the artificial sweetener
-                aspartame a “possible” cause of cancer, while a separate group looking at the same
-                evidence said it considers the sugar substitute safe.
-            </p>
-            <span>July 13, 2023</span>
+        <div class="col main" *ngIf="news.length > 0">
+            <img *ngIf="news[0]?.acf?.Featured_image?.url" [src]="news[0]?.acf?.Featured_image?.url" alt="">
+            <h2>{{ news[0]?.title?.rendered }} </h2>
+            <p [innerHTML]="preview(news[0]?.content?.rendered) + ' ...'"></p>
+            <span>{{ news[0]?.acf?.date_published }}</span>
         </div>
         <div class="col sec">
             <div class="row">
