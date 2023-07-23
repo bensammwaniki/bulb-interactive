@@ -1016,6 +1016,8 @@ button{
 }
 .headline{
     .main{
+        border-right: 1px solid #cccccc;
+        margin-right: 3px;
         img{
             width: inherit;
             height: 400px;
@@ -1037,6 +1039,7 @@ button{
     }
     .sec{
         .col-12{
+            border-bottom: 1px solid #cccccc;
             .highlight{
                 display: flex;
                 div{
@@ -1067,7 +1070,7 @@ hr.solid {
     div{
         
         img{
-            height: 250px;
+            height: 200px;
             width: 100%;
             object-fit: cover;
         }
