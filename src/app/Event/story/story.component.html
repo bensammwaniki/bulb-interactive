@@ -1,39 +1,4 @@
-<!-- <div class="container">
-    <article class="blog-post">
-        <div class="blog-post_img">
-            <img src="../../../assets/images/Bulb-Networking-Event.jpg" alt="Bulb decor poster for the Event">
-        </div>
-        <div class="blog-post_info">
-            <div class="blog-post_date">
-                <span>Learn more about our upcoming event</span>
-            </div>
-            <h2 class="blog-post_title">About the Event</h2>
-            <h3>Why Sponsor</h3>
-            <p>
-                As a sponsor of premier Business Networking Forum, your brand gains inequitable visibility as a Market leader.
-                Exhibitions play a huge role in marketing your products and service.
-                In addition to saving on costs, you get to interact directly with your target market and increase your brand awareness.
-                Secure new business opportunities and stamp your authority as an industry leader.
-                Become a recognised partner that drives sustainable investment avenues in your sector.
-                Gain visibility on all advertising and marketing avenues of the exhibition.
-                Increase awareness of your brand and educate the target market at a deeper level.
-                Gain maximum benefits with prime showcases at the event venue via prime booths.
-                Position your company or brand to be innovative and reliable.
-                Exclusive networking opportunities.
-                Opportunities to deliver keynote addresses at the event. 
-            </p>
-            <h3>Why Exibit</h3>  
-                <ol>
-                    <li><p>Meet affluent prospects looking for the products/services to buy 1</p></li>
-                    <li><p>Increase your brand / product / service awareness</p></li>
-                    <li><p>Make instant sales on the floor.</p></li>
-                    <li><p>Gather data to increase your prospecting database.</p></li>
-                </ol>
-            <a href="#" class="blog-post_cta">Learn more</a>
-        </div>
-    </article>
-</div> -->
-<app-countdown *ngIf="mainEvent" [futureDate]="mainEvent.acf?.date_held"></app-countdown>
+<app-countdown *ngIf="mainEvent" [futureDate]="mainEvent.acf?.date_held" [title]="mainEvent.title?.rendered"></app-countdown>
 <div class="container events">
     <div class="row row-cols-1 row-cols-md-2 all-events">
         <div class="col-sm-12 col-md-4">
@@ -70,8 +35,8 @@
         <div class="story-head">
             <h2 class="head">Past Events</h2>
             <div class="cst-btn">
-                <button (click)="slickModal.slickPrev()"><i class="fa-solid fa-chevron-left"></i></button>
-                <button (click)="slickModal.slickNext()"><i class="fa-solid fa-chevron-right"></i></button>
+                <button (click)="slickModal.slickPrev()"> <i class="fa-solid fa-chevron-left"></i> </button>
+                <button (click)="slickModal.slickNext()"> <i class="fa-solid fa-chevron-right"></i> </button>
             </div>
         </div>
         <div class="row">

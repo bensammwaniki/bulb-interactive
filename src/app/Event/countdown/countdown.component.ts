@@ -9,6 +9,8 @@ import { takeWhile } from 'rxjs/operators';
 })
 export class CountdownComponent {
   @Input() futureDate: Date = new Date();
+  @Input() title: string = '';
+  
   private future: Date = new Date();
   private diff: number = 0;
   private $counter: Observable<number> = new Observable();

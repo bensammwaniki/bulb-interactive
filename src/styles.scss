@@ -922,76 +922,6 @@ button{
     }
 }
 
-//===================Story========================//
-// .blog-post{
-//     display: flex;
-//     align-items: center;
-//     max-width: 90rem;
-//     background-color: #fff;
-//     padding: 2.5rem;
-//     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-//     border-radius: 0.8rem;
-//     .blog-post_img{
-//         position: relative;
-//         min-width: 38rem;
-//         max-width: 38rem;
-//         height: 38rem;
-//         transform: translateX(-3rem);
-//     }
-//     .blog-post_img img{
-//         display: block;
-//         width: 100%;
-//         height: 100%;
-//         object-fit: cover;
-//         border-radius: 0.8rem;
-//     }
-//     .blog-post_img::before{
-//         content: "";
-//         position: absolute;
-//         inset: 0;
-//         background: linear-gradient(to right, $primary 0%, $secondary 100%);
-//         box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.05);
-//         border-radius: 0.8rem;
-//         opacity: 0.5;
-//     }
-//     .blog-post_date span{
-//         display: block;
-//         color: $primary;
-//         font-weight: 600;
-//         margin: 0.5rem 0;
-//     }
-//     .blog-post_title{
-//         font-size: 1.5rem;
-//         font-family: $bold;
-//         margin: 1.5rem 0 2rem;
-//         text-transform: uppercase;
-//         color: $secondary;
-//     }
-//     .blog-post_info {
-//         h3{
-//             font-size: 1rem;
-//             font-family: $bold;
-//             text-transform: uppercase;
-//             color: $primary; 
-//         }
-//         p{
-//         color: #000000e9;
-//        }
-//     }
-//     .blog-post_cta{
-//         display: inline-block;
-//         text-decoration: none;
-//         background-image: linear-gradient( to right, $primary 0%, $secondary 100%,);
-//         padding: 1.1rem 3rem;
-//         letter-spacing: 1px;
-//         text-transform: uppercase;
-//         color: #fff;
-//         border-radius: 0.8rem;
-//     }
-//     .blog-post_cta:hover{
-//         background-image: linear-gradient( to right, #00f2fe 0%, #4facfe 100%,);
-//     }
-// }
 //================blog page==================//
 .blog-banner{
     width: 100%;
@@ -1705,6 +1635,9 @@ footer{
                     }
                 }
             }
+        }
+        .all-events{
+            padding:0px 0px;
         }
       }
 //===========smaller phone sizes=========//
