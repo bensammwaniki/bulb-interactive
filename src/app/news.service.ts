@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class NewsService {
   private apiUrl = 'https://godnextdoor.org/wp-json/wp/v2/news';
+  private eventUrl = 'https://godnextdoor.org/wp-json/wp/v2/events';
 
   constructor(private http: HttpClient) { }
   
@@ -17,5 +18,13 @@ export class NewsService {
 
   getNews() {
     return this.http.get<any[]>(this.apiUrl);
+  }
+  getEventsById(events: number): Observable<any> {
+    const url = `${this.eventUrl}/${events}`;
+    return this.http.get<any>(url);
+  }
+
+  getEvents() {
+    return this.http.get<any[]>(this.eventUrl);
   }
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <article class="blog-post">
         <div class="blog-post_img">
             <img src="../../../assets/images/Bulb-Networking-Event.jpg" alt="Bulb decor poster for the Event">
@@ -32,9 +32,41 @@
             <a href="#" class="blog-post_cta">Learn more</a>
         </div>
     </article>
+</div> -->
+<app-countdown *ngIf="mainEvent" [futureDate]="mainEvent.acf?.date_held"></app-countdown>
+<div class="container events">
+    <div class="row row-cols-1 row-cols-md-2 all-events">
+        <div class="col-sm-12 col-md-4">
+            <div class="main-event" *ngIf="mainEvent">
+                <img *ngIf="mainEvent.acf?.event?.url" [src]="mainEvent.acf?.event?.sizes?.medium_large" alt="">
+                <div class="overlay">
+                    <span class="badge text-bg-primary">Past Events</span>
+                    <h2>{{ mainEvent.title?.rendered }}</h2>
+                    <p> Held on<span>{{ mainEvent.acf?.date_held }}</span> </p>
+                </div>
+            </div>
+        </div>
+        <div class="col  col-sm-12 col-md-8 other-events">
+            <div class="row">
+                <ngx-slick-carousel class="carousel" 
+                        #slickModal2="slick-carousel"
+                        [config]="slideConfig">
+                    <div ngxSlickItem class="event col" *ngFor="let event of upcomingEvents | slice:1:9">
+                        <img [src]="event.acf?.event?.sizes?.large"  alt="">
+                        <div class="overlay">
+                            <span class="badge text-bg-primary">Date Held: {{ event.acf?.date_held | date:'mediumDate' }}</span>
+                            <h2>{{ event.title?.rendered }}</h2>
+                            <p>{{ event.acf?.event_introduction | slice:0:200 }}...</p> 
+                        </div>
+                    </div>
+                </ngx-slick-carousel>
+            </div>
+        </div>
+    </div>
 </div>
+
 <div class="container">
-    <div class="event-slider margin_one">
+    <div class="event-slider">
         <div class="story-head">
             <h2 class="head">Past Events</h2>
             <div class="cst-btn">
@@ -46,13 +78,14 @@
             <ngx-slick-carousel class="carousel" 
                     #slickModal="slick-carousel"
                     [config]="slideConfig">
-                <div ngxSlickItem class="event col"  *ngFor="let blog of blogs">
-                    <img [src]="blog.image" alt="">
+                <div ngxSlickItem class="event col" *ngFor="let event of pastEvents">
+                    <img *ngIf="event.acf?.event?.url" [src]="event.acf?.event?.sizes?.medium_large"  alt="">
                     <div class="overlay">
                         <span class="badge text-bg-primary">Past Events</span>
-                        <h2>{{blog.title}}</h2>
-                        <p>{{blog.intro}}</p> 
-                        <button type="button" class="btn btn-secondary btnEdit" (click)="openBlog(blog.id)">Learn More</button>
+                        <h2>{{ event.title?.rendered }}</h2>
+                        <p>{{ event.acf?.event_introduction | slice:0:200 }} ...</p>
+                        <p>Date Held: {{ event.acf?.date_held | date:'mediumDate' }}</p>
+                        <button type="button" class="btn btn-secondary btnEdit" (click)="openEvent(event.id)">Learn More</button>
                     </div>
                 </div>
             </ngx-slick-carousel>

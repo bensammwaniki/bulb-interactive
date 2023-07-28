@@ -750,7 +750,7 @@ button{
 }
 
 .event-slider{
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 50px;
     padding: 50px;
     border-radius: $border-radius;
@@ -845,76 +845,153 @@ button{
 
     }
 }
-//===================Story========================//
-.blog-post{
-    display: flex;
-    align-items: center;
-    max-width: 90rem;
-    background-color: #fff;
-    padding: 2.5rem;
-    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-    border-radius: 0.8rem;
-    .blog-post_img{
-        position: relative;
-        min-width: 38rem;
-        max-width: 38rem;
-        height: 38rem;
-        transform: translateX(-3rem);
-    }
-    .blog-post_img img{
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 0.8rem;
-    }
-    .blog-post_img::before{
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to right, $primary 0%, $secondary 100%);
-        box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.05);
-        border-radius: 0.8rem;
-        opacity: 0.5;
-    }
-    .blog-post_date span{
-        display: block;
-        color: $primary;
-        font-weight: 600;
-        margin: 0.5rem 0;
-    }
-    .blog-post_title{
-        font-size: 1.5rem;
-        font-family: $bold;
-        margin: 1.5rem 0 2rem;
-        text-transform: uppercase;
-        color: $secondary;
-    }
-    .blog-post_info {
-        h3{
-            font-size: 1rem;
-            font-family: $bold;
-            text-transform: uppercase;
-            color: $primary; 
+.all-events{
+    padding:0px 50px;
+}
+.events{
+    margin-top: 20px;
+    background-color: white;
+    .main-event{
+        padding: 10px;
+        img{
+            height: 450px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: $border-radius;
         }
-        p{
-        color: #000000e9;
-       }
     }
-    .blog-post_cta{
-        display: inline-block;
-        text-decoration: none;
-        background-image: linear-gradient( to right, $primary 0%, $secondary 100%,);
-        padding: 1.1rem 3rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #fff;
-        border-radius: 0.8rem;
-    }
-    .blog-post_cta:hover{
-        background-image: linear-gradient( to right, #00f2fe 0%, #4facfe 100%,);
+    .other-events{
+        padding: 10px;
+        .event{
+            position: relative;
+            margin-right: 20px;
+            height: 27rem;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: $border-radius;
+                object-fit: cover;           
+            }
+            .overlay{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                border-radius: $border-radius;
+                background-color: #11111156;
+                color: #fff;
+                top: 0px;
+                bottom: 0px;
+                transition: all 0.5s;
+                .badge{
+                    width: fit-content;
+                }
+                h2{
+                    font-family: $bold;
+                    font-size: 16px;
+                    margin-top: 10px;
+                }
+                p{
+                    max-height: 0px;
+                    overflow: hidden;
+                    transition:max-height 2s;
+                }
+                button{
+                    height: 35px;
+                    width: 145px;
+                    padding: 0px 5px 0px 5px;
+                }
+            }
+            .overlay:hover{
+                background-color: #11111182;
+                backdrop-filter: blur(2px);
+                transition: all 2s;
+        
+                &:hover{
+                    p{
+                        max-height: 125px;
+                        transition:max-height 2s;
+                    }
+                }
+            }
+    
+        }
     }
 }
+
+//===================Story========================//
+// .blog-post{
+//     display: flex;
+//     align-items: center;
+//     max-width: 90rem;
+//     background-color: #fff;
+//     padding: 2.5rem;
+//     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+//     border-radius: 0.8rem;
+//     .blog-post_img{
+//         position: relative;
+//         min-width: 38rem;
+//         max-width: 38rem;
+//         height: 38rem;
+//         transform: translateX(-3rem);
+//     }
+//     .blog-post_img img{
+//         display: block;
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//         border-radius: 0.8rem;
+//     }
+//     .blog-post_img::before{
+//         content: "";
+//         position: absolute;
+//         inset: 0;
+//         background: linear-gradient(to right, $primary 0%, $secondary 100%);
+//         box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.05);
+//         border-radius: 0.8rem;
+//         opacity: 0.5;
+//     }
+//     .blog-post_date span{
+//         display: block;
+//         color: $primary;
+//         font-weight: 600;
+//         margin: 0.5rem 0;
+//     }
+//     .blog-post_title{
+//         font-size: 1.5rem;
+//         font-family: $bold;
+//         margin: 1.5rem 0 2rem;
+//         text-transform: uppercase;
+//         color: $secondary;
+//     }
+//     .blog-post_info {
+//         h3{
+//             font-size: 1rem;
+//             font-family: $bold;
+//             text-transform: uppercase;
+//             color: $primary; 
+//         }
+//         p{
+//         color: #000000e9;
+//        }
+//     }
+//     .blog-post_cta{
+//         display: inline-block;
+//         text-decoration: none;
+//         background-image: linear-gradient( to right, $primary 0%, $secondary 100%,);
+//         padding: 1.1rem 3rem;
+//         letter-spacing: 1px;
+//         text-transform: uppercase;
+//         color: #fff;
+//         border-radius: 0.8rem;
+//     }
+//     .blog-post_cta:hover{
+//         background-image: linear-gradient( to right, #00f2fe 0%, #4facfe 100%,);
+//     }
+// }
 //================blog page==================//
 .blog-banner{
     width: 100%;
@@ -1237,12 +1314,12 @@ footer{
 
 //====================== Responsiveness ===================================//
 // =======================bigger tablet================================//
-@media (max-width: 1068px) {
-    .blog-post{
-        max-width: 70rem;
-        flex-direction: column;
-    }
-}
+// @media (max-width: 1068px) {
+//     .blog-post{
+//         max-width: 70rem;
+//         flex-direction: column;
+//     }
+// }
 
 //===================tablet========================================//
 @media (max-width: 768px) {
@@ -1288,10 +1365,10 @@ footer{
         margin-left: 50px;
         margin-right: 50px;
     }
-    .blog-post{
-        max-width: 70rem;
-        flex-direction: column;
-    }
+    // .blog-post{
+    //     max-width: 70rem;
+    //     flex-direction: column;
+    // }
     .castom-publication{
         padding-left: 0px;
         padding-right: 0px;
@@ -1526,20 +1603,20 @@ footer{
             min-width: 243px !important;
             transform: translate3d(-122.81px, -39.2px, 0px) !important;
         }
-        .blog-post{
-            padding: 2.5rem;
-            flex-direction: column;
-            .blog-post_img {
-                position: relative;
-                min-width: 120%;
-                max-width: 120%;
-                height: 18rem;
-                transform: translateX(0rem);
-                img{
-                    object-fit: cover;
-                }
-            }
-        }
+        // .blog-post{
+        //     padding: 2.5rem;
+        //     flex-direction: column;
+        //     .blog-post_img {
+        //         position: relative;
+        //         min-width: 120%;
+        //         max-width: 120%;
+        //         height: 18rem;
+        //         transform: translateX(0rem);
+        //         img{
+        //             object-fit: cover;
+        //         }
+        //     }
+        // }
         .countdown{
             h2{
                 color: white;

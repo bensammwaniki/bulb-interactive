@@ -57,24 +57,5 @@ const data = [
   {
     srcUrl: '../../../assets/images/test(1).jpg',
     // previewUrl: '../../../assets/images/img-1.jpg'
-  },
-  {
-    srcUrl: '../../../assets/images/Design(1).jpg',
-  },
-  {
-    srcUrl: '../../../assets/images/Design(2).jpg',
-  },
-  {
-    srcUrl: '../../../assets/images/Design(3).jpg',
-  },
-  {
-    srcUrl: '../../../assets/images/Design(4).jpg',
-  },
-  {
-    srcUrl: '../../../assets/images/Design(5).jpg',
-  },
-  {
-    srcUrl: '../../../assets/images/Design(6).jpg',
-  },
-
+  }
 ];

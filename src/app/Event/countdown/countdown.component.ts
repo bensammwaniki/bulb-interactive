@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, Input } from '@angular/core';
 import { Observable, interval, Subscription } from 'rxjs';
 import { takeWhile } from 'rxjs/operators';
 
@@ -8,16 +8,12 @@ import { takeWhile } from 'rxjs/operators';
   styleUrls: ['./countdown.component.scss']
 })
 export class CountdownComponent {
+  @Input() futureDate: Date = new Date();
   private future: Date = new Date();
-  private futureString: string = '';
   private diff: number = 0;
   private $counter: Observable<number> = new Observable();
   private subscription: Subscription = new Subscription();
   private message: string = '';
-
-  constructor(elm: ElementRef) {
-    this.futureString = '2023-07-13T20:00:00';
-  }
 
   days: number = 0;
   hours: number = 0;
@@ -48,7 +44,7 @@ export class CountdownComponent {
   }
 
   ngOnInit() {
-    this.future = new Date(this.futureString);
+    this.future = new Date(this.futureDate);
     this.$counter = interval(1000).pipe(
       takeWhile(() => this.diff >= 0),
     );

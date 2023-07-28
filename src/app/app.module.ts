@@ -36,7 +36,6 @@ import { AboutComponent } from './Branding/about/about.component';
 import { PackagesComponent } from './Branding/packages/packages.component';
 import { ContainerComponent } from './Branding/container/container.component';
 import { AboutTvComponent } from './Home/about-tv/about-tv.component';
-import { ImageGalleryComponent } from './Shared/image-gallery/image-gallery.component';
 import { SpinnerComponent } from './Shared/spinner/spinner.component';
 import { CountdownComponent } from './Event/countdown/countdown.component';
 import { AllvideosComponent } from './Gallery/allvideos/allvideos.component';
@@ -68,7 +67,6 @@ import { ReadComponent } from './News/read/read.component';
     PackagesComponent,
     ContainerComponent,
     AboutTvComponent,
-    ImageGalleryComponent,
     SpinnerComponent,
     CountdownComponent,
     AllvideosComponent,
