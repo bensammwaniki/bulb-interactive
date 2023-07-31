@@ -5,14 +5,24 @@
             <div class="main-event" *ngIf="mainEvent">
                 <img *ngIf="mainEvent.acf?.event?.url" [src]="mainEvent.acf?.event?.sizes?.medium_large" alt="">
                 <div class="overlay">
-                    <span class="badge text-bg-primary">Past Events</span>
+                    <span class="badge text-bg-primary">Upcoming Events</span>
                     <h2>{{ mainEvent.title?.rendered }}</h2>
-                    <p>Upcoming Event<span>{{ mainEvent.acf?.date_held }}</span> </p>
+                    <p>Register to attend<span>{{ mainEvent.acf?.date_held }}</span> </p>
                 </div>
             </div>
         </div>
-        <div class="col  col-sm-12 col-md-8 other-events">
-            <div class="row">
+        <div class="col col-sm-12 col-md-8 other-events">
+            <div class="row row-cols-1 row-cols-lg-3">
+                <div class="event col" *ngFor="let event of upcomingEvents | slice:1:9">
+                    <img [src]="event.acf?.event?.sizes?.large" alt="">
+                    <div class="overlay col">
+                        <span class="badge text-bg-primary">Date Held: {{ event.acf?.date_held | date:'mediumDate' }}</span>
+                        <h2>{{ event.title?.rendered }}</h2>
+                        <p>{{ event.acf?.event_introduction | slice:0:200 }}...</p> 
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
                 <ngx-slick-carousel class="carousel" 
                         #slickModal2="slick-carousel"
                         [config]="slideConfig">
@@ -25,10 +35,11 @@
                         </div>
                     </div>
                 </ngx-slick-carousel>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
+<!-- partnership evemts -->
 
 <div class="container">
     <div class="event-slider">
