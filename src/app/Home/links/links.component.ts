@@ -8,7 +8,11 @@ import { NewsService } from 'src/app/news.service';
   styleUrls: ['./links.component.scss']
 })
 export class LinksComponent implements OnInit {
-  mainEvent: any;
+  upcomingEvents: any[] = [];
+  pastEvents: any[] = [];
+  currentSlideIndex = 0;
+  mainEvent: any; 
+  events: any[] = [];
   constructor(private newsService: NewsService) {}
 
   ngOnInit() {
@@ -18,24 +22,50 @@ export class LinksComponent implements OnInit {
   getEvents() {
     this.newsService.getEvents().subscribe(
       (data) => {
-        this.filterMainEvent(data);
+        this.events = data;
+        this.filterEventsByDate(); // Separate upcoming and past events
+        this.sortEventsByDate();
+        this.getMainEvent(); // Get the main event
       },
       (error) => {
         console.error('Error fetching events:', error);
       }
     );
   }
-
-  filterMainEvent(events: any[]) {
+  
+  filterEventsByDate() {
     const today = new Date().getTime();
-    for (const event of events) {
+    this.upcomingEvents = this.events.filter(event => {
+      const eventDate = new Date(event.acf.date_held).getTime();
+      return eventDate >= today;
+    });
+
+    this.pastEvents = this.events.filter(event => {
+      const eventDate = new Date(event.acf.date_held).getTime();
+      return eventDate < today;
+    });
+  }
+  
+  sortEventsByDate() {
+    this.upcomingEvents.sort((a, b) => {
+      return new Date(a.acf.date_held).getTime() - new Date(b.acf.date_held).getTime();
+    });
+
+    this.pastEvents.sort((a, b) => {
+      return new Date(a.acf.date_held).getTime() - new Date(b.acf.date_held).getTime();
+    });
+  }
+
+  getMainEvent() {
+    const today = new Date().getTime();
+    for (const event of this.upcomingEvents) {
       const eventDate = new Date(event.acf.date_held).getTime();
       if (eventDate >= today) {
         this.mainEvent = event;
         return;
       }
     }
-    this.mainEvent = events[events.length - 1];
+    this.mainEvent = this.upcomingEvents[this.upcomingEvents.length - 1];
   }
 }
 
