@@ -1,6 +1,5 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/news.service';
-
 
 @Component({
   selector: 'app-links',
@@ -8,64 +7,32 @@ import { NewsService } from 'src/app/news.service';
   styleUrls: ['./links.component.scss']
 })
 export class LinksComponent implements OnInit {
-  upcomingEvents: any[] = [];
-  pastEvents: any[] = [];
-  currentSlideIndex = 0;
-  mainEvent: any; 
-  events: any[] = [];
+  mainEvent: any;
+
   constructor(private newsService: NewsService) {}
 
   ngOnInit() {
-    this.getEvents();
+    this.getMainEvent();
   }
 
-  getEvents() {
+  getMainEvent() {
     this.newsService.getEvents().subscribe(
       (data) => {
-        this.events = data;
-        this.filterEventsByDate(); // Separate upcoming and past events
-        this.sortEventsByDate();
-        this.getMainEvent(); // Get the main event
+        const today = new Date().getTime();
+        let closestEvent = null;
+
+        for (const event of data) {
+          const eventDate = new Date(event.acf.date_held).getTime();
+          if (eventDate >= today && (!closestEvent || eventDate < new Date(closestEvent.acf.date_held).getTime())) {
+            closestEvent = event;
+          }
+        }
+
+        this.mainEvent = closestEvent;
       },
       (error) => {
         console.error('Error fetching events:', error);
       }
     );
   }
-  
-  filterEventsByDate() {
-    const today = new Date().getTime();
-    this.upcomingEvents = this.events.filter(event => {
-      const eventDate = new Date(event.acf.date_held).getTime();
-      return eventDate >= today;
-    });
-
-    this.pastEvents = this.events.filter(event => {
-      const eventDate = new Date(event.acf.date_held).getTime();
-      return eventDate < today;
-    });
-  }
-  
-  sortEventsByDate() {
-    this.upcomingEvents.sort((a, b) => {
-      return new Date(a.acf.date_held).getTime() - new Date(b.acf.date_held).getTime();
-    });
-
-    this.pastEvents.sort((a, b) => {
-      return new Date(a.acf.date_held).getTime() - new Date(b.acf.date_held).getTime();
-    });
-  }
-
-  getMainEvent() {
-    const today = new Date().getTime();
-    for (const event of this.upcomingEvents) {
-      const eventDate = new Date(event.acf.date_held).getTime();
-      if (eventDate >= today) {
-        this.mainEvent = event;
-        return;
-      }
-    }
-    this.mainEvent = this.upcomingEvents[this.upcomingEvents.length - 1];
-  }
 }
-
