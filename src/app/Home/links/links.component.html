@@ -3,7 +3,7 @@
     <div class="justify-content-between row row-left row-cols-1 row-cols-md-3 row-cols-lg-5 links">
         <div class="col mt-1">
                 <div class="card col">
-                    <img src="../../../assets/images/event_poster.jpg" class="link-img" alt="Image to the link event">
+                    <img *ngIf="mainEvent.acf?.event?.url" [src]="mainEvent.acf?.event?.sizes?.medium_large" class="link-img" alt="Image to the link event">
                     <a class="link-title" routerLink="/events">
                       <h3>Events</h3>
                     </a>
@@ -37,9 +37,9 @@
 
         <div class="col mt-1">
                 <div class="card col">
-                    <img src="../../../assets/images/link(4).jpg" class="card-img-top link-img" alt="Image to the link bulb awards">
+                    <img src="../../../assets/images/blogs.jpg" class="card-img-top link-img" alt="Image to the link bulb news">
                     <a class="link-title">
-                      <h3>Bulb Awards</h3>
+                      <h3>Blogs</h3>
                     </a>
                 </div>
         </div>

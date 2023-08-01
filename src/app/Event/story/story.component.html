@@ -1,45 +1,33 @@
 <app-countdown *ngIf="mainEvent" [futureDate]="mainEvent.acf?.date_held" [title]="mainEvent.title?.rendered"></app-countdown>
 <div class="container events">
     <div class="row row-cols-1 row-cols-md-2 all-events">
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-5">
             <div class="main-event" *ngIf="mainEvent">
                 <img *ngIf="mainEvent.acf?.event?.url" [src]="mainEvent.acf?.event?.sizes?.medium_large" alt="">
                 <div class="overlay">
                     <span class="badge text-bg-primary">Upcoming Events</span>
                     <h2>{{ mainEvent.title?.rendered }}</h2>
-                    <p>Register to attend<span>{{ mainEvent.acf?.date_held }}</span> </p>
+                    <p>Register to attend<span>{{ mainEvent.acf?.date_held }}</span></p>
                 </div>
             </div>
         </div>
-        <div class="col col-sm-12 col-md-8 other-events">
-            <div class="row row-cols-1 row-cols-lg-3">
-                <div class="event col" *ngFor="let event of upcomingEvents | slice:1:9">
-                    <img [src]="event.acf?.event?.sizes?.large" alt="">
-                    <div class="overlay col">
-                        <span class="badge text-bg-primary">Date Held: {{ event.acf?.date_held | date:'mediumDate' }}</span>
-                        <h2>{{ event.title?.rendered }}</h2>
-                        <p>{{ event.acf?.event_introduction | slice:0:200 }}...</p> 
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="row">
-                <ngx-slick-carousel class="carousel" 
-                        #slickModal2="slick-carousel"
-                        [config]="slideConfig">
-                    <div ngxSlickItem class="event col" *ngFor="let event of upcomingEvents | slice:1:9">
-                        <img [src]="event.acf?.event?.sizes?.large"  alt="">
+        <div class="col col-sm-12 col-md-7 other-events">
+            <div class="row row-cols-2 row-cols-lg-3 g-2">
+                <div class="col" *ngFor="let event of upcomingEvents | slice:1:9">
+                    <div class="upcoming-event">
+                        <img [src]="event.acf?.event?.sizes?.large" alt="">
                         <div class="overlay">
                             <span class="badge text-bg-primary">Date Held: {{ event.acf?.date_held | date:'mediumDate' }}</span>
                             <h2>{{ event.title?.rendered }}</h2>
                             <p>{{ event.acf?.event_introduction | slice:0:200 }}...</p> 
                         </div>
                     </div>
-                </ngx-slick-carousel>
-            </div> -->
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<!-- partnership evemts -->
+<!-- partnership events -->
 
 <div class="container">
     <div class="event-slider">
