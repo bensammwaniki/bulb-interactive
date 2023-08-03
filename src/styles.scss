@@ -955,6 +955,209 @@ button{
         }
     }
 }
+//==============listing page=================//
+.featured-img{
+    padding: 20px;
+    img{
+        min-height: 300px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: $border-radius;
+    }
+}
+.filter {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  
+    .tabs {
+      display: flex;
+      position: relative;
+      background-color: #fff;
+      box-shadow: 0 0 1px 0 rgba($primary, 0.15), 0 6px 12px 0 rgba($primary, 0.15);
+      padding: 0.5rem;
+      border-radius: 99px;
+      * {
+        z-index: 2;
+      }
+  
+      input[type="radio"] {
+        display: none;
+      }
+  
+      .tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 150px;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 99px;
+        cursor: pointer;
+        transition: color 0.15s ease-in;
+      }
+  
+      input[type="radio"] {
+        &:checked {
+          & + label {
+            color: $primary;
+          }
+        }
+      }
+  
+      @for $i from 1 through 10 {
+        input[id="radio-#{$i}"] {
+          &:checked {
+            & ~ .glider {
+              transform: translateX(#{($i - 1) * 100%});
+            }
+          }
+        }
+      }
+    }
+  
+    .glider {
+      position: absolute;
+      display: flex;
+      height: 40px;
+      width: 150px;
+      background-color: $secondary;
+      z-index: 1;
+      border-radius: 99px; // just a high number to create pill effect
+      transition: 0.25s ease-out;
+    }
+  }
+  .wrap{
+    width: 100%;
+    height: 400px;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.5s;
+    .cont{
+      width:100%;
+      height:100%;
+    .top{
+        height: 80%;
+        width:100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: all ease-in-out 1s;
+            &:hover{
+                transform: scale(1.1);
+                filter: blur(2px);
+                transition: all ease-in-out 2s;
+              }
+        }
+      }
+      .bottom{
+        width: 200%;
+        height: 20%;
+        h1{
+            margin:0;
+            padding:0;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+        .left{
+          height:100%;
+          width: 50%;
+          background: #f4f4f4;
+          position:relative;
+          float:left;
+          .details{
+            padding: 20px;
+            float: left;
+            width: calc(70% - 40px);
+          }
+          .buy{
+            float:right;
+            width: calc(30% - 2px);
+            height:100%;
+            background: #f1f1f1;
+            border-left:solid thin rgba(0,0,0,0.1);
+            i{
+              font-size:30px;
+              padding:20px;
+              color: $primary;
+            }
+          }
+        }
+        .right{
+          width: 50%;
+          background: #A6CDDE;
+          color: white;
+          float:right;
+          height:200%;
+          overflow: hidden;
+          .details{
+            padding: 20px;
+            float: right;
+            width: calc(70% - 40px);
+          }
+        }
+      }
+    }
+    
+    .inside{
+      z-index:9;
+      background: $secondary;
+      width:140px;
+      height:140px;
+      position: absolute;
+      top: -70px;
+      right: -70px;
+      border-radius: 0px 0px 200px 200px;
+      transition: all 0.5s, border-radius 2s, top 1s;
+      overflow: hidden;
+      .icon{
+        position:absolute;
+        right:85px;
+        top:85px;
+        color:white;
+        opacity: 1;
+      }
+      &:hover{
+        width:100%;
+        right:0;
+        top:0;
+        border-radius: 0;
+        height:80%;
+        .icon{
+          opacity: 0;
+          right:15px;
+          top:15px;
+        }
+        .contents{
+          opacity: 1;
+          transform: scale(1);
+          transform: translateY(0);
+        }
+      }
+      .contents{
+        padding: 5%;
+        opacity: 0;
+        transform: scale(0.5);
+        transform: translateY(-200%);
+        transition: opacity 0.2s, transform 0.8s;
+        color: white;
+        font-size:13px;
+
+      }
+    }
+  }
 
 //================blog page==================//
 .blog-banner{

@@ -43,6 +43,7 @@ import { NotfoundComponent } from './Shared/notfound/notfound.component';
 import { BlogPostComponent } from './Shared/blog-post/blog-post.component';
 import { DisplayComponent } from './News/display/display.component';
 import { ReadComponent } from './News/read/read.component';
+import { ListingComponent } from './Listing/listing/listing.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { ReadComponent } from './News/read/read.component';
     NotfoundComponent,
     BlogPostComponent,
     DisplayComponent,
-    ReadComponent
+    ReadComponent,
+    ListingComponent
   ],
   imports: [
     BrowserModule,
@@ -115,6 +117,10 @@ import { ReadComponent } from './News/read/read.component';
       {
         path:'news',
         component: DisplayComponent
+      },
+      {
+        path:'listing',
+        component: ListingComponent
       },
       { path: 'blog/:id', component: BlogPostComponent },
       { path: 'news/:id', component: ReadComponent },
