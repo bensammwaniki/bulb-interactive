@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class NewsService {
   private apiUrl = 'https://godnextdoor.org/wp-json/wp/v2/news';
   private eventUrl = 'https://godnextdoor.org/wp-json/wp/v2/events';
+  private productUrl = 'https://godnextdoor.org/wp-json/wp/v2/products';
 
   constructor(private http: HttpClient) { }
   
@@ -26,5 +27,14 @@ export class NewsService {
 
   getEvents() {
     return this.http.get<any[]>(this.eventUrl);
+  }
+
+  getProductById(product: number): Observable<any> {
+    const url = `${this.productUrl}/${product}`;
+    return this.http.get<any>(url);
+  }
+
+  getProducts() {
+    return this.http.get<any[]>(this.productUrl);
   }
 }

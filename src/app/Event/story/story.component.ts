@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { NewsService } from 'src/app/news.service';
 
+
 @Component({
   selector: 'app-story',
   templateUrl: './story.component.html',

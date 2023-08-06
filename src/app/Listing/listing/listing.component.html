@@ -1,8 +1,15 @@
 <div class="container">
     <div class="row">
-        <div class="featured-img">
-            <img src="../../../assets/images/sample.jpg" alt="">
-        </div>
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+            <div ngxSlickItem class="featured-img">
+                <img src="../../../assets/images/sample.jpg" alt="">
+            </div>
+            <div ngxSlickItem class="featured-img">
+                <img src="../../../assets/images/sample.jpg" alt="">
+            </div>            <div ngxSlickItem class="featured-img">
+                <img src="../../../assets/images/sample.jpg" alt="">
+            </div>
+        </ngx-slick-carousel>
     </div>
     <div class="row">
         <div class="filter">
