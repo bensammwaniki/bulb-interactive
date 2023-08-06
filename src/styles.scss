@@ -959,7 +959,7 @@ button{
 .featured-img{
     padding: 20px;
     img{
-        min-height: 300px;
+        height: 420px;
         width: 100%;
         object-fit: cover;
         border-radius: $border-radius;
@@ -1011,11 +1011,11 @@ button{
         }
       }
   
-      @for $i from 1 through 10 {
+      @for $i from 0 through 10 {
         input[id="radio-#{$i}"] {
           &:checked {
             & ~ .glider {
-              transform: translateX(#{($i - 1) * 100%});
+              transform: translateX(#{($i - 0) * 100%});
             }
           }
         }

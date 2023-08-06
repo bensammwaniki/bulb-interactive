@@ -7,12 +7,15 @@
         </ngx-slick-carousel>
     </div>
     <div class="row">
+        
+    </div>
+    <div class="row">
         <div class="filter">
             <div class="tabs">
                 <input type="radio" id="radio-1" name="tabs" />
                 <label class="tab" for="radio-1">Upcoming</label>
-                <input type="radio" id="radio-2" name="tabs" />
-                <label class="tab" for="radio-2">something</label>
+                <input type="radio" *ngFor="let category of categories; let i = index;" [id]="'radio-' + i" name="tabs" />
+                <label class="tab" *ngFor="let category of categories; let i = index;" [for]="'radio-' + i">{{ category }}</label>
                 <span class="glider"></span>
             </div>
         </div>
@@ -22,7 +25,7 @@
             <div class="wrap">
                 <div class="cont">
                   <div class="top">
-                    <img [src]="product.acf.product_image.url" alt="">
+                    <img [src]="product.acf.product_image.sizes.medium_large ? product.acf.product_image.sizes.medium_large : product.acf.product_image.sizes.large" alt="">
                   </div>
                   <div class="bottom">
                     <div class="left">

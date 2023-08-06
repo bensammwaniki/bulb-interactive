@@ -6,10 +6,10 @@ import { NewsService } from 'src/app/news.service';
   templateUrl: './listing.component.html',
   styleUrls: ['./listing.component.scss']
 })
-export class ListingComponent implements OnInit{
-  featuredProducts:any[] = []
-  products: any[] = []
-  categories: string[] = [];
+export class ListingComponent implements OnInit {
+  featuredProducts: any[] = [];
+  products: any[] = [];
+  categories: any[] = [];
 
   slideConfig = {
     infinite: true,
@@ -18,10 +18,11 @@ export class ListingComponent implements OnInit{
     autoplay: true,
     autoplaySpeed: 2000,
   };
+
   constructor(private newsService: NewsService) {}
+
   ngOnInit() {
     this.getProducts();
-    this.getCategories();
   }
 
   getProducts() {
@@ -29,25 +30,20 @@ export class ListingComponent implements OnInit{
       (data) => {
         this.products = data;
         this.filterFeaturedProducts();
+        this.getCategories();
       },
       (error) => {
         console.error('Error fetching products:', error);
       }
     );
   }
+
   filterFeaturedProducts() {
     this.featuredProducts = this.products.filter((product) => product.acf.product_category.includes('Featured Product'));
   }
-  
+
   getCategories() {
-    this.newsService.getProducts().subscribe(
-      (data) => {
-        this.categories = data.map(product => product.acf.product_category).flat();
-        this.categories = [...new Set(this.categories)].sort();
-      },
-      (error) => {
-        console.error('Error fetching products:', error);
-      }
-    );
+    const allCategories = this.products.map((product) => product.acf.product_category).flat();
+    this.categories = Array.from(new Set(allCategories)); 
   }
 }
