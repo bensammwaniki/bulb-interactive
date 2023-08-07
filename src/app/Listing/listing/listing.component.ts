@@ -10,6 +10,7 @@ export class ListingComponent implements OnInit {
   featuredProducts: any[] = [];
   products: any[] = [];
   categories: any[] = [];
+  companyLogos: any[] = [];
 
   slideConfig = {
     infinite: true,
@@ -31,6 +32,7 @@ export class ListingComponent implements OnInit {
         this.products = data;
         this.filterFeaturedProducts();
         this.getCategories();
+        this.getCompanyLogos();
       },
       (error) => {
         console.error('Error fetching products:', error);
@@ -45,5 +47,13 @@ export class ListingComponent implements OnInit {
   getCategories() {
     const allCategories = this.products.map((product) => product.acf.product_category).flat();
     this.categories = Array.from(new Set(allCategories)); 
+  }
+  getCompanyLogos() {
+    this.products.forEach((product) => {
+      const logo = product.acf.company_logo;
+      if (logo && !this.companyLogos.includes(logo)) {
+        this.companyLogos.push(logo);
+      }
+    });
   }
 }

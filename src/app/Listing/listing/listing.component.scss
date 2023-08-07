@@ -7,3 +7,23 @@
     }
 }
 
+.slider {
+	height: 100px;
+	margin: auto;
+	position: relative;
+	width: auto;
+	.slide-track {
+		display: flex;
+        justify-content: center;
+	}
+	.slide {
+		height: 90px;
+		margin: 10px;
+		img{
+			height: 80px;
+            width: fit-content;
+            filter: grayscale(3);
+            object-fit: contain;			
+		}
+	}
+}
