@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
             <div ngxSlickItem class="featured-img" *ngFor="let product of featuredProducts">
@@ -6,12 +6,14 @@
             </div>
         </ngx-slick-carousel>
     </div>
-    <div class="row m-5">
+</div>
+<div class="container">
+    <div class="row">
             <div class="par">
                 <h6>PARTNERS</h6>
             </div>
             <ngx-slick-carousel class="carousel" #sliderElement="slick-carousel" [config]="slideConfig">
-                <div class="slider">
+                <div class="partner-slider">
                     <div class="slide-track" #sliderElement>
                         <div class="slide" *ngFor="let logo of companyLogos">
                             <img [src]="logo.url" alt="partner logo" />
@@ -20,7 +22,7 @@
                 </div>
             </ngx-slick-carousel>
     </div>
-    <div class="row m-5">
+    <div class="row mt-5">
         <div class="filter">
             <div class="tabs">
                 <input type="radio" *ngFor="let category of categories; let i = index;" [id]="'radio-' + i" name="tabs" />
@@ -29,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div class="row row-left row-cols-1 row-cols-md-4 m-5">
+    <div class="row row-left row-cols-1 row-cols-md-4 mt-5">
         <div class="col p-0" *ngFor="let product of products">
             <div class="wrap">
                 <div class="cont">

@@ -965,6 +965,26 @@ button{
         border-radius: $border-radius;
     }
 }
+.partner-slider {
+	height: 100px;
+	margin: auto;
+	position: relative;
+	width: auto;
+	.slide-track {
+		display: flex;
+        justify-content: center;
+	}
+	.slide {
+		height: 90px;
+		margin: 10px;
+		img{
+			height: 80px;
+            width: fit-content;
+            filter: grayscale(3);
+            object-fit: contain;			
+		}
+	}
+}
 .filter {
     position: relative;
     left: 0;
@@ -1548,7 +1568,7 @@ footer{
             flex-wrap: nowrap;
             justify-content: space-evenly;
             position: absolute;
-            padding-top: 150px;
+            padding-top: 50px;
             top: 0px;
             right: 0px;
             z-index: 1;
@@ -1874,6 +1894,29 @@ footer{
         }
         .all-events{
             padding:0px 0px;
+        }
+        .featured-img{
+            padding: 0px;
+            padding-top: 5px;
+            img{
+                height: 150px;
+                object-fit: cover;
+            }
+        }
+        .partner-slider {
+            height: 70px;
+            .slide {
+                height: 70px;
+                margin: 10px;
+                img{
+                    height: 50px;
+                    display: inline;
+                    align-items: center;
+                    width: fit-content;
+                    filter: grayscale(3);
+                    object-fit: contain;			
+                }
+            }
         }
       }
 //===========smaller phone sizes=========//
