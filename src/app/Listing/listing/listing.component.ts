@@ -18,6 +18,9 @@ export class ListingComponent implements OnInit {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    fade: true,
+    cssEase: 'linear',
+    arrows:false,
   };
 
   constructor(private newsService: NewsService) {}
