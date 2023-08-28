@@ -89,47 +89,6 @@ import { ListingComponent } from './Listing/listing/listing.component';
     ShareButtonsModule,
     ShareIconsModule,
     LightgalleryModule,
-    RouterModule.forRoot([
-      { path: '', 
-        redirectTo: 'home', 
-        pathMatch: 'full'
-      },
-      {
-        path:'home',
-        component: HomeComponent
-      },
-      {
-        path:'magazine',
-        component: MagazineComponent
-      },
-      {
-        path:'videos',
-        component: VideogalleryComponent
-      },
-      {
-        path:'events',
-        component: EventsComponent
-      },
-      {
-        path:'branding',
-        component: BrandingComponent
-      },
-      {
-        path:'news',
-        component: DisplayComponent
-      },
-      {
-        path:'listing',
-        component: ListingComponent
-      },
-      { path: 'blog/:id', component: BlogPostComponent },
-      { path: 'news/:id', component: ReadComponent },
-      {
-        path:'**',
-        component: NotfoundComponent
-      },
-
-    ])
   ],
   providers: [
     {

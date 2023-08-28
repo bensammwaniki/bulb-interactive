@@ -6,9 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class NewsService {
-  private apiUrl = 'https://godnextdoor.org/wp-json/wp/v2/news';
-  private eventUrl = 'https://godnextdoor.org/wp-json/wp/v2/events';
-  private productUrl = 'https://godnextdoor.org/wp-json/wp/v2/products';
+  private apiUrl = 'https://api.bulb.co.ke/wp-json/wp/v2/news';
+  private eventUrl = 'https://api.bulb.co.ke/wp-json/wp/v2/events';
+  private productUrl = 'https://api.bulb.co.ke/wp-json/wp/v2/products';
 
   constructor(private http: HttpClient) { }
   
