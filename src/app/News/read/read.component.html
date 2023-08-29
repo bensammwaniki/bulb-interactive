@@ -4,12 +4,12 @@
         <p>Published on: {{ news.acf?.date_published }}</p>
         <p>By: {{ news.acf?.author }}</p>
     </div>
-    <img src="../../../assets/images/counter.jpg" alt="blur image of people looking at a computer">
+   <img loading="lazy"  src="../../../assets/images/counter.jpg" alt="blur image of people looking at a computer">
 </div>
 <div class="container">
     <div class="news-content">
         <div *ngIf="news">
-            <img *ngIf="news.acf?.Featured_image?.url" [src]="news.acf?.Featured_image?.sizes?.medium_large" alt="{{ news.title?.rendered }} Blog Image" class="main_img">
+           <img loading="lazy"  *ngIf="news.acf?.Featured_image?.url" [src]="news.acf?.Featured_image?.sizes?.medium_large" alt="{{ news.title?.rendered }} Blog Image" class="main_img">
             <div [innerHTML]="news.content?.rendered" class="content"></div>
         </div>
     </div>

@@ -3,7 +3,7 @@
     <div class="row row-cols-1 row-cols-md-2 all-events">
         <div class="col-sm-12 col-md-5">
             <div class="main-event" *ngIf="mainEvent">
-                <img *ngIf="mainEvent.acf?.event?.url" [src]="mainEvent.acf?.event?.sizes?.medium_large" alt="">
+               <img loading="lazy"  *ngIf="mainEvent.acf?.event?.url" [src]="mainEvent.acf?.event?.sizes?.medium_large" alt="">
                 <div class="overlay">
                     <span class="badge text-bg-primary">Upcoming Events</span>
                     <h2>{{ mainEvent.title?.rendered }}</h2>
@@ -15,7 +15,7 @@
             <div class="row row-cols-2 row-cols-lg-3 g-2">
                 <div class="col" *ngFor="let event of upcomingEvents | slice:1:9">
                     <div class="upcoming-event">
-                        <img [src]="event.acf?.event?.sizes?.large" alt="">
+                       <img loading="lazy"  [src]="event.acf?.event?.sizes?.large" alt="">
                         <div class="overlay">
                             <span class="badge text-bg-primary">Date Held: {{ event.acf?.date_held | date:'mediumDate' }}</span>
                             <h2>{{ event.title?.rendered }}</h2>
@@ -43,7 +43,7 @@
                     #slickModal="slick-carousel"
                     [config]="slideConfig">
                 <div ngxSlickItem class="event col" *ngFor="let event of pastEvents">
-                    <img *ngIf="event.acf?.event?.url" [src]="event.acf?.event?.sizes?.medium_large"  alt="">
+                   <img loading="lazy"  *ngIf="event.acf?.event?.url" [src]="event.acf?.event?.sizes?.medium_large"  alt="">
                     <div class="overlay">
                         <span class="badge text-bg-primary">Past Events</span>
                         <h2>{{ event.title?.rendered }}</h2>

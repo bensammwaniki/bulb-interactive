@@ -3,9 +3,9 @@
     <div class="justify-content-between row row-left row-cols-1 row-cols-md-3 row-cols-lg-5 links">
         <div class="col mt-1">
                 <div class="card col">
-                      <img *ngIf="mainEvent.acf?.event?.url; else defaultImage" [src]="mainEvent.acf?.event?.sizes?.medium_large" class="link-img" alt="Image to the link event">
+                     <img loading="lazy"  *ngIf="mainEvent.acf?.event?.url; else defaultImage" [src]="mainEvent.acf?.event?.sizes?.medium_large" class="link-img" alt="Image to the link event">
                       <ng-template #defaultImage>
-                        <img src="../../../assets/images/mag(1).jpg" class="link-img" alt="Image to the link magazine">
+                       <img loading="lazy"  src="../../../assets/images/mag(1).jpg" class="link-img" alt="Image to the link magazine">
                       </ng-template>
                     <a class="link-title" routerLink="/events">
                       <h3>Events</h3>
@@ -14,7 +14,7 @@
         </div>
         <div class="col mt-1">
                 <div class="card col">
-                    <img src="../../../assets/images/mag(1).jpg" class="link-img" alt="Image to the link magazine">
+                   <img loading="lazy"  src="../../../assets/images/mag(1).jpg" class="link-img" alt="Image to the link magazine">
                     <a class="link-title" routerLink="/magazine">
                       <h3>Bulb Magazine</h3>
                     </a>
@@ -22,7 +22,7 @@
         </div>
         <div class="col mt-1" >
                 <div class="card col">
-                    <img src="../../../assets/images/link(2).jpg" class="link-img" alt="Image to the link bulb TV">
+                   <img loading="lazy"  src="../../../assets/images/link(2).jpg" class="link-img" alt="Image to the link bulb TV">
                     <a class="link-title" routerLink="/videos">
                       <h3>Bulb TV</h3>
                     </a>
@@ -31,7 +31,7 @@
 
         <div class="col mt-1">
                 <div class="card col">
-                    <img src="../../../assets/images/link(3).jpg" class="link-img" alt="Image to the link Branding">
+                   <img loading="lazy"  src="../../../assets/images/link(3).jpg" class="link-img" alt="Image to the link Branding">
                     <a class="link-title" routerLink="/branding">
                       <h3>Personal Branding</h3>
                     </a>
@@ -40,7 +40,7 @@
 
         <div class="col mt-1">
                 <div class="card col">
-                    <img src="../../../assets/images/blogs.jpg" class="card-img-top link-img" alt="Image to the link bulb news">
+                   <img loading="lazy"  src="../../../assets/images/blogs.jpg" class="card-img-top link-img" alt="Image to the link bulb news">
                     <a class="link-title">
                       <h3>Blogs</h3>
                     </a>

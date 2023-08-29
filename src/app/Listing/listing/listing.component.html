@@ -2,7 +2,7 @@
     <div class="row">
         <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
             <div ngxSlickItem class="featured-img" *ngFor="let product of featuredProducts">
-                <img [src]="product.acf.featured_banner.url" alt="{{ product.title.rendered }} image">
+               <img loading="lazy"  [src]="product.acf.featured_banner.url" alt="{{ product.title.rendered }} image">
             </div>
         </ngx-slick-carousel>
     </div>
@@ -16,7 +16,7 @@
                 <div class="partner-slider">
                     <div class="slide-track" #sliderElement>
                         <div class="slide" *ngFor="let logo of companyLogos">
-                            <img [src]="logo.url" alt="partner logo" />
+                           <img loading="lazy"  [src]="logo.url" alt="partner logo" />
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
             <div class="wrap">
                 <div class="cont">
                   <div class="top">
-                    <img [src]="product.acf.product_image.sizes.medium_large ? product.acf.product_image.sizes.medium_large : product.acf.product_image.sizes.large" alt="">
+                   <img loading="lazy"  [src]="product.acf.product_image.sizes.medium_large ? product.acf.product_image.sizes.medium_large : product.acf.product_image.sizes.large" alt="">
                   </div>
                   <div class="bottom">
                     <div class="left">

@@ -5,7 +5,7 @@
     <div class="row headline">
             <div class="col main">
                 <a *ngIf="news.length > 0" (click)="openNews(news[0].id)">
-                    <img *ngIf="news[0]?.acf?.Featured_image?.sizes?.medium_large" [src]="news[0]?.acf?.Featured_image?.sizes?.medium_large" alt="main article image">
+                   <img loading="lazy"  *ngIf="news[0]?.acf?.Featured_image?.sizes?.medium_large" [src]="news[0]?.acf?.Featured_image?.sizes?.medium_large" alt="main article image">
                     <h2>{{ news[0]?.title?.rendered }} </h2>
                     <p [innerHTML]="preview(news[0]?.content?.rendered) + ' ...'"></p>
                     <span>{{ news[0]?.acf?.date_published }}</span>
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-12" *ngFor="let singleNews of news.slice(1, 6)">
                     <div class="highlight">
-                        <img *ngIf="singleNews?.acf?.Featured_image?.sizes?.medium_large" [src]="singleNews?.acf?.Featured_image?.sizes?.medium_large" alt=" news article images">
+                       <img loading="lazy"  *ngIf="singleNews?.acf?.Featured_image?.sizes?.medium_large" [src]="singleNews?.acf?.Featured_image?.sizes?.medium_large" alt=" news article images">
                         <div>
                             <a (click)="openNews(singleNews.id)">  <h3>{{ singleNews?.title?.rendered }}</h3>  </a>
                             <span>{{ singleNews?.acf?.date_published }}</span>
@@ -31,7 +31,7 @@
     </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 tabs">
         <div class="col" *ngFor="let singleNews of news.slice(6)">
-            <img *ngIf="singleNews?.acf?.Featured_image?.sizes?.medium_large" [src]="singleNews?.acf?.Featured_image?.sizes?.medium_large" alt="">
+           <img loading="lazy"  *ngIf="singleNews?.acf?.Featured_image?.sizes?.medium_large" [src]="singleNews?.acf?.Featured_image?.sizes?.medium_large" alt="">
             <a (click)="openNews(singleNews.id)">  <h4>{{ singleNews?.title?.rendered }}</h4>  </a>
             <span>{{ singleNews?.acf?.date_published }}</span>
         </div>
