@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": ["lodash"],
-            "outputPath": "dist/bulb_interactive",
+            "outputPath": "dist/bulb_interactive/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -110,6 +110,60 @@
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/bulb_interactive/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "bulb_interactive:build:development",
+              "serverTarget": "bulb_interactive:server:development"
+            },
+            "production": {
+              "browserTarget": "bulb_interactive:build:production",
+              "serverTarget": "bulb_interactive:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "bulb_interactive:build:production",
+              "serverTarget": "bulb_interactive:server:production"
+            },
+            "development": {
+              "browserTarget": "bulb_interactive:build:development",
+              "serverTarget": "bulb_interactive:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'magazine', component: MagazineComponent },
   { path: 'videos', component: VideogalleryComponent },
-  { path: 'events', component: EventsComponent },
+  { path: '/events', component: EventsComponent },
   { path: 'branding', component: BrandingComponent },
   { path: 'news', component: DisplayComponent },
   { path: 'listing', component: ListingComponent },
@@ -28,7 +28,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes, { useHash: false, initialNavigation: 'enabledBlocking' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

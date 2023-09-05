@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { GalleryModule } from  'ng-gallery';
 import { LightboxModule } from  'ng-gallery/lightbox';
@@ -78,7 +77,7 @@ import { ListingComponent } from './Listing/listing/listing.component';
     ListingComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     SlickCarouselModule,
     GalleryModule,
