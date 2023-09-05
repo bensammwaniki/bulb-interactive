@@ -1,12 +1,13 @@
-<div class="container-fluid">
-    <div class="row">
-        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-            <div ngxSlickItem class="featured-img" *ngFor="let product of featuredProducts">
-               <img loading="lazy"  [src]="product.acf.featured_banner.url" alt="{{ product.title.rendered }} image">
-            </div>
-        </ngx-slick-carousel>
-    </div>
+<div class="container-fluid" *ngIf="featuredProducts && featuredProducts.length > 0">
+  <div class="row">
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+          <div ngxSlickItem class="featured-img" *ngFor="let product of featuredProducts">
+             <img loading="lazy"  [src]="product.acf.featured_banner.url" alt="{{ product.title.rendered }} image">
+          </div>
+      </ngx-slick-carousel>
+  </div>
 </div>
+
 <div class="container">
     <div class="row">
             <div class="par">
