@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bulb-interactive": {
+      "hosting": {
+        "bulb_interactive": [
+          "bulb-interactive"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bulb-interactive"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/bulb_interactive/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

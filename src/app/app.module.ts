@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { GalleryModule } from  'ng-gallery';
 import { LightboxModule } from  'ng-gallery/lightbox';
@@ -22,7 +21,6 @@ import { HomeComponent } from './Home/home/home.component';
 import { SliderComponent } from './Home/slider/slider.component';
 import { LinksComponent } from './Home/links/links.component';
 import { VideoSliderComponent } from './Shared/video-slider/video-slider.component';
-import { PartnersComponent } from './Home/partners/partners.component';
 import { MagazineComponent } from './magazine/magazine/magazine.component';
 import { MagazineSliderComponent } from './magazine/magazine-slider/magazine-slider.component';
 import { EditionsComponent } from './magazine/editions/editions.component';
@@ -54,7 +52,6 @@ import { ListingComponent } from './Listing/listing/listing.component';
     SliderComponent,
     LinksComponent,
     VideoSliderComponent,
-    PartnersComponent,
     MagazineComponent,
     MagazineSliderComponent,
     EditionsComponent,
@@ -78,7 +75,7 @@ import { ListingComponent } from './Listing/listing/listing.component';
     ListingComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     SlickCarouselModule,
     GalleryModule,
