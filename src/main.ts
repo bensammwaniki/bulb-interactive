@@ -10,13 +10,13 @@ if (environment.production) {
   enableProdMode();
 }
 const firebaseConfig = {
-  apiKey: "AIzaSyD-IxLpX8KeGAAF0mXNSluX8bC-4Ri1U8w",
-  authDomain: "bulb-interactive.firebaseapp.com",
-  projectId: "bulb-interactive",
-  storageBucket: "bulb-interactive.appspot.com",
-  messagingSenderId: "559234943398",
-  appId: "1:559234943398:web:6899b3110a9a71be97a767",
-  measurementId: "G-WGDPL4W5CX"
+  apiKey: "AIzaSyD-H7pqXs718-Fo6rZ43h8_jdRkBCX0pvE",
+  authDomain: "bulb-interactive2023.firebaseapp.com",
+  projectId: "bulb-interactive2023",
+  storageBucket: "bulb-interactive2023.appspot.com",
+  messagingSenderId: "809700115819",
+  appId: "1:809700115819:web:5e1a2e9e96fe97f1d8782e",
+  measurementId: "G-SV229XPCK3"
 };
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);

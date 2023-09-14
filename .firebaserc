@@ -1,14 +1,14 @@
 {
+  "projects": {
+    "default": "bulb-interactive2023"
+  },
   "targets": {
-    "bulb-interactive": {
+    "bulb-interactive2023": {
       "hosting": {
         "bulb_interactive": [
-          "bulb-interactive"
+          "bulb-interactive2023"
         ]
       }
     }
-  },
-  "projects": {
-    "default": "bulb-interactive"
   }
 }
