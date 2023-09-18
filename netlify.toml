@@ -1,10 +1,9 @@
 # example netlify.toml
 [build]
-  command = "ng build --configuration production && ng run bulb_interactive:serverless:production"
+  command = "npm run prerender"
+  functions = "netlify/functions"
   publish = "dist/bulb_interactive/browser"
 
-[[plugins]]
-  package = "@netlify/plugin-angular-universal"
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
   #[[redirects]]
