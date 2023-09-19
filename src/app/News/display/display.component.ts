@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NewsService } from 'src/app/news.service';
+import { Title } from '@angular/platform-browser';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-display',
@@ -10,10 +12,13 @@ import { NewsService } from 'src/app/news.service';
 export class DisplayComponent implements OnInit {
   news: any[] = [];
 
-  constructor(private newsService: NewsService,private router: Router) { }
-
+  constructor(private newsService: NewsService,private router: Router,private title: Title, private meta: Meta) { 
+      this.meta.updateTag({ name: 'description', content: "Stay up-to-date on the latest business news in Kenya with Bulb Interactive. We cover everything from industry trends to company announcements to government policies. Get the latest news from Kenya's top business professionals."} );
+  }
   ngOnInit() {
     this.getNews();
+    this.title.setTitle("Bulb Magazine")
+
   }
 
   getNews() {
