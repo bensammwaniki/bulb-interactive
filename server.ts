@@ -24,10 +24,17 @@ export function app(): express.Express {
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
+
   // Serve static files from /browser
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
   }));
+
+  // Serve sitemap.xml file
+  server.get('/sitemap.xml', (req, res) => {
+    const sitemapPath = join(distFolder, 'sitemap.xml');
+    res.sendFile(sitemapPath);
+  });
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {

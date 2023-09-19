@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /my-private-directory
+Allow: /
+Sitemap: https://bulb.co.ke/sitemap.xml
+Sitemap: https://bulb.co.ke/ror.xml
