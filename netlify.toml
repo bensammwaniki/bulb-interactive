@@ -1,6 +1,6 @@
 # example netlify.toml
 [build]
-  command = "netlify deploy --build"
+  command = "npm run prerender"
   functions = "netlify/functions"
   publish = "dist/bulb_interactive/browser"
 
