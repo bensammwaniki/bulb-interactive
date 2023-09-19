@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /my-private-directory
+Allow: /

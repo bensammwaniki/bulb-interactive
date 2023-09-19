@@ -31,7 +31,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/_redirects"
+              "src/robots.txt","src/sitemap.xml","src/ror.xml","src/urllist.txt"
             ],
             "styles": [
               "src/styles.scss",
@@ -104,7 +104,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/sitemaps"
+              "src/robots.txt","src/sitemap.xml","src/ror.xml","src/urllist.txt"
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
