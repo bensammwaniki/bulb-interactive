@@ -3,10 +3,10 @@
     <div class="justify-content-between row row-left row-cols-1 row-cols-md-3 row-cols-lg-5 links">
         <div class="col mt-1">
                 <div class="card col">
-                     <img loading="lazy"  *ngIf="mainEvent.acf?.event?.url; else defaultImage" [src]="mainEvent.acf?.event?.sizes?.medium_large" class="link-img" alt="Image to the link event">
-                      <ng-template #defaultImage>
-                       <img loading="lazy"  src="../../../assets/images/mag(1).jpg" class="link-img" alt="Image to the link magazine">
-                      </ng-template>
+                    <img loading="lazy" *ngIf="mainEvent; else defaultImage" [src]="mainEvent.acf?.event?.sizes?.medium_large" class="link-img" alt="Image to the link event">
+                    <ng-template #defaultImage>
+                      <img loading="lazy" src="../../../assets/images/upcomingevent.jpg" class="link-img" alt="Image to the link magazine">
+                    </ng-template>                  
                     <a class="link-title" routerLink="/events">
                       <h3>Events</h3>
                     </a>
