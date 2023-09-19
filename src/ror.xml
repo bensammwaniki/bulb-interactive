@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-
 <channel>
   <title>ROR Sitemap for https://bulb.co.ke/</title>
   <link>https://bulb.co.ke/</link>
+  <description>Get the latest news and articles from Bulb Interactive, a business networking website for professionals in Kenya. Stay ahead of the curve and connect with the best in the business.</description>
 
 <item>
      <link>https://bulb.co.ke/</link>
@@ -80,4 +79,3 @@
 </item>
 </channel>
 </rss>
-  
