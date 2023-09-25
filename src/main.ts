@@ -1,6 +1,9 @@
 // import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
+import { inject } from '@vercel/analytics';
+ 
+inject();
 
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
