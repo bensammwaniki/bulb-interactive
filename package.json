@@ -4,14 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve ",
-    "build": "ng build",
+    "build-dev": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-compress": "ng build && gzipper c ./dist --include js,css,html --output-file-format [filename].[ext] ./dist-compressed/",
     "dev:ssr": "ng run bulb_interactive:serve-ssr",
     "serve:ssr": "node dist/bulb_interactive/server/main.js",
     "build:ssr": "ng build && ng run bulb_interactive:server",
-    "prerender": "ng run bulb_interactive:prerender"
+    "prerender": "ng run bulb_interactive:prerender",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
