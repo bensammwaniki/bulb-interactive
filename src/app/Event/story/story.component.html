@@ -3,11 +3,11 @@
     <div class="row row-cols-1 row-cols-md-2 all-events">
         <div class="col-sm-12 col-md-5">
             <div class="main-event" *ngIf="mainEvent">
-               <img loading="lazy"  *ngIf="mainEvent.acf?.event?.url" [src]="mainEvent.acf?.event?.sizes?.medium_large" alt="">
+                <img loading="lazy" *ngIf="mainEvent.acf?.event?.url" [src]="mainEvent.acf?.event?.sizes?.medium_large" alt="">
                 <div class="overlay">
-                    <span class="badge text-bg-primary">Upcoming Events</span>
+                    <span class="badge text-bg-primary">Upcoming Business Networking Events in Kenya</span>
                     <h2>{{ mainEvent.title?.rendered }}</h2>
-                    <p>Register to attend<span>{{ mainEvent.acf?.date_held }}</span></p>
+                    <p>Register to attend and connect with professionals on {{ mainEvent.acf?.date_held }}</p>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
             <div class="row row-cols-2 row-cols-lg-3 g-2">
                 <div class="col" *ngFor="let event of upcomingEvents | slice:1:9">
                     <div class="upcoming-event">
-                       <img loading="lazy"  [src]="event.acf?.event?.sizes?.large" alt="">
+                        <img loading="lazy" [src]="event.acf?.event?.sizes?.large" alt="">
                         <div class="overlay">
                             <span class="badge text-bg-primary">Date Held: {{ event.acf?.date_held | date:'mediumDate' }}</span>
                             <h2>{{ event.title?.rendered }}</h2>
@@ -27,12 +27,13 @@
         </div>
     </div>
 </div>
-<!-- partnership events -->
+
+<!-- Partnership Events -->
 
 <div class="container">
     <div class="event-slider">
         <div class="story-head">
-            <h2 class="head">Past Events</h2>
+            <h2 class="head">Past Business Networking Events</h2>
             <div class="cst-btn">
                 <button (click)="slickModal.slickPrev()"> <i class="fa-solid fa-chevron-left"></i> </button>
                 <button (click)="slickModal.slickNext()"> <i class="fa-solid fa-chevron-right"></i> </button>
@@ -43,9 +44,9 @@
                     #slickModal="slick-carousel"
                     [config]="slideConfig">
                 <div ngxSlickItem class="event col" *ngFor="let event of pastEvents">
-                   <img loading="lazy"  *ngIf="event.acf?.event?.url" [src]="event.acf?.event?.sizes?.medium_large"  alt="">
+                    <img loading="lazy" *ngIf="event.acf?.event?.url" [src]="event.acf?.event?.sizes?.medium_large" alt="">
                     <div class="overlay">
-                        <span class="badge text-bg-primary">Past Events</span>
+                        <span class="badge text-bg-primary">Past Business Networking Events</span>
                         <h2>{{ event.title?.rendered }}</h2>
                         <p>{{ event.acf?.event_introduction | slice:0:200 }} ...</p>
                         <p>Date Held: {{ event.acf?.date_held | date:'mediumDate' }}</p>
